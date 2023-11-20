@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Servicio.Implementacion;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,14 +10,22 @@ namespace FarmaciaWebApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        // GET: api/<LoginController>
-        [HttpGet]
-        public IActionResult GetLogin()
+        // GET: api/Login
+        [HttpGet()]
+        public IActionResult GetLogin(string usuario, string clave)
         {
-            return new string[] { "value1", "value2" };
+            bool aux = ServicioDao.ObtenerServicio().Login(usuario, clave);
+            if (aux)
+            {
+                return Ok("Login exitoso");
+            }
+            else
+            {
+                return NotFound("Usuario o contraseña incorrecto");
+            }
         }
 
-        /*// GET api/<LoginController>/5
+        /*// GET api/<LoginController>/usuario/contraseña
         [HttpGet("{id}")]
         public string Get(int id)
         {
