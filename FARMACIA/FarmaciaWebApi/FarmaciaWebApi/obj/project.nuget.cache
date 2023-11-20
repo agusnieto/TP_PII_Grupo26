@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H8J1TC1B/IgON7MLdRhy69dHSUxmlbbxyXd8YIilD4qpw5W9lTT1EeW8G+qgHQbktebrIiUk2jIMvNoQ6T9qdA==",
+  "dgSpecHash": "wGvw8KSYeAXBa/ckeEnhY6QV4pFdiU3HjoOYWKGXUgPColfbIL3QF7vwY0IKZavZw6IH3qt49tLK4GNKzrHPSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Tp_agus\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

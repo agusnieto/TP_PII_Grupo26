@@ -15,10 +15,12 @@ namespace FarmaciaBack.Servicio.Implementacion
         private static ServicioDao instancia;
         private IClienteDao clienteDao;
         private IProductoDao productoDao;
+        private ILoginDao loginDao;
         private ServicioDao()
         {            
             clienteDao = new ClienteDao();
             productoDao = new ProductoDao();
+            loginDao = new LoginDao();
         }
         public static ServicioDao ObtenerServicio()
         {
@@ -103,6 +105,11 @@ namespace FarmaciaBack.Servicio.Implementacion
         public List<Caracteristica> ConsultarCaracteristicas()
         {
             return productoDao.GetCaracteristica();
+        }
+
+        public bool Login(string usuario, string clave)
+        {
+            return loginDao.Login(usuario, clave);
         }
     }
 }

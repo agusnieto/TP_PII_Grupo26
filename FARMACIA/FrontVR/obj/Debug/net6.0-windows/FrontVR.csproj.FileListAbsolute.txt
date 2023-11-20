@@ -1,0 +1,59 @@
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.csproj.AssemblyReference.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\Farmacia.ABMC.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\Farmacia.DatosPersonales.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\Farmacia.Form1.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\Farmacia.MaestroDetalle.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\Farmacia.Menu.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.csproj.GenerateResource.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.AssemblyInfoInputs.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.AssemblyInfo.cs
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.csproj.CoreCompileInputs.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.frmLogin.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\FrontVR.exe
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\FrontVR.deps.json
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\FrontVR.runtimeconfig.json
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\FrontVR.pdb
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.csproj.CopyComplete
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\refint\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.pdb
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.genruntimeconfig.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\ref\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR\obj\Debug\net6.0-windows\FrontVR.FrmPrincipalRain.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\FrontVR.exe
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\FrontVR.deps.json
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\FrontVR.runtimeconfig.json
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\FrontVR.pdb
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.csproj.AssemblyReference.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.frmLogin.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.Properties.Resources.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.csproj.GenerateResource.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.AssemblyInfoInputs.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.AssemblyInfo.cs
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.csproj.CoreCompileInputs.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.csproj.CopyComplete
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\refint\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.pdb
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.genruntimeconfig.cache
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\ref\FrontVR.dll
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\Farmacia.FrmAbmc.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\Farmacia.FrmDatosPersonales.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\Farmacia.FrmMaestroDetalle.resources
+C:\Users\r4yn1\Music\TRABAJO PRACTICO PROGRAMACION\RAIN BRANCH\FrontVR_v1 - Copy\obj\Debug\net6.0-windows\FrontVR.FrmMenu.resources
