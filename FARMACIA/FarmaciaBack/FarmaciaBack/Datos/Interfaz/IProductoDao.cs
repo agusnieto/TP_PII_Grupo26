@@ -15,8 +15,8 @@ namespace FarmaciaBack.Datos.Interfaz
         List<Marca> GetMarcas();
         List<Proveedor> GetProveedores();
         List<Pais> GetPaises();
+        List<Caracteristica> GetCaracteristica();
         bool PostProducto(Producto oProducto);
-        bool PostCaracteristica(Caracteristica oCaracteristica);
         bool PutProducto(Producto producto);
         bool DeleteProducto(int id);
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FarmaciaBack.Datos.Dominio
 {
-    public class TipoCaracteristica
+    public class Caracteristica
     {
         private int id;
         private string tipo;

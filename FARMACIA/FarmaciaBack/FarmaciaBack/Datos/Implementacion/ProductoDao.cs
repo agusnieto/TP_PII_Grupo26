@@ -27,7 +27,7 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@PAIS", oProducto.Pais.Id),
                 new Parametro("@STOCK", oProducto.Stock),
                 new Parametro("@PRECIO", oProducto.Precio),
-                new Parametro("@CARACTERITICA", oProducto.Caracteristica.Id)
+                new Parametro("@CARACTERISTICA", oProducto.Caracteristica.Id)
             };
 
             if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_INSERT_PRODUCTO", parametros) == 1)
