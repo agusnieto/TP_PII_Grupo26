@@ -1,6 +1,6 @@
-﻿using FarmaciaBack.Datos.Implementacion;
+﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.Implementacion;
 using FarmaciaBack.Datos.Interfaz;
-using FarmaciaBack.Dominio;
 using FarmaciaBack.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -12,68 +12,96 @@ namespace FarmaciaBack.Servicio.Implementacion
 {
     public class Servicio : IServicio
     {
-        private static Servicio instancia;
-        private IClienteDAO clienteDAO;
-        private IProveedorDAO proveedorDAO;
-        private IEmpleadoDAO empleadoDAO;
+        private static Servicio servicio;
+        private IClienteDao clienteDao;
+        private IProductoDao productoDao;
         private Servicio()
-        {
-            clienteDAO = new ClienteDAO();
-            proveedorDAO = new ProveedorDAO();
+        {            
+            clienteDao = new ClienteDao();
+            productoDao = new ProductoDao();
         }
-        public static Servicio ObtenerIntancia()
+        public static Servicio ObtenerServicio()
         {
-            if (instancia.Equals(null))
+            if(servicio== null)
             {
-                instancia = new Servicio();
+                servicio = new Servicio();
             }
-            return instancia;
-        }
-        //Cliente
-        public bool CargarCliente(Cliente cliente)
-        {
-            throw new NotImplementedException();
+            return servicio;
         }
 
-        public List<CategoriaOS> ConsultarCategoriaOS()
+        public bool ActualizarCliente(Cliente oCliente)
         {
-            return clienteDAO.GetCategoriaOS();
+            return clienteDao.PostCliente(oCliente);
         }
 
-        public List<CondicionIva> ConsultarCondicionIva()
+        public bool ActualizarProducto(Producto producto)
         {
-            return clienteDAO.GetCondicionIva();
+            return productoDao.PutProducto(producto);
         }
 
-        public List<ObraSocial> ConsultarObraSocial()
+        public bool CargarCaracteristica(Caracteristica oCaracteristica)
         {
-            return clienteDAO.GetObraSocial();
+            return productoDao.PostCaracteristica(oCaracteristica);
         }
 
-        //Proveedor
-        public List<TipoProveedor> ConsultarTipoProveedor()
+        public bool CargarCliente(Cliente oCliente)
         {
-            return proveedorDAO.GetTipoProveedor();
+            return clienteDao.PostCliente(oCliente);
         }
 
-        public List<Transporte> ConsultarTransporte()
+        public bool CargarProducto(Producto oProducto)
         {
-            return proveedorDAO.GetTransporte();
-        }
-        public bool CargarProveedor(Proveedor proveedor)
-        {
-            throw new NotImplementedException();
+            return productoDao.PostProducto(oProducto);
         }
 
-        //Empleado
-        public bool CargarEmpleado(Empleado empleado)
+        public Producto ConsultaProducto(int id)
         {
-            return empleadoDAO.PostEmpleado(empleado);
-        }
-        public List<Sucursal> ConsultarSucursal()
-        {
-            return empleadoDAO.GetSucursal();
+            return productoDao.GetProducto(id);
         }
 
+        public List<Barrio> ConsultarBarrios()
+        {
+            return clienteDao.GetBarrios();
+        }
+
+        public Cliente ConsultarCliente(int id)
+        {
+            return clienteDao.GetCliente(id);
+        }
+
+        public List<Cliente> ConsultarClientes()
+        {
+            return clienteDao.GetClientes();
+        }
+
+        public List<Marca> ConsultarMarcas()
+        {
+            return productoDao.GetMarcas();
+        }
+
+        public List<Pais> ConsultarPaises()
+        {
+            return productoDao.GetPaises();
+        }
+
+        public List<Proveedor> ConsultarProveedores()
+        {
+            return productoDao.GetProveedores();
+        }
+
+        public List<TipoProducto> ConsultarTipoProducto()
+        {
+            return productoDao.GetTipoProducto();
+        }
+
+        public bool EliminarCliente(int id)
+        {
+            return clienteDao.DeleteCliente(id);
+        }
+
+        public bool EliminarProducto(int id)
+        {
+            return productoDao.DeleteProducto(id);
+        }
     }
 }

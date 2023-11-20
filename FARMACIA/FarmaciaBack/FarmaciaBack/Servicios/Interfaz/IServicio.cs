@@ -11,17 +11,23 @@ namespace FarmaciaBack.Servicio.Interfaz
     public interface IServicio
     {
         //Cliente
-        
+        bool CargarCliente(Cliente oCliente);
+        bool ActualizarCliente(Cliente oCliente);
+        bool EliminarCliente(int id);
+        List<Barrio> ConsultarBarrios();
+        List<Cliente> ConsultarClientes();
+        Cliente ConsultarCliente(int id);
+        //List<Cliente> GetClientesScreen();
 
         //Producto
-        Producto GetProducto(int id);
-        List<TipoProducto> GetTipoProducto();
-        List<Marca> GetMarcas();
-        List<Proveedor> GetProveedores();
-        List<Pais> GetPaises();
-        bool PostProducto(Producto oProducto);
-        bool PostCaracteristica(Caracteristica oCaracteristica);
-        bool PutProducto(Producto producto);
-        bool DeleteProducto(int id);
+        Producto ConsultaProducto(int id);
+        List<TipoProducto> ConsultarTipoProducto();
+        List<Marca> ConsultarMarcas();
+        List<Proveedor> ConsultarProveedores();
+        List<Pais> ConsultarPaises();
+        bool CargarProducto(Producto oProducto);
+        bool CargarCaracteristica(Caracteristica oCaracteristica);
+        bool ActualizarProducto(Producto producto);
+        bool EliminarProducto(int id);
     }
 }
