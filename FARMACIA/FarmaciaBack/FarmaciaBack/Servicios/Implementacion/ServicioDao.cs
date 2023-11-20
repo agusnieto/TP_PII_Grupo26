@@ -107,9 +107,9 @@ namespace FarmaciaBack.Servicio.Implementacion
             return productoDao.GetCaracteristica();
         }
 
-        public bool Login(string usuario, string clave)
+        public bool Login(LoginModel login)
         {
-            return loginDao.Login(usuario, clave);
+            return loginDao.Login(login);
         }
     }
 }

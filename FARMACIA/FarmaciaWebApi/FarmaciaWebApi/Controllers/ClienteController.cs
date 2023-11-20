@@ -27,7 +27,7 @@ namespace FarmaciaAPI.Controllers
             return NoContent();
         }
 
-        [HttpGet("Clientes")]
+        [HttpGet]
         public IActionResult GetClientes() // IActionResult devuelve un Json y un Codigo OK 200
         {
             List<Cliente> lista = ServicioDao.ObtenerServicio().ConsultarClientes();
@@ -38,7 +38,7 @@ namespace FarmaciaAPI.Controllers
             return NoContent();
         }
 
-        [HttpGet("Cliente/id")]
+        [HttpGet("{id}")]
         public IActionResult GetCliente(int id) // IActionResult devuelve un Json y un Codigo OK 200
         {
             Cliente cliente = ServicioDao.ObtenerServicio().ConsultarCliente(id);
@@ -50,7 +50,7 @@ namespace FarmaciaAPI.Controllers
         }
 
         // POST api/<ClienteController>
-        [HttpPost("Cliente")]
+        [HttpPost]
         public IActionResult Post([FromBody] Cliente cliente)
         {
             //dentro de un try catch
@@ -76,7 +76,7 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
-        [HttpPut("Cliente")]
+        [HttpPut]
         public IActionResult Put([FromBody] Cliente cliente)
         {
             //dentro de un try catch
@@ -102,7 +102,7 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
-        [HttpDelete("Cliente/id")]
+        [HttpDelete("{id}")]
         public IActionResult Delete([FromBody] int id)
         {
             //dentro de un try catch
@@ -112,7 +112,10 @@ namespace FarmaciaAPI.Controllers
                 {
                     return BadRequest("Se esperaba un identificador de un cliente");
                 }
-                //if (cliente.) validaciones por si es un objeto valido.
+                /*if (ValidarDatos())
+                {
+
+                }*/
                 if (ServicioDao.ObtenerServicio().ConsultarCliente(id) != null)
                 {
                     if (ServicioDao.ObtenerServicio().EliminarCliente(id))
@@ -136,6 +139,68 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
+
+        /*private bool ValidarDatos()
+        {
+            private bool ValidarDatos()
+            {
+                int n = 0;
+                if (string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
+                {
+                    n = 1;
+                }
+                else
+                {
+                    foreach (char c in txtApellido.Text)
+                    {
+                        if (c <= 31 && c > 32 || c < 65 && c > 90 || c < 97 && c > 122)
+                        {
+                            n = 1;
+                        }
+                    }
+                }
+                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
+                {
+                    n = 2;
+                }
+                else
+                {
+                    foreach (char c in txtNombre.Text)
+                    {
+                        if (c <= 31 && c > 32 || c < 65 && c > 90 || c < 97 && c > 122)
+                        {
+                            n = 2;
+                        }
+                    }
+                }
+                if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrWhiteSpace(txtEmail.Text))
+                {
+                    n = 3;
+                }
+                else
+                {
+                    foreach (char c in txtEmail.Text)
+                    {
+                        if (c <= 31 && c >= 33 || c <= 45 && c >= 47 || c < 64 && c > 90 || c < 97 && c > 122)
+                        {
+                            n = 3;
+                        }
+                    }
+                }
+                if (string.IsNullOrEmpty(txtTelefono.Text) || !int.TryParse(txtTelefono.Text, out _))
+                {
+                    n = 4;
+                }
+                if (string.IsNullOrEmpty(cboBarrio.Text))
+                {
+                    n = 5;
+                }
+                switch (n)
+                {
+
+                }*/
     }
 }
+    
+
 

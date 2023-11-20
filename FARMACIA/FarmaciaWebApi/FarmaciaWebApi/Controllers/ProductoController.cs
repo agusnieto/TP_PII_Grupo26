@@ -9,9 +9,7 @@ namespace FarmaciaAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class ProductoController : ControllerBase
-    {
-
-        
+    {        
         public ProductoController()
         {
             
@@ -36,7 +34,7 @@ namespace FarmaciaAPI.Controllers
             }
             return NoContent();
         }
-        [HttpGet("Producto/id")]
+        [HttpGet("{id}")]
         public IActionResult GetProducto(int id)
         {
             Producto producto = ServicioDao.ObtenerServicio().ConsultarProducto(id);
@@ -46,7 +44,7 @@ namespace FarmaciaAPI.Controllers
             }
             return NoContent();
         }
-        [HttpGet("Proveedores")]
+        [HttpGet]
         public IActionResult GetProveedores()
         {
             List<Proveedor> lista = ServicioDao.ObtenerServicio().ConsultarProveedores();
@@ -77,7 +75,7 @@ namespace FarmaciaAPI.Controllers
             return NoContent();
         }
         
-        [HttpPost("Producto")]
+        [HttpPost]
         public IActionResult Post([FromBody] Producto producto)
         {
             //dentro de un try catch
@@ -103,7 +101,7 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
-        [HttpPut("Producto")]
+        [HttpPut]
         public IActionResult Put([FromBody] Producto producto)
         {
             //dentro de un try catch
@@ -129,7 +127,7 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
-        [HttpDelete("Producto/id")]
+        [HttpDelete]
         public IActionResult Delete([FromBody] int id)
         {
             //dentro de un try catch

@@ -31,7 +31,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool EliminarProducto(int id);
 
         //Login
-        bool Login(string usuario, string clave);
+        bool Login(LoginModel login);
 
     }
 }

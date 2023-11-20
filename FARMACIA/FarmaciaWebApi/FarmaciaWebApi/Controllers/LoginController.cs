@@ -6,15 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FarmaciaWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    
     [ApiController]
+    [Route("api/[controller]")]
+
     public class LoginController : ControllerBase
     {
-        // GET: api/Login
-        [HttpGet()]
-        public IActionResult GetLogin(string usuario, string clave)
+        [HttpPost("login")]
+        public IActionResult PostLogin([FromBody] LoginModel loginModel)
         {
-            bool aux = ServicioDao.ObtenerServicio().Login(usuario, clave);
+            bool aux = ServicioDao.ObtenerServicio().Login(loginModel);
             if (aux)
             {
                 return Ok("Login exitoso");
@@ -24,14 +25,6 @@ namespace FarmaciaWebApi.Controllers
                 return NotFound("Usuario o contraseña incorrecto");
             }
         }
-
-        /*// GET api/<LoginController>/usuario/contraseña
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }*/
-
-        
     }
 }
+
