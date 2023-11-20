@@ -34,5 +34,19 @@ namespace FarmaciaBack.Datos
 
             return new ResponseHttp(result.StatusCode, content);
         }
+        public async Task<ResponseHttp> PutAsync(string url, string json) 
+        {
+            var result = await client.PutAsync(url, new StringContent(json, Encoding.UTF8, "Application/Json")); 
+            var content = await result.Content.ReadAsStringAsync();
+
+            return new ResponseHttp(result.StatusCode, content);
+        }
+        public async Task<ResponseHttp> DeleteAsync(string url) 
+        {
+            var result = await client.DeleteAsync(url); 
+            var content = await result.Content.ReadAsStringAsync();
+
+            return new ResponseHttp(result.StatusCode, content);
+        }
     }
 }
