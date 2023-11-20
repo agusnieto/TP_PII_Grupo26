@@ -1,0 +1,7 @@
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\source\repos\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.MvcApplicationPartsAssemblyInfo.cache

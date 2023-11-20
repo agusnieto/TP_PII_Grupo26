@@ -20,8 +20,9 @@ namespace FarmaciaBack.Servicio.Interfaz
         //List<Cliente> GetClientesScreen();
 
         //Producto
-        Producto ConsultaProducto(int id);
-        List<TipoProducto> ConsultarTipoProducto();
+        Producto ConsultarProducto(int id);
+        List<TipoProducto> ConsultarTiposProducto();
+        List<Caracteristica> ConsultarCaracteristicas();
         List<Marca> ConsultarMarcas();
         List<Proveedor> ConsultarProveedores();
         List<Pais> ConsultarPaises();

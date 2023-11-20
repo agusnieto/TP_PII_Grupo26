@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaWebApi", "FarmaciaWebApi\FarmaciaWebApi.csproj", "{EBC9B87B-87B9-41AE-A5C3-C71B111C524A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaBack", "..\FarmaciaBack\FarmaciaBack\FarmaciaBack.csproj", "{BD90EE6B-495A-4016-A610-B3DC74D8D839}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBC9B87B-87B9-41AE-A5C3-C71B111C524A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC9B87B-87B9-41AE-A5C3-C71B111C524A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC9B87B-87B9-41AE-A5C3-C71B111C524A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC9B87B-87B9-41AE-A5C3-C71B111C524A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F09B108-C893-4B0E-9055-60A893CACF7B}
+	EndGlobalSection
+EndGlobal

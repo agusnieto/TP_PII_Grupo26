@@ -10,23 +10,23 @@ using System.Threading.Tasks;
 
 namespace FarmaciaBack.Servicio.Implementacion
 {
-    public class Servicio : IServicio
+    public class ServicioDao : IServicio
     {
-        private static Servicio servicio;
+        private static ServicioDao instancia;
         private IClienteDao clienteDao;
         private IProductoDao productoDao;
-        private Servicio()
+        private ServicioDao()
         {            
             clienteDao = new ClienteDao();
             productoDao = new ProductoDao();
         }
-        public static Servicio ObtenerServicio()
+        public static ServicioDao ObtenerServicio()
         {
-            if(servicio== null)
+            if (instancia.Equals(null))
             {
-                servicio = new Servicio();
+                instancia = new ServicioDao();
             }
-            return servicio;
+            return instancia;
         }
 
         public bool ActualizarCliente(Cliente oCliente)
@@ -50,7 +50,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return productoDao.PostProducto(oProducto);
         }
 
-        public Producto ConsultaProducto(int id)
+        public Producto ConsultarProducto(int id)
         {
             return productoDao.GetProducto(id);
         }
@@ -85,7 +85,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return productoDao.GetProveedores();
         }
 
-        public List<TipoProducto> ConsultarTipoProducto()
+        public List<TipoProducto> ConsultarTiposProducto()
         {
             return productoDao.GetTipoProducto();
         }
@@ -98,6 +98,11 @@ namespace FarmaciaBack.Servicio.Implementacion
         public bool EliminarProducto(int id)
         {
             return productoDao.DeleteProducto(id);
+        }
+
+        public List<Caracteristica> ConsultarCaracteristicas()
+        {
+            return productoDao.GetCaracteristica();
         }
     }
 }
