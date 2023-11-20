@@ -26,7 +26,6 @@ namespace FarmaciaBack.Servicio.Interfaz
         List<Proveedor> ConsultarProveedores();
         List<Pais> ConsultarPaises();
         bool CargarProducto(Producto oProducto);
-        bool CargarCaracteristica(Caracteristica oCaracteristica);
         bool ActualizarProducto(Producto producto);
         bool EliminarProducto(int id);
     }

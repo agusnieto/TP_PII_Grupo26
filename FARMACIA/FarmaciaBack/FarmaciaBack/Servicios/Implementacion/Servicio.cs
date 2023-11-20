@@ -38,11 +38,7 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return productoDao.PutProducto(producto);
         }
-
-        public bool CargarCaracteristica(Caracteristica oCaracteristica)
-        {
-            return productoDao.PostCaracteristica(oCaracteristica);
-        }
+              
 
         public bool CargarCliente(Cliente oCliente)
         {

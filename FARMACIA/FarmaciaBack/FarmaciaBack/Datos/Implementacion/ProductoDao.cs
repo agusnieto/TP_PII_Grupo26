@@ -14,23 +14,6 @@ namespace FarmaciaBack.Datos.Implementacion
     {
         public ProductoDao() { }
 
-        public bool PostCaracteristica(Caracteristica oCaracteristica)
-        {
-            bool aux = false;
-            List<Parametro> parametros = new List<Parametro>()
-            {
-                new Parametro("@DETALLE", oCaracteristica.Detalle),
-                new Parametro("@TIPO_CARACTERISTICA", oCaracteristica.Tio_carac.Id),
-                new Parametro("@PRODUCTO", oCaracteristica.Producto.Id)
-            };
-
-            if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_INSERT_CARACTERISTICAS", parametros) == 1)
-            {
-                aux = true;
-            }
-            return aux;
-        }
-
         public bool PostProducto(Producto oProducto)
         {
             bool aux = false;
@@ -43,7 +26,8 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@PROVEEDOR", oProducto.Proveedor.Id),
                 new Parametro("@PAIS", oProducto.Pais.Id),
                 new Parametro("@STOCK", oProducto.Stock),
-                new Parametro("@PRECIO", oProducto.Precio)
+                new Parametro("@PRECIO", oProducto.Precio),
+                new Parametro("@CARACTERITICA", oProducto.Caracteristica.Id)
             };
 
             if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_INSERT_PRODUCTO", parametros) == 1)
@@ -157,6 +141,26 @@ namespace FarmaciaBack.Datos.Implementacion
                         Tipo = row.ItemArray[1].ToString()
                     };
                     lista.Add(tipo);
+                }
+            }
+            return lista;
+        }
+        public List<Caracteristica> GetCaracteristica()
+        {
+            Caracteristica caracteristica;
+            List<Caracteristica> lista = new List<Caracteristica>();
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_CARACTERISTICA", new List<Parametro>());
+
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow row in tabla.Rows)
+                {
+                    caracteristica = new Caracteristica()
+                    {
+                        Id = Convert.ToInt32(row.ItemArray[0]),
+                        Tipo = row.ItemArray[1].ToString()
+                    };
+                    lista.Add(caracteristica);
                 }
             }
             return lista;

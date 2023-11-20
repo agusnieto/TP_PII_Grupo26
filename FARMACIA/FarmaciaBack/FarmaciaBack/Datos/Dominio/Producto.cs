@@ -15,9 +15,15 @@ namespace FarmaciaBack.Datos.Dominio
         private Marca marca;
         private Proveedor proveedor;
         private Pais pais;
+        private Caracteristica caracteristica;
         private int stock;
         private double precio;
 
+        public Caracteristica Caracteristica
+        {
+            get { return caracteristica; }
+            set { caractersitica = value; }
+        }
         public string Descripcion
         {
             get { return descripcion; }
