@@ -21,12 +21,12 @@ namespace FarmaciaBack.Datos.Dominio
             get { return id; }
             set { id = value; }
         }
-        public TipoCaracteristica(int id, string tipo)
+        public Caracteristica(int id, string tipo)
         {
             Id = id;
             Tipo = tipo;
         }
-        public TipoCaracteristica()
+        public Caracteristica()
         {
 
         }
