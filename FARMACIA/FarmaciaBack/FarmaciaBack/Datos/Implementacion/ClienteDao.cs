@@ -19,9 +19,12 @@ namespace FarmaciaBack.Datos.Implementacion
             {
                 new Parametro("@NOMBRE", oCliente.Nombre),
                 new Parametro("@APELLIDO", oCliente.Apellido),
-                new Parametro("@ID_BARRIO", oCliente.Barrio.Id),
+                new Parametro("@OBRA_SOCIAL", oCliente.ObraSocial.Id),
+                new Parametro("@BARRIO", oCliente.Barrio.Id),
+                new Parametro("@DNI", oCliente.Dni),
                 new Parametro("@TELEFONO", oCliente.Telefono),
-                new Parametro("@EMAIL", oCliente.Email)
+                new Parametro("@EMAIL", oCliente.Email),
+                new Parametro("@SEXO", oCliente.Sexo)
             };
 
             if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_INSERT_CLIENTE", parametros) == 1)
@@ -52,31 +55,113 @@ namespace FarmaciaBack.Datos.Implementacion
             return lista;
         }
 
-        public List<Cliente> GetCliente()
+        public Cliente GetCliente(int id)
         {
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_CLIENTE", new List<Parametro>());
-            Cliente cliente;
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_CLIENTE", new List<Parametro>() { new Parametro("@ID", id) });
+            Cliente cliente = null;
             List<Cliente> lista = new List<Cliente>();
 
             if (tabla.Rows.Count > 0)
             {
                 foreach (DataRow row in tabla.Rows)
                 {
-                    cliente = new Cliente();
-                    lista.Add(cliente);
-                }
+                    cliente = new Cliente()
+                    {
+                        Nombre = row.ItemArray[0].ToString(),
+                        Apellido = row.ItemArray[1].ToString(),
+                        ObraSocial = new ObraSocial()
+                        {
+                            Id = Convert.ToInt32(row.ItemArray[2]),
+                            Nombre = row.ItemArray[3].ToString()
+                        },
+                        Barrio = new Barrio()
+                        {
+                            Id = Convert.ToInt32(row.ItemArray[4]),
+                            Nombre = row.ItemArray[5].ToString()
+                        },
+                        Dni = Convert.ToInt32(row.ItemArray[6])
+                    };
+                    cliente.Telefono = Convert.ToInt32(row.ItemArray[7]);
+                    cliente.Email = row.ItemArray[8].ToString();
+                    cliente.Sexo = Convert.ToBoolean(row.ItemArray[9]);
+                };                         
             }
-            return lista;
+            return cliente;
         }
-        public bool PutCliente(Cliente cliente)
+            
+        
+    public List<Cliente> GetClientes()
+    {
+        DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_CLIENTES", new List<Parametro>());
+        Cliente cliente;
+        List<Cliente> lista = new List<Cliente>();
+
+        if (tabla.Rows.Count > 0)
         {
-            throw new NotImplementedException();
+            foreach (DataRow row in tabla.Rows)
+            {
+                    cliente = new Cliente()
+                    {
+                        Nombre = row.ItemArray[0].ToString(),
+                        Apellido = row.ItemArray[1].ToString(),
+                        ObraSocial = new ObraSocial()
+                        {
+                            Id = Convert.ToInt32(row.ItemArray[2]),
+                            Nombre = row.ItemArray[3].ToString()
+                        },
+                        Barrio = new Barrio()
+                        {
+                            Id = Convert.ToInt32(row.ItemArray[4]),
+                            Nombre = row.ItemArray[5].ToString()
+                        },
+                        Dni = Convert.ToInt32(row.ItemArray[6])
+                    };
+                    cliente.Telefono = Convert.ToInt32(row.ItemArray[7]);
+                    cliente.Email = row.ItemArray[8].ToString();
+                    cliente.Sexo = Convert.ToBoolean(row.ItemArray[9]);
+
+                    lista.Add(cliente);
+            }
+        }
+        return lista;
+    }
+    public bool PutCliente(Cliente oCliente)
+    {
+            bool aux = false;
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@ID", oCliente.IdCliente),
+                new Parametro("@NOMBRE", oCliente.Nombre),
+                new Parametro("@APELLIDO", oCliente.Apellido),
+                new Parametro("@OBRA_SOCIAL", oCliente.ObraSocial.Id),
+                new Parametro("@BARRIO", oCliente.Barrio.Id),
+                new Parametro("@DNI", oCliente.Dni),
+                new Parametro("@TELEFONO", oCliente.Telefono),
+                new Parametro("@EMAIL", oCliente.Email),
+                new Parametro("@SEXO", oCliente.Sexo)
+            };
+
+            if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_UPDATE_CLIENTE", parametros) == 1)
+            {
+                aux = true;
+            }
+            return aux;
         }
 
-        public bool DeleteCliente(int id)
-        {
-            throw new NotImplementedException();
-        }
+    public bool DeleteCliente(int id)
+    {
+            bool aux = false;
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@ID", id),
+            };
+
+            if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_DELETE_CLIENTE", parametros) == 1)
+            {
+                aux = true;
+            }
+            return aux;
+        } 
 
         /*public List<Cliente> GetClientesScreen()
 {

@@ -11,10 +11,11 @@ namespace FarmaciaBack.Datos.Interfaz
     public interface IClienteDao
     {
         bool PostCliente(Cliente oCliente);
-        bool PutCliente(Cliente cliente);
+        bool PutCliente(Cliente oCliente);
         bool DeleteCliente(int id);
         List<Barrio> GetBarrios();
-        List<Cliente> GetCliente();
+        List<Cliente> GetClientes();
+        Cliente GetCliente(int id);
         //List<Cliente> GetClientesScreen();
     }
 }

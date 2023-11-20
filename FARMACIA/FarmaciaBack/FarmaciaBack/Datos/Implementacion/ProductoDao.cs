@@ -36,7 +36,6 @@ namespace FarmaciaBack.Datos.Implementacion
             bool aux = false;
             List<Parametro> parametros = new List<Parametro>()
             {
-                new Parametro("@ID_PRODUCTO", oProducto.Id),
                 new Parametro("@NOMBRE", oProducto.Nombre),
                 new Parametro("@DESCRIPCION", oProducto.Descripcion),
                 new Parametro("@TIPO_PRODUCTO", oProducto.TipoProducto.Id),
@@ -101,7 +100,7 @@ namespace FarmaciaBack.Datos.Implementacion
             Producto producto = null;
             List<Parametro> parametros = new List<Parametro>()
             {
-                new Parametro("@id", id)
+                new Parametro("@ID", id)
             };
 
             DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_CONSULTAR_PRODUCTO", parametros);
@@ -112,10 +111,10 @@ namespace FarmaciaBack.Datos.Implementacion
                 {
                     producto = new Producto()
                     {
-                        Id = Convert.ToInt32(row["ID_PRODUCTO"]),
-                        Nombre = row["NOMBRE"].ToString(),
-                        Precio = (float)Convert.ToDecimal(row["Precio"].ToString()),
-                        TipoProducto = new TipoProducto() { Id = Convert.ToInt32(row["ID_T_PRODUCTO"]), Tipo = row["TIPO"].ToString() }
+                        Id = Convert.ToInt32(row.ItemArray[0]),
+                        Nombre = row.ItemArray[1].ToString(),
+                        Precio = (float)Convert.ToDecimal(row.ItemArray[2].ToString()),
+                        TipoProducto = new TipoProducto() { Id = Convert.ToInt32(row.ItemArray[3]), Tipo = row.ItemArray[4].ToString() }
                     };
                 }
             }
@@ -147,7 +146,7 @@ namespace FarmaciaBack.Datos.Implementacion
             TipoProducto tipo;
             List<TipoProducto> lista = new List<TipoProducto>();
             DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_TIPO_PRODUCTO", new List<Parametro>());
-            
+
             if (tabla.Rows.Count > 0)
             {
                 foreach (DataRow row in tabla.Rows)
@@ -158,19 +157,47 @@ namespace FarmaciaBack.Datos.Implementacion
                         Tipo = row.ItemArray[1].ToString()
                     };
                     lista.Add(tipo);
-                }                
+                }
             }
             return lista;
         }
 
         public bool PutProducto(Producto producto)
         {
-            throw new NotImplementedException();
+            bool aux = false;
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@ID_PRODUCTO", producto.Id),
+                new Parametro("@NOMBRE", producto.Nombre),
+                new Parametro("@DESCRIPCION", producto.Descripcion),
+                new Parametro("@TIPO_PRODUCTO", producto.TipoProducto.Id),
+                new Parametro("@MARCA", producto.Marca.Id),
+                new Parametro("@PROVEEDOR", producto.Proveedor.Id),
+                new Parametro("@PAIS", producto.Pais.Id),
+                new Parametro("@STOCK", producto.Stock),
+                new Parametro("@PRECIO", producto.Precio)
+            };
+
+            if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_UPDATE_PRODUCTO", parametros) == 1)
+            {
+                aux = true;
+            }
+            return aux;
         }
 
         public bool DeleteProducto(int id)
         {
-            throw new NotImplementedException();
+            bool aux = false;
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@ID_PRODUCTO", id),
+            };
+
+            if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_DELETE_PRODUCTO", parametros) == 1)
+            {
+                aux = true;
+            }
+            return aux;
         }
     }
 }
