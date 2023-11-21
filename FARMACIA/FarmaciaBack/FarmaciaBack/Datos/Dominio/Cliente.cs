@@ -19,9 +19,9 @@ namespace FarmaciaBack.Datos.Dominio
         private Barrio barrio;
         private int dni;
         private bool sexo;
-        private int telefono;
+        private long telefono;
         private string email;
-        public int Telefono
+        public long Telefono
         {
             get { return telefono; }
             set { telefono = value; }

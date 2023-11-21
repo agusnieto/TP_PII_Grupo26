@@ -16,13 +16,12 @@ namespace FarmaciaBack.Datos.Implementacion
         public bool DeleteMedico(int id)
         {
             bool aux = false;
-
-            int ok = HelperDB.ObtenerInstancia().EjecutarSQL("SP_DELETE_MEDICO", new List<Parametro>()
+            List<Parametro> parametros = new List<Parametro>()
             {
-                new Parametro("@ID", id)
-            });
+                new Parametro("@ID", id),
+            };
 
-            if (ok == 1)
+            if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_DELETE_MEDICO", parametros) == 1)
             {
                 aux = true;
             }
@@ -32,7 +31,7 @@ namespace FarmaciaBack.Datos.Implementacion
         public Medico GetMedico(int id)
         {
             Medico medico = null;
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_MEDICOS", new List<Parametro>()
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_MEDICO", new List<Parametro>()
             {
                 new Parametro("@ID", id)
             });
@@ -54,7 +53,7 @@ namespace FarmaciaBack.Datos.Implementacion
                             Nombre = row.ItemArray[7].ToString()
                         },
                         FechaIngreso = Convert.ToDateTime(row.ItemArray[8]),
-                        Telefono = Convert.ToInt32(row.ItemArray[9]),
+                        Telefono = Convert.ToInt64(row.ItemArray[9]),
                         Email = row.ItemArray[10].ToString()
                     };
                 }
@@ -127,9 +126,9 @@ namespace FarmaciaBack.Datos.Implementacion
                             Id = Convert.ToInt32(row.ItemArray[6]),
                             Nombre = row.ItemArray[7].ToString()
                         },
-                        FechaIngreso = Convert.ToDateTime(row.ItemArray[9]),
-                        Telefono = Convert.ToInt32(row.ItemArray[10]),
-                        Email = row.ItemArray[11].ToString()
+                        FechaIngreso = Convert.ToDateTime(row.ItemArray[8]),
+                        Telefono = Convert.ToInt64(row.ItemArray[9]),
+                        Email = row.ItemArray[10].ToString()
                     };
                     lista.Add(medico);
                 }

@@ -73,15 +73,15 @@ namespace FarmaciaWebApi.Controllers
             }
             return NotFound("No hay empleados cargados");
         }
-        [HttpGet("{id}")]
-        public IActionResult GetEmpleadosDTO(int id)
+        [HttpGet("{sede}")]
+        public IActionResult GetEmpleadosDTO(int sede)
         {
-            EmpleadoDTO empleado = ServicioDao.ObtenerServicio().ConsultarEmpleado(id);
-            if (empleado != null)
+            List<EmpleadoDTO> empleados = ServicioDao.ObtenerServicio().ConsultarEmpleados(sede);
+            if (empleados != null)
             {
-                return Ok(empleado);
+                return Ok(empleados);
             }
-            return NotFound("No se encontro el empleado");
+            return NotFound("No se encontraron los empleados");
         }
         [HttpGet("ClientesDTO")]
         public IActionResult GetClientesDTO()

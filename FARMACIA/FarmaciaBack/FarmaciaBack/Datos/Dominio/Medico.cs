@@ -15,9 +15,9 @@ namespace FarmaciaBack.Datos.Dominio
         private ObraSocial obra_social;
         private Sede sede;
         private DateTime fecha_ingreso;
-        private int telefono;
+        private long telefono;
         private string email;
-        public int Telefono
+        public long Telefono
         {
             get { return telefono; }
             set { telefono = value; }

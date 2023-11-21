@@ -103,7 +103,7 @@ namespace FarmaciaAPI.Controllers
             }
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete([FromBody] int id)
+        public IActionResult Delete(int id)
         {
             //dentro de un try catch
             try
