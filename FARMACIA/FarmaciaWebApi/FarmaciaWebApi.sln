@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaWebApi", "FarmaciaW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaBack", "..\FarmaciaBack\FarmaciaBack\FarmaciaBack.csproj", "{BD90EE6B-495A-4016-A610-B3DC74D8D839}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontVR", "..\..\..\..\tp_Rain\TPI_PROGRAMACIONII\FrontVR\FrontVR.csproj", "{DAD7F763-3426-482C-AD52-A42747DC89EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontVR", "..\FrontVR\FrontVR.csproj", "{FF08F2FD-8ABD-40DF-8CEF-F8FECEBC5217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD90EE6B-495A-4016-A610-B3DC74D8D839}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAD7F763-3426-482C-AD52-A42747DC89EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAD7F763-3426-482C-AD52-A42747DC89EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAD7F763-3426-482C-AD52-A42747DC89EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAD7F763-3426-482C-AD52-A42747DC89EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF08F2FD-8ABD-40DF-8CEF-F8FECEBC5217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF08F2FD-8ABD-40DF-8CEF-F8FECEBC5217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF08F2FD-8ABD-40DF-8CEF-F8FECEBC5217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF08F2FD-8ABD-40DF-8CEF-F8FECEBC5217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

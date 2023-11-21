@@ -102,23 +102,23 @@ namespace FarmaciaBack.Datos.Implementacion
             {
                     cliente = new Cliente()
                     {
-                        Nombre = row.ItemArray[0].ToString(),
-                        Apellido = row.ItemArray[1].ToString(),
+                        Nombre = row.ItemArray[1].ToString(),
+                        Apellido = row.ItemArray[2].ToString(),
                         ObraSocial = new ObraSocial()
                         {
-                            Id = Convert.ToInt32(row.ItemArray[2]),
-                            Nombre = row.ItemArray[3].ToString()
+                            Id = Convert.ToInt32(row.ItemArray[3]),
+                            Nombre = row.ItemArray[4].ToString()
                         },
                         Barrio = new Barrio()
                         {
-                            Id = Convert.ToInt32(row.ItemArray[4]),
-                            Nombre = row.ItemArray[5].ToString()
+                            Id = Convert.ToInt32(row.ItemArray[5]),
+                            Nombre = row.ItemArray[6].ToString()
                         },
-                        Dni = Convert.ToInt32(row.ItemArray[6])
+                        Dni = Convert.ToInt32(row.ItemArray[7])
                     };
-                    cliente.Telefono = Convert.ToInt32(row.ItemArray[7]);
-                    cliente.Email = row.ItemArray[8].ToString();
-                    cliente.Sexo = Convert.ToBoolean(row.ItemArray[9]);
+                    cliente.Telefono = Convert.ToInt32(row.ItemArray[8]);
+                    cliente.Email = row.ItemArray[9].ToString();
+                    cliente.Sexo = Convert.ToBoolean(row.ItemArray[10]);
 
                     lista.Add(cliente);
             }

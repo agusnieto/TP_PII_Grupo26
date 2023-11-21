@@ -25,45 +25,46 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@SEDE", factura.Sede.Id),
                 new Parametro("@ENVIO", factura.Envio.Id)
             };
-            int nro_factura = HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_FACTURAS", parametros, "@NRO_FACTURA");
+            int nro_factura = HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_FACTURAS", parametros, "@FACTURA");
 
             if (nro_factura > 0)
             {
-
-                factura.NroFactura = nro_factura;
-                int detalleServ = 1;
-                int detalleFac = 1;
                 int auxser = 0;
                 int auxfact = 0;
-                foreach (DetalleServicio ds in factura.DetalleServicio)
+
+                factura.NroFactura = nro_factura;
+
+                if (factura.DetalleServicio != null)
                 {
-                    List<Parametro> detalleS = new List<Parametro>()
+                    foreach (DetalleServicio ds in factura.DetalleServicio)
                     {
-                    new Parametro("ID_DETALLE", detalleServ),
-                    new Parametro("@NRO_FACTURA", factura.NroFactura),
+                        List<Parametro> detalleS = new List<Parametro>()
+                    {
+                    new Parametro("@FACTURA", factura.NroFactura),
                     new Parametro("@MEDICO", ds.Medico.Id),
                     new Parametro("@SERVICIO", ds.Servicio.Id),
                     new Parametro("@PRECIO", ds.Precio),
                     new Parametro("@ATENCION", ds.Precio),
-                    new Parametro("@Descuento", ds.Precio)   //REVISAR SI DESCUENTO ESTA BIEN ACA O VA EN FACTURA           
+                    new Parametro("@DESCUENTO", ds.Precio)   //REVISAR SI DESCUENTO ESTA BIEN ACA O VA EN FACTURA           
                     };
-                    auxser += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_SERVICIO", parametros, "");
-                    detalleServ++;
+                        auxser += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_SERVICIO", parametros, "");
+                    }
                 }
-
-                foreach (DetalleFactura df in factura.DetalleFactura)
+                if (factura.DetalleFactura != null)
                 {
-                    List<Parametro> detalleS = new List<Parametro>()
+                    foreach (DetalleFactura df in factura.DetalleFactura)
                     {
-                    new Parametro("ID_DETALLE", detalleFac),
-                    new Parametro("@NRO_FACTURA", factura.NroFactura),
+                        List<Parametro> detalleS = new List<Parametro>()
+                    {
+                    new Parametro("@FACTURA", factura.NroFactura),
                     new Parametro("@PRODUCTO", df.Producto.Id),
                     new Parametro("@CANTIDAD", df.Cantidad),
                     new Parametro("@PRECIO", df.Precio)
                     };
-                    auxfact += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_FACTURA", parametros, "");
-                    detalleFac++;
+                        auxfact += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_FACTURA", parametros, "");
+                    }
                 }
+
                 if (auxser == factura.DetalleServicio.Count && auxfact == factura.DetalleFactura.Count)
                 {
                     resultado = true;
@@ -111,7 +112,7 @@ namespace FarmaciaBack.Datos.Implementacion
 
         public List<EmpleadoDTO> GetEmpleados(int sede)
         {
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_EMPLEADOS", new List<Parametro>() {
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_EMPLEADOS_X_SEDE", new List<Parametro>() {
                 new Parametro("@SEDE", sede)
             });
 
@@ -184,19 +185,19 @@ namespace FarmaciaBack.Datos.Implementacion
             }
             );
 
-            ClienteDTO empleado = null;
+            ClienteDTO cliente = null;
             if (tabla.Rows.Count > 0)
             {
                 foreach (DataRow row in tabla.Rows)
                 {
-                    empleado = new ClienteDTO()
+                    cliente = new ClienteDTO()
                     {
                         IdCliente = Convert.ToInt32(row.ItemArray[0]),
                         NombreCompleto = row.ItemArray[1].ToString() + ", " + row.ItemArray[2].ToString()
                     };
                 }
             }
-            return empleado;
+            return cliente;
         }
 
         public List<FormaPago> GetFormasmasPago()

@@ -45,6 +45,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool ActualizarMaestroDetalle(Factura factura);
         List<ServicioDTO> GetServicioDTO();
         Producto GetProduto(int id);
+        bool CargarFactura(Factura factura);
 
         //MEDICO        
         List<ObraSocial> ConsultarObrasSociales();

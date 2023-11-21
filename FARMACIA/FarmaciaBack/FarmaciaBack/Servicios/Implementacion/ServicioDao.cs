@@ -29,7 +29,7 @@ namespace FarmaciaBack.Servicio.Implementacion
         }
         public static ServicioDao ObtenerServicio()
         {
-            if (instancia.Equals(null))
+            if (instancia == null)
             {
                 instancia = new ServicioDao();
             }
@@ -210,6 +210,10 @@ namespace FarmaciaBack.Servicio.Implementacion
         public Producto GetProduto(int id)
         {
             return facturaDao.GetProduto(id);
+        }
+        public bool CargarFactura(Factura factura)
+        {
+            return facturaDao.PostFactura(factura);
         }
     }
 }

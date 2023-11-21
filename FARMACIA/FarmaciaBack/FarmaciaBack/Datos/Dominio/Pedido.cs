@@ -1,10 +1,9 @@
-﻿using FarmaciaBack.Dominio;
+﻿using FarmaciaBack.Datos.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TiendaMusicaBack.Enitidades;
 
 namespace FarmaciaBack.Datos.Dominio
 {

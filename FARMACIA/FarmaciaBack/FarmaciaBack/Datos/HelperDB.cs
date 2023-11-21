@@ -10,7 +10,7 @@ namespace FarmaciaBack.Datos
 
         private HelperDB()
         {
-            cnn = new SqlConnection();//INSERTAR CADENA DE CONEXION
+            cnn = new SqlConnection(@"Data Source=NEHO-PC\SQLEXPRESS;Initial Catalog=VITAFARMA;Integrated Security=True");//INSERTAR CADENA DE CONEXION
         }
 
         public static HelperDB ObtenerInstancia()

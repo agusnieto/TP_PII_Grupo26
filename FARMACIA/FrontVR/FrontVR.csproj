@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\Tp_nato\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj" />
     <ProjectReference Include="..\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj" />
   </ItemGroup>
 
