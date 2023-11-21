@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Datos.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,29 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool ActualizarProducto(Producto producto);
         bool EliminarProducto(int id);
 
-
         //Login
         bool Login(LoginModel login);
+
+        //Factura
+        List<EmpleadoDTO> ConsultarEmpleados();
+        EmpleadoDTO ConsultarEmpleado(int id);
+        List<ClienteDTO> ConsultarClientesDTO();
+        ClienteDTO ConsultarClienteDTO(int id);
+        List<FormaPago> ConsultarFormasPago();
+        List<Sede> ConsultarSedes();
+        List<FormaEnvio> ConsultarFormasEnvio();
+        bool ActualizarMaestroDetalle(Factura factura);
+
+        //MEDICO        
+        List<ObraSocial> ConsultarObrasSociales();
+        List<Medico> ConsultarMedicos();
+        Medico ConsultarMedico(int id);
+        bool ActualizarMedico(Medico medico);
+        bool CargarMedico(Medico medico);
+        bool EliminarMedico(int id);
+        public List<MedicoDTO> ConsultarMedicosDTO();
+        public MedicoDTO ConsultarMedicoDTO(int id);
+        List<ServicioDTO> GetServicioDTO();
 
     }
 }

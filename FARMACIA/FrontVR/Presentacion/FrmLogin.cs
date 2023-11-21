@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FarmaciaBack.Datos;
+using FarmaciaBack.Datos.DTOs;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +17,6 @@ namespace FrontVR
 {
     public partial class frmLogin : Form
     {
-        AccesoDatos ayudante = new AccesoDatos();
-
         public frmLogin()
         {
             InitializeComponent();
@@ -27,13 +28,13 @@ namespace FrontVR
         }
 
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private async void btnIngresar_Click(object sender, EventArgs e)
         {
             if (ValidarLogueo())
             {
-                int resultado = ayudante.Logeo(txtUsuario.Text, txtClave.Text);
+                bool resultado = await Logeo(txtUsuario.Text, txtClave.Text);
 
-                if (resultado == 1)
+                if (resultado)
                 {
                     // ACA ESTA LA RUTA AL FORM DE VALENTINA
                     //Form frmExitoso = new frmExitoso();
@@ -43,29 +44,35 @@ namespace FrontVR
                     //frmExitoso.ShowDialog();
                     menu.ShowDialog();
                 }
-                else if (resultado == 0)
+                else
                 {
                     MessageBox.Show("Usuario o contraseña incorrecta...");
                 }
             }
+
         }
 
-        public bool ValidarLogueo()
+
+        private async Task<bool> Logeo(string usuario, string clave)
         {
-            if (txtUsuario.Text == string.Empty)
+            LoginModelDTO login = new LoginModelDTO()
             {
-                MessageBox.Show("Debe ingresar su USUARIO...", "Error", MessageBoxButtons.OK);
-                LimpiarLogueo();
+                Usuario = usuario,
+                Clave = clave
+            };
+            string url = "https://localhost:7046/api/Login";
+            string bodyContent = JsonConvert.SerializeObject(login);
+            var result = await HelperHttp.GetInstance().PostAsync(url, bodyContent);
+
+            if (result.Equals("true"))//servicio.CrearPresupuesto(nuevo)
+            {
+                return true;
+            }
+            else
+            {
                 return false;
             }
 
-            if (txtClave.Text == "")
-            {
-                MessageBox.Show("Debe ingresar su CLAVE...", "Error", MessageBoxButtons.OK);
-                LimpiarLogueo();
-                return false;
-            }
-            return true;
         }
 
         private void LimpiarLogueo()
@@ -89,12 +96,24 @@ namespace FrontVR
                 txtUsuario.Text = string.Empty;
                 txtClave.Text = string.Empty;
             }
-
-
-
-
         }
+        public bool ValidarLogueo()
+        {
+            if (txtUsuario.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar su USUARIO...", "Error", MessageBoxButtons.OK);
+                LimpiarLogueo();
+                return false;
+            }
 
+            if (txtClave.Text == "")
+            {
+                MessageBox.Show("Debe ingresar su CLAVE...", "Error", MessageBoxButtons.OK);
+                LimpiarLogueo();
+                return false;
+            }
+            return true;
+        }
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "USUARIO")
@@ -176,3 +195,4 @@ namespace FrontVR
         }
     }
 }
+

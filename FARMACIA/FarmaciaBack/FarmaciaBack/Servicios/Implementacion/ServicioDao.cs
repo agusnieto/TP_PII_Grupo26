@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Datos.Implementacion;
 using FarmaciaBack.Datos.Interfaz;
 using FarmaciaBack.Servicio.Interfaz;
@@ -16,11 +17,15 @@ namespace FarmaciaBack.Servicio.Implementacion
         private IClienteDao clienteDao;
         private IProductoDao productoDao;
         private ILoginDao loginDao;
+        private IFacturaDao facturaDao;
+        private IMedicoDao medicoDao;
         private ServicioDao()
-        {            
+        {
             clienteDao = new ClienteDao();
             productoDao = new ProductoDao();
             loginDao = new LoginDao();
+            facturaDao = new FacturaDao();
+            medicoDao = new MedicoDao();
         }
         public static ServicioDao ObtenerServicio()
         {
@@ -40,7 +45,7 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return productoDao.PutProducto(producto);
         }
-              
+
 
         public bool CargarCliente(Cliente oCliente)
         {
@@ -110,6 +115,96 @@ namespace FarmaciaBack.Servicio.Implementacion
         public bool Login(LoginModel login)
         {
             return loginDao.Login(login);
+        }
+
+        public List<EmpleadoDTO> ConsultarEmpleados()
+        {
+            return facturaDao.GetEmpleados();
+        }
+
+        public EmpleadoDTO ConsultarEmpleado(int id)
+        {
+            return facturaDao.GetEmpleado(id);
+        }
+
+        public List<FormaPago> ConsultarFormasPago()
+        {
+            return facturaDao.GetFormasPago();
+        }
+
+        public List<Sede> ConsultarSedes()
+        {
+            return facturaDao.GetSedes();
+        }
+
+        public List<FormaEnvio> ConsultarFormasEnvio()
+        {
+            return facturaDao.GetFormasEnvio();
+        }
+
+        public bool CargarMaestroDetalle(Factura factura)
+        {
+            return facturaDao.PostFactura(factura);
+        }
+
+        public List<ObraSocial> ConsultarObrasSociales()
+        {
+            return medicoDao.GetObrasSociales();
+        }
+
+        public List<Medico> ConsultarMedicos()
+        {
+            return medicoDao.GetMedicos(); ;
+        }
+
+        public Medico ConsultarMedico(int id)
+        {
+            return medicoDao.GetMedico(id);
+        }
+
+        public bool CargarMedico(Medico medico)
+        {
+            return medicoDao.PostMedico(medico);
+        }
+
+        public bool ActualizarMedico(Medico medico)
+        {
+            return medicoDao.PostMedico(medico);
+        }
+
+        public bool EliminarMedico(int id)
+        {
+            return medicoDao.DeleteMedico(id);
+        }
+
+        public List<ClienteDTO> ConsultarClientesDTO()
+        {
+            return facturaDao.GetClientes();
+        }
+
+        public ClienteDTO ConsultarClienteDTO(int id)
+        {
+            return facturaDao.GetCliente(id);
+        }
+
+        public bool ActualizarMaestroDetalle(Factura factura)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<MedicoDTO> ConsultarMedicosDTO()
+        {
+            return medicoDao.GetMedicosDTO();
+        }
+
+        public MedicoDTO ConsultarMedicoDTO(int id)
+        {
+            return medicoDao.GetMedicoDTO(id);
+        }
+
+        public List<ServicioDTO> GetServicioDTO()
+        {
+            return medicoDao.GetServicioDTO();
         }
     }
 }

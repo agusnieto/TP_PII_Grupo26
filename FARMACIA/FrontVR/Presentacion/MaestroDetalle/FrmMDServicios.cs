@@ -1,5 +1,8 @@
-﻿using FarmaciaBack.Datos.Dominio;
+﻿using FarmaciaBack.Datos;
+using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Servicio.Implementacion;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,42 +17,42 @@ namespace FrontVR.Presentacion.MaestroDetalle
 {
     public partial class FrmMDServicios : Form
     {
-        //IServicioDAO servicioDAO;
-        //IMedicoDao medicoDao;
         List<DetalleServicio> detalleServicios;
         Factura factura = new Factura();
 
         public FrmMDServicios(Factura factura)
         {
             InitializeComponent();
-            //servicio dao inicializ / medicodao
             this.factura = factura;
             this.detalleServicios = factura.DetalleServicio;
         }
 
-        private void FrmMDServicios_Load(object sender, EventArgs e)
+        private async void FrmMDServicios_Load(object sender, EventArgs e)
         {
-            CargarCombos();
+            CargarCombosAsync();
         }
-        private void CargarCombos()
+        private async void CargarCombosAsync()
         {
             cboServicio.Items.Clear();
-            //List<Servicio> servicios = servicioDao.ObtenerServicios();
-            //foreach (Servicio servicio in servicios)
-            //{
-            //    cboServicio.Items.Add(servicio);
-            //}
+            string url = "http://localhost:5031/servicios";
+            var result = await HelperHttp.GetInstance().GetAsync(url);
+            var lst = JsonConvert.DeserializeObject<List<Servicio>>(result.Data);
+
+            cboServicio.DataSource = lst;
+            cboServicio.DisplayMember = "Nombre";
+            cboServicio.ValueMember = "Id";
             cboServicio.SelectedIndex = 0;
 
 
             cboMedico.Items.Clear();
-            //List<Medico> medicos = medicoDAO.ObtenerMedicos();
-            //foreach (Medico medico in medicos)
-            //{
-            //    cboMedico.Items.Add(medico);
-            //}
-            cboMedico.SelectedIndex = 0;
+            string url2 = "http://localhost:5031/medicos";
+            var result2 = await HelperHttp.GetInstance().GetAsync(url);
+            var lst2 = JsonConvert.DeserializeObject<List<MedicoDTO>>(result.Data);
 
+            cboServicio.DataSource = lst;
+            cboServicio.DisplayMember = "Nombre";
+            cboServicio.ValueMember = "Id";
+            cboMedico.SelectedIndex = 0;
         }
     }
 }

@@ -19,6 +19,5 @@ namespace FarmaciaBack.Datos.Interfaz
         bool PostProducto(Producto oProducto);
         bool PutProducto(Producto producto);
         bool DeleteProducto(int id);
-        Producto FacturarProducto(int id);
     }
 }

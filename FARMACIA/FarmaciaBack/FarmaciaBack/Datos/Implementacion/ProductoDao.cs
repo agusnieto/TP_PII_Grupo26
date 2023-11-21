@@ -203,32 +203,5 @@ namespace FarmaciaBack.Datos.Implementacion
             }
             return aux;
         }
-        public Producto FacturarProducto(int id)
-        {
-            Producto producto = new Producto();
-            List<Parametro> parametros = new List<Parametro>();
-            string sp = "SP_FACTURACION_PRODUCTO";
-            parametros.Add(new Parametro("@id", id));
-
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL(sp, parametros);
-
-
-            //List<Producto> lista = new List<Producto>();
-            if (tabla.Rows.Count > 0)
-            {
-                foreach (DataRow row in tabla.Rows)
-                {
-                    producto = new Producto()
-                    {
-                        Id = Convert.ToInt32(row["ID_PRODUCTO"]),
-                        Nombre = row["NOMBRE"].ToString(),
-                        Precio = (float)Convert.ToDecimal(row["Precio"].ToString()),
-                        TipoProducto = new TipoProducto() { Id = Convert.ToInt32(row["ID_T_PRODUCTO"]), Tipo = row["TIPO"].ToString() }
-                    };
-                }
-                return producto;
-            }
-            return null;
-        }
     }
 }

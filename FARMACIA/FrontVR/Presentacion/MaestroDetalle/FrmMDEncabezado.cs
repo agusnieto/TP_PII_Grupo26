@@ -1,4 +1,7 @@
-﻿using FarmaciaBack.Datos.Dominio;
+﻿using FarmaciaBack.Datos;
+using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +30,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
         }
         private void CargarCombos()
         {
-            throw new NotImplementedException();
+
         }
         public void ActualizarTotales()
         {
@@ -55,13 +58,13 @@ namespace FrontVR.Presentacion.MaestroDetalle
             //}
         }
         public void ActualizarFactura()
-        {/*
+        {
             factura.Sede = (Sede)cboSede.SelectedItem;
-            factura.Emplead = (Empleado)cboEmpleado.SelectedItem;
-            factura.Client = (Cliente)cboCliente.SelectedItem;
-            factura.Envio = (MetodoEnvio)cboEnvio.SelectedItem;
-            factura.Metodo = (FormaPago)cboPago.SelectedItem;
-            */
+            factura.Empleado = (Empleado)cboEmpleado.SelectedItem;
+            factura.Cliente = (Cliente)cboCliente.SelectedItem;
+            factura.Envio = (FormaEnvio)cboEnvio.SelectedItem;
+            factura.FormaPago = (FormaPago)cboPago.SelectedItem;
+            
         }
 
         private void btnComprobante_Click(object sender, EventArgs e)

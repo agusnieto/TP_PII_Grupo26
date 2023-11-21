@@ -12,11 +12,7 @@ namespace FarmaciaAPI.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        public ClienteController()
-        {
-
-        }
-        [HttpGet("Barrio")]
+        [HttpGet("Barrios")]
         public IActionResult GetBarrio() // IActionResult devuelve un Json y un Codigo OK 200
         {
             List<Barrio> lista = ServicioDao.ObtenerServicio().ConsultarBarrios();
@@ -114,7 +110,15 @@ namespace FarmaciaAPI.Controllers
                 }
                 /*if (ValidarDatos())
                 {
-
+                ID_CLIENTE INT,
+                NOMBRE VARCHAR(50),
+                APELLIDO VARCHAR(50),
+                ID_OBRASOCIAL INT,
+                ID_BARRIO INT,
+                DNI BIGINT,
+                TELEFONO BIGINT,
+                EMAIL VARCHAR(50),
+                SEXO BIT
                 }*/
                 if (ServicioDao.ObtenerServicio().ConsultarCliente(id) != null)
                 {
@@ -140,12 +144,12 @@ namespace FarmaciaAPI.Controllers
             }
         }
 
-        /*private bool ValidarDatos()
+        /*private bool ValidarDatos(ClienteDTO cliente)
         {
             private bool ValidarDatos()
             {
                 int n = 0;
-                if (string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
+                if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrWhiteSpace(txtApellido.Text))
                 {
                     n = 1;
                 }
