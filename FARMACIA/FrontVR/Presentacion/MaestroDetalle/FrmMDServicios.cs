@@ -34,7 +34,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
         private async void CargarCombosAsync()
         {
             cboServicio.Items.Clear();
-            string url = "http://localhost:5031/servicios";
+            string url = "https://localhost:7071/api/Factura/ServicioDTO";
             var result = await HelperHttp.GetInstance().GetAsync(url);
             var lst = JsonConvert.DeserializeObject<List<Servicio>>(result.Data);
 
@@ -45,11 +45,11 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
 
             cboMedico.Items.Clear();
-            string url2 = "http://localhost:5031/medicos";
-            var result2 = await HelperHttp.GetInstance().GetAsync(url);
-            var lst2 = JsonConvert.DeserializeObject<List<MedicoDTO>>(result.Data);
+            string url2 = "https://localhost:7071/api/Medico/MedicoDTO";
+            var result2 = await HelperHttp.GetInstance().GetAsync(url2);
+            var lst2 = JsonConvert.DeserializeObject<List<MedicoDTO>>(result2.Data);
 
-            cboServicio.DataSource = lst;
+            cboServicio.DataSource = lst2;
             cboServicio.DisplayMember = "Nombre";
             cboServicio.ValueMember = "Id";
             cboMedico.SelectedIndex = 0;

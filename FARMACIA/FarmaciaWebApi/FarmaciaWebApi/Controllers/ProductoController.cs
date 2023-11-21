@@ -44,7 +44,7 @@ namespace FarmaciaAPI.Controllers
             }
             return NoContent();
         }
-        [HttpGet]
+        [HttpGet("Proveedores")]
         public IActionResult GetProveedores()
         {
             List<Proveedor> lista = ServicioDao.ObtenerServicio().ConsultarProveedores();

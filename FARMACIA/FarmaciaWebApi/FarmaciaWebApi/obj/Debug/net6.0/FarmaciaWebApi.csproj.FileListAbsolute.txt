@@ -86,3 +86,4 @@ C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWe
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.pdb
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.genruntimeconfig.cache
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\ref\FarmaciaWebApi.dll
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.MvcApplicationPartsAssemblyInfo.cs

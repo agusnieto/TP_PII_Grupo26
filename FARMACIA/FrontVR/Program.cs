@@ -1,3 +1,6 @@
+using Farmacia;
+using FrontVR.Presentacion.MaestroDetalle;
+
 namespace FrontVR
 {
     internal static class Program
@@ -11,7 +14,7 @@ namespace FrontVR
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmLogin());
+            Application.Run(new FrmMaestroDetalle());
         }
     }
 }

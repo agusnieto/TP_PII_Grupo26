@@ -11,5 +11,10 @@ namespace FarmaciaBack.Datos.DTOs
         public int Id { get; set; }
         public string NombreCompleto { get; set; }
         public EmpleadoDTO() { }
+        public EmpleadoDTO(int id, string nombreCompleto)
+        {
+            Id = id;
+            NombreCompleto = nombreCompleto;
+        }
     }
 }

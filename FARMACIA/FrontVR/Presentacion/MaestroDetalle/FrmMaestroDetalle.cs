@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Servicio.Implementacion;
 using FrontVR.Presentacion.MaestroDetalle;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,9 @@ namespace Farmacia
 
         Factura factura;
 
-        //FacturaDAO facturaDAO;
         public FrmMaestroDetalle()
         {
-            //facturaDAO = new FacturaDAO();
-
+            /*
             detalleServicio = new List<DetalleServicio>();
             detalleFactura = new List<DetalleFactura>();
             this.factura = new Factura();
@@ -59,7 +58,7 @@ namespace Farmacia
             steps = new List<Form>();
             steps.Add(formProd);
             steps.Add(formServ);
-            steps.Add(formEncabezado);
+            steps.Add(formEncabezado);*/
         }
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
@@ -125,16 +124,21 @@ namespace Farmacia
         private void FinalizarCompra()
         {
             formEncabezado.ActualizarFactura();
-            int nroFactura = 0;//facturaDao.CrearFactura(factura); *********************
-            if (nroFactura == -1)
+            bool aux = ServicioDao.ObtenerServicio().CargarFactura(factura);
+            if (aux == false)
             {
                 MessageBox.Show("Ha ocurrido un error", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show($"Factura {nroFactura} creada con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Factura {factura.NroFactura} creada con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+        }
+
+        private void btnSiguiente_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

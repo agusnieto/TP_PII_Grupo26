@@ -33,48 +33,48 @@ namespace FrontVR.Presentacion.MaestroDetalle
         private async void CargarCombos()
         {
             cboCliente.Items.Clear();
-            string url = "http://localhost:5031/ClientesDTO";
+            string url = "https://localhost:7071/api/Factura/ClientesDTO";
             var result = await HelperHttp.GetInstance().GetAsync(url);
-            var lst = JsonConvert.DeserializeObject<List<ClienteDTO>>(result.Data);
+            List<ClienteDTO> lst = JsonConvert.DeserializeObject<List<ClienteDTO>>(result.Data);
             cboCliente.DataSource = lst;
             cboCliente.DisplayMember = "NombreCompleto";
             cboCliente.ValueMember = "IdCliente";
             cboCliente.SelectedIndex = 0;
 
             cboEmpleado.Items.Clear();
-            string url2 = "http://localhost:5031/EmpleadosDTO";
+            string url2 = "https://localhost:7071/api/Factura/EmpleadosDTO";
             var result2 = await HelperHttp.GetInstance().GetAsync(url2);
-            var lst2 = JsonConvert.DeserializeObject<List<EmpleadoDTO>>(result.Data);
-            cboEmpleado.DataSource = lst;
+            List<EmpleadoDTO> lst2 = JsonConvert.DeserializeObject<List<EmpleadoDTO>>(result2.Data);
+            cboEmpleado.DataSource = lst2;
             cboEmpleado.DisplayMember = "NombreCompleto";
             cboEmpleado.ValueMember = "Id";
             cboEmpleado.SelectedIndex = 0;
 
             cboEnvio.Items.Clear();
-            string url3 = "http://localhost:5031/FormaEnvio";
+            string url3 = "https://localhost:7071/api/Factura/Envios";
             var result3 = await HelperHttp.GetInstance().GetAsync(url3);
-            var lst3 = JsonConvert.DeserializeObject<List<FormaEnvio>>(result.Data);
-            cboEnvio.DataSource = lst;
+            List<FormaEnvio> lst3 = JsonConvert.DeserializeObject<List<FormaEnvio>>(result3.Data);
+            cboEnvio.DataSource = lst3;
             cboEnvio.DisplayMember = "Forma";
             cboEnvio.ValueMember = "Id";
             cboEnvio.SelectedIndex = 0;
 
             cboPago.Items.Clear();
-            string url4 = "http://localhost:5031/FormaPago";
+            string url4 = "https://localhost:7071/api/Factura/Pagos";
             var result4 = await HelperHttp.GetInstance().GetAsync(url4);
-            var lst4 = JsonConvert.DeserializeObject<List<FormaEnvio>>(result.Data);
-            cboPago.DataSource = lst;
+            List<FormaPago> lst4 = JsonConvert.DeserializeObject<List<FormaPago>>(result4.Data);
+            cboPago.DataSource = lst4;
             cboPago.DisplayMember = "Forma";
             cboPago.ValueMember = "Id";
             cboPago.SelectedIndex = 0;
 
 
             cboSede.Items.Clear();
-            string url5 = "http://localhost:5031/Sede";
+            string url5 = "https://localhost:7071/api/Factura/Sedes";
             var result5 = await HelperHttp.GetInstance().GetAsync(url5);
-            var lst5 = JsonConvert.DeserializeObject<List<FormaEnvio>>(result.Data);
-            cboSede.DataSource = lst;
-            cboSede.DisplayMember = "Forma";
+            List<Sede> lst5 = JsonConvert.DeserializeObject<List<Sede>>(result5.Data);
+            cboSede.DataSource = lst5;
+            cboSede.DisplayMember = "Nombre";
             cboSede.ValueMember = "Id";
             cboSede.SelectedIndex = 0;
 
@@ -88,14 +88,14 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
         private void cboEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarEmpleados(((Sede)cboSede.SelectedItem));
+            
         }
         private async void CargarEmpleados(Sede sede)
         {
             cboEmpleado.Enabled = true;
             cboEmpleado.Items.Clear();
 
-            string url = "http://localhost:5031/EmpleadoDTO";
+            string url = "https://localhost:7071/api/Factura/EmpleadosDTO";
             var result = await HelperHttp.GetInstance().GetAsync(url);
             List<EmpleadoDTO> lst = JsonConvert.DeserializeObject<List<EmpleadoDTO>>(result.Data);
 
@@ -117,6 +117,12 @@ namespace FrontVR.Presentacion.MaestroDetalle
         private void btnComprobante_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboSede_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboEmpleado.Items.Clear();
+            CargarEmpleados(((Sede)cboSede.SelectedItem));
         }
     }
 }

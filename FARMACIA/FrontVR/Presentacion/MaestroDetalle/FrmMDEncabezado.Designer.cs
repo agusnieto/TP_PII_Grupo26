@@ -70,6 +70,7 @@
             cboSede.Name = "cboSede";
             cboSede.Size = new Size(165, 23);
             cboSede.TabIndex = 1;
+            cboSede.SelectedIndexChanged += cboSede_SelectedIndexChanged;
             // 
             // label1
             // 

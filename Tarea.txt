@@ -13,6 +13,8 @@ https://localhost:7071/api/Factura/{sede}
 https://localhost:7071/api/Factura/ClientesDTO
 https://localhost:7071/api/Factura/Pagos
 https://localhost:7071/api/Factura/Envios
+https://localhost:7071/api/Factura/Productos
+
 
 https://localhost:7071/api/Medico
 ---------[PENDIENTE] /api/Medico POST Y PUT
@@ -27,6 +29,8 @@ https://localhost:7071/api/Producto/Marcas
 https://localhost:7071/api/Producto/Paises
 https://localhost:7071/api/Producto/{id}
 https://localhost:7071/api/Producto (agregar nombre de proveedores)
-*********[testear post, put, delete del producto- SACAR FROM BODY DEL DELETE]
+https://localhost:7071/api/Producto [POST]
+https://localhost:7071/api/Producto [PUT]
+https://localhost:7071/api/Producto [DELETE]
 https://localhost:7071/api/Producto/TiposProducto
 https://localhost:7071/api/Producto/Caracteristicas

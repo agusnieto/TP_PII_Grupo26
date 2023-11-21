@@ -113,5 +113,15 @@ namespace FarmaciaWebApi.Controllers
             }
             return NotFound("No se encontraron formas de envio");
         }
+        [HttpGet("Productos")]
+        public IActionResult GetProductos(int id)
+        {
+            Producto producto = ServicioDao.ObtenerServicio().GetProduto(id);
+            if (producto != null)
+            {
+                return Ok(producto);
+            }
+            return NotFound("No se encontro el producto");
+        }
     }
 }

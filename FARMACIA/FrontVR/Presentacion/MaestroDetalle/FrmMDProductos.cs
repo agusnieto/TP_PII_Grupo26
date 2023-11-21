@@ -27,7 +27,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
         }
         private async void AgregarProducto(string codigo)
         {
-            string url = "http://localhost:5031/productos";
+            string url = "https://localhost:7071/api/Factura/Productos";
             var result = await HelperHttp.GetInstance().GetAsync(url);
             Producto prod = JsonConvert.DeserializeObject<Producto>(result.Data);
 
