@@ -35,7 +35,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool Login(LoginModel login);
 
         //Factura
-        List<EmpleadoDTO> ConsultarEmpleados();
+        List<EmpleadoDTO> ConsultarEmpleados(int sede);
         EmpleadoDTO ConsultarEmpleado(int id);
         List<ClienteDTO> ConsultarClientesDTO();
         ClienteDTO ConsultarClienteDTO(int id);
@@ -43,6 +43,8 @@ namespace FarmaciaBack.Servicio.Interfaz
         List<Sede> ConsultarSedes();
         List<FormaEnvio> ConsultarFormasEnvio();
         bool ActualizarMaestroDetalle(Factura factura);
+        List<ServicioDTO> GetServicioDTO();
+        Producto GetProduto(int id);
 
         //MEDICO        
         List<ObraSocial> ConsultarObrasSociales();
@@ -53,7 +55,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool EliminarMedico(int id);
         public List<MedicoDTO> ConsultarMedicosDTO();
         public MedicoDTO ConsultarMedicoDTO(int id);
-        List<ServicioDTO> GetServicioDTO();
+
 
     }
 }

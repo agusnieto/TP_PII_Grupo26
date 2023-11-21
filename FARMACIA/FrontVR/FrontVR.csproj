@@ -12,7 +12,9 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
-  <ItemGroup>    <ProjectReference Include="..\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Desktop\Tp_nato\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj" />
+    <ProjectReference Include="..\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>

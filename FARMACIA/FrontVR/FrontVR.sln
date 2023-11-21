@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontVR", "FrontVR.csproj", "{6E58F2AB-8F9B-4FBB-BFE7-8BEA15DB5465}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaBack", "..\..\..\..\Desktop\Tp_nato\FarmaciaBack\FarmaciaBack\FarmaciaBack.csproj", "{FACCF7E8-8CBB-43B9-8F26-DFFF7E87E5B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaBack", "..\FarmaciaBack\FarmaciaBack\FarmaciaBack.csproj", "{1F9BD853-56F0-446E-9778-B527C83F2798}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaWebApi", "..\..\..\..\Desktop\Tp_nato\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj", "{F6721673-079E-4A68-9016-8C1D452D8646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaWebApi", "..\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj", "{0DF99B2F-5B62-4B24-8F89-A67E3B9E1E5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{6E58F2AB-8F9B-4FBB-BFE7-8BEA15DB5465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E58F2AB-8F9B-4FBB-BFE7-8BEA15DB5465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E58F2AB-8F9B-4FBB-BFE7-8BEA15DB5465}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FACCF7E8-8CBB-43B9-8F26-DFFF7E87E5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FACCF7E8-8CBB-43B9-8F26-DFFF7E87E5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FACCF7E8-8CBB-43B9-8F26-DFFF7E87E5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FACCF7E8-8CBB-43B9-8F26-DFFF7E87E5B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6721673-079E-4A68-9016-8C1D452D8646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6721673-079E-4A68-9016-8C1D452D8646}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6721673-079E-4A68-9016-8C1D452D8646}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6721673-079E-4A68-9016-8C1D452D8646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9BD853-56F0-446E-9778-B527C83F2798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9BD853-56F0-446E-9778-B527C83F2798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9BD853-56F0-446E-9778-B527C83F2798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9BD853-56F0-446E-9778-B527C83F2798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF99B2F-5B62-4B24-8F89-A67E3B9E1E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF99B2F-5B62-4B24-8F89-A67E3B9E1E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF99B2F-5B62-4B24-8F89-A67E3B9E1E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF99B2F-5B62-4B24-8F89-A67E3B9E1E5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

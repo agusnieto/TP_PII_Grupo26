@@ -53,6 +53,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             cboServicio.DisplayMember = "Nombre";
             cboServicio.ValueMember = "Id";
             cboMedico.SelectedIndex = 0;
+
         }
     }
 }

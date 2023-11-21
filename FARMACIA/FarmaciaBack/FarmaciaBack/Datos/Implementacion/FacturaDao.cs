@@ -109,9 +109,11 @@ namespace FarmaciaBack.Datos.Implementacion
             return lista;
         }
 
-        public List<EmpleadoDTO> GetEmpleados()
+        public List<EmpleadoDTO> GetEmpleados(int sede)
         {
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_EMPLEADOS", new List<Parametro>());
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_EMPLEADOS", new List<Parametro>() {
+                new Parametro("@SEDE", sede)
+            });
 
             EmpleadoDTO empleado;
             List<EmpleadoDTO> lista = new List<EmpleadoDTO>();
@@ -122,7 +124,7 @@ namespace FarmaciaBack.Datos.Implementacion
                     empleado = new EmpleadoDTO()
                     {
                         Id = Convert.ToInt32(row.ItemArray[0]),
-                        NombreCompleto = row.ItemArray[1].ToString() + ", " + row.ItemArray[2].ToString()
+                        NombreCompleto = row.ItemArray[2].ToString() + ", " + row.ItemArray[1].ToString()
                     };
                     lista.Add(empleado);
                 }
@@ -238,6 +240,51 @@ namespace FarmaciaBack.Datos.Implementacion
             }
             return lista;
         }
-       
+
+        public Producto GetProduto(int id)
+        {
+            
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_FACTURACION_PRODUCTO", new List<Parametro>()
+            {
+                new Parametro("@Id", id)
+            });
+
+            Producto producto = null;
+            
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow row in tabla.Rows)
+                {
+                    producto = new Producto()
+                    {
+                        Id = Convert.ToInt32(row["ID_PRODUCTO"]),
+                        Nombre = row["NOMBRE"].ToString(),
+                        Precio = (float)Convert.ToDecimal(row["PRECIO"].ToString()),
+                        TipoProducto = new TipoProducto() { Id = Convert.ToInt32(row["ID_T_PRODUCTO"]), Tipo = row["TIPO"].ToString() }
+                    };                    
+                }
+            }
+            return producto;
+        }
+        public List<ServicioDTO> GetServicioDTO()
+        {
+            ServicioDTO servicio;
+            List<ServicioDTO> lista = new List<ServicioDTO>();
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_SERVICIOS", new List<Parametro>());
+
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow row in tabla.Rows)
+                {
+                    servicio = new ServicioDTO()
+                    {
+                        Id = Convert.ToInt32(row.ItemArray[0]),
+                        Nombre = row.ItemArray[1].ToString()
+                    };
+                    lista.Add(servicio);
+                }
+            }
+            return lista;
+        }
     }
 }

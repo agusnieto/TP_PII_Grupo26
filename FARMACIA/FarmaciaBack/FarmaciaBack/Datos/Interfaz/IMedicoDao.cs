@@ -10,15 +10,15 @@ namespace FarmaciaBack.Datos.Interfaz
 {
     public interface IMedicoDao
     {
-        List<Sede> GetSedes();
-        List<ObraSocial> GetObrasSociales();
-        List<Medico> GetMedicos();
-        Medico GetMedico(int id);
-        bool PutMedico(Medico medico);
-        bool PostMedico(Medico medico);
-        bool DeleteMedico(int id);
+        List<Sede> GetSedes();//
+        List<ObraSocial> GetObrasSociales();//
+        List<Medico> GetMedicos();//
+        Medico GetMedico(int id);//
+        bool PutMedico(Medico medico);//
+        bool PostMedico(Medico medico);//
+        bool DeleteMedico(int id);//
         public List<MedicoDTO> GetMedicosDTO();
         public MedicoDTO GetMedicoDTO(int id);
-        List<ServicioDTO> GetServicioDTO();
+        
     }
 }

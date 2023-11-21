@@ -1,5 +1,4 @@
 ﻿using FarmaciaBack.Datos.Dominio;
-using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Servicio.Implementacion;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +9,11 @@ namespace FarmaciaAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class ProductoController : ControllerBase
-    {   
+    {
+        public ProductoController()
+        {
+
+        }
         [HttpGet("Marcas")]
         public IActionResult GetMarcas() //devuelve un Json y un Codigo OK 200
         {
@@ -41,7 +44,7 @@ namespace FarmaciaAPI.Controllers
             }
             return NoContent();
         }
-        [HttpGet("Proveedores")]
+        [HttpGet]
         public IActionResult GetProveedores()
         {
             List<Proveedor> lista = ServicioDao.ObtenerServicio().ConsultarProveedores();
@@ -71,7 +74,7 @@ namespace FarmaciaAPI.Controllers
             }
             return NoContent();
         }
-        
+
         [HttpPost]
         public IActionResult Post([FromBody] Producto producto)
         {
@@ -108,30 +111,16 @@ namespace FarmaciaAPI.Controllers
                 {
                     return BadRequest("Se esperaba un producto completo");
                 }
-                //if (ValidarProducto(producto))
-                //{
-                    if (ServicioDao.ObtenerServicio().CargarProducto(producto))
-                    {
-                        return Ok("Producto registrado con exito");
-                    }
-                    else
-                    {
-                        return StatusCode(500, "No se pudo registrar el producto");
-                    }
-                //}
-                /*
-                 * 
-                   NOMBRE VARCHAR(50),
-                   DESCRIPCION VARCHAR(100),
-                   ID_CARACTERISTICA INT,
-                   ID_T_PRODUCTO INT,
-                    ID_MARCA INT,
-                    ID_PROVEEDOR INT,
-                    ID_PAIS INT,
-                    STOCK INT,
-                    PRECIO DECIMAL(10,2)
-                 */
-               
+
+                if (ServicioDao.ObtenerServicio().CargarProducto(producto))
+                {
+                    return Ok("Producto registrado con exito");
+                }
+                else
+                {
+                    return StatusCode(500, "No se pudo registrar el producto");
+                }
+
             }
             catch (Exception)
             {
@@ -139,6 +128,7 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
+
 
         [HttpDelete]
         public IActionResult Delete([FromBody] int id)
@@ -150,13 +140,15 @@ namespace FarmaciaAPI.Controllers
                 {
                     return BadRequest("Se esperaba un identificador de un cliente");
                 }
+
                 if (ServicioDao.ObtenerServicio().EliminarProducto(id))
                 {
-                        return Ok("Producto eliminado con exito");
+                    return Ok("Cliente eliminado con exito");
                 }
                 else
                 {
-                    return StatusCode(500, "No se pudo eliminar el producto");
+                    return StatusCode(500, "No se pudo eliminar el cliente");
+
                 }
             }
             catch (Exception)

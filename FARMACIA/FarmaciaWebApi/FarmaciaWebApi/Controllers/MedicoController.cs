@@ -12,8 +12,7 @@ namespace FarmaciaWebApi.Controllers
     public class MedicoController : ControllerBase
     {
         // GET: api/<MedicoController>
-
-        [HttpGet("medicos")]
+        [HttpGet]
         public IActionResult Get()
         {
             List<Medico> lista = ServicioDao.ObtenerServicio().ConsultarMedicos();
@@ -33,7 +32,16 @@ namespace FarmaciaWebApi.Controllers
             }
             return NotFound("No hay Medicos cargados");
         }
-        
+        [HttpGet("Sedes")]
+        public IActionResult GetSedes()
+        {
+            List<Sede> lista = ServicioDao.ObtenerServicio().ConsultarSedes();
+            if (lista != null)
+            {
+                return Ok(lista);
+            }
+            return NotFound("No hay Sedes cargadas");
+        }
         [HttpGet("ObrasSociales")]
         public IActionResult GetObrasSociales()
         {
@@ -68,7 +76,9 @@ namespace FarmaciaWebApi.Controllers
                     return Ok("El Medico fue cargado correctamente");
                 }
             }
+
             return BadRequest("Se espera un Medico no nulo");
+
         }
 
         // PUT api/<MedicoController>/5
@@ -82,6 +92,7 @@ namespace FarmaciaWebApi.Controllers
                     return Ok("El Medico fue cargado correctamente");
                 }
             }
+
             return BadRequest("Se espera un Medico no nulo");
         }
 
@@ -93,7 +104,7 @@ namespace FarmaciaWebApi.Controllers
             {
                 if (ServicioDao.ObtenerServicio().EliminarMedico(id))
                 {
-                    return Ok("El Medico ha sido eliminado correctamente");
+                    return Ok("El Medico ah sido eliminado correctamente");
                 }
             }
             return BadRequest();

@@ -12,7 +12,11 @@ namespace FarmaciaAPI.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        [HttpGet("Barrios")]
+        public ClienteController()
+        {
+
+        }
+        [HttpGet("Barrio")]
         public IActionResult GetBarrio() // IActionResult devuelve un Json y un Codigo OK 200
         {
             List<Barrio> lista = ServicioDao.ObtenerServicio().ConsultarBarrios();

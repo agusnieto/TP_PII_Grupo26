@@ -225,26 +225,7 @@ namespace FarmaciaBack.Datos.Implementacion
             return ok;
         }
 
-        public List<ServicioDTO> GetServicioDTO()
-        {
-            ServicioDTO servicio;
-            List<ServicioDTO> lista = new List<ServicioDTO>();
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_SERVICIOS", new List<Parametro>());
-
-            if (tabla.Rows.Count > 0)
-            {
-                foreach (DataRow row in tabla.Rows)
-                {
-                    servicio = new ServicioDTO()
-                    {
-                        Id = Convert.ToInt32(row.ItemArray[0]),
-                        Nombre = row.ItemArray[1].ToString()
-                    };
-                    lista.Add(servicio);
-                }
-            }
-            return lista;
-        }
+        
     }
 }
 

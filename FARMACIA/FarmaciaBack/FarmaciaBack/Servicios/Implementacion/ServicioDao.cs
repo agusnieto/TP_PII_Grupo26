@@ -117,9 +117,9 @@ namespace FarmaciaBack.Servicio.Implementacion
             return loginDao.Login(login);
         }
 
-        public List<EmpleadoDTO> ConsultarEmpleados()
+        public List<EmpleadoDTO> ConsultarEmpleados(int sede)
         {
-            return facturaDao.GetEmpleados();
+            return facturaDao.GetEmpleados(sede);
         }
 
         public EmpleadoDTO ConsultarEmpleado(int id)
@@ -204,7 +204,12 @@ namespace FarmaciaBack.Servicio.Implementacion
 
         public List<ServicioDTO> GetServicioDTO()
         {
-            return medicoDao.GetServicioDTO();
+            return facturaDao.GetServicioDTO();
+        }
+
+        public Producto GetProduto(int id)
+        {
+            return facturaDao.GetProduto(id);
         }
     }
 }

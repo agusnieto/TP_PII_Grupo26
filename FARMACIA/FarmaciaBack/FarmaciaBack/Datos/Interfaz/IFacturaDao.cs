@@ -10,7 +10,8 @@ namespace FarmaciaBack.Datos.Interfaz
 {
     public interface IFacturaDao
     {
-        List<EmpleadoDTO> GetEmpleados();
+
+        List<EmpleadoDTO> GetEmpleados(int sede);
         EmpleadoDTO GetEmpleado(int id);
         List<ClienteDTO> GetClientes();
         ClienteDTO GetCliente(int id);
@@ -18,6 +19,8 @@ namespace FarmaciaBack.Datos.Interfaz
         List<Sede> GetSedes();
         List<FormaEnvio> GetFormasEnvio();
         bool PostFactura(Factura factura);
+        public List<ServicioDTO> GetServicioDTO();
+        Producto GetProduto(int id);
 
     }
 }
