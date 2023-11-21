@@ -63,5 +63,10 @@ namespace FrontVR.Presentacion.MaestroDetalle
             factura.Metodo = (FormaPago)cboPago.SelectedItem;
             */
         }
+
+        private void btnComprobante_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

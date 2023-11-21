@@ -64,7 +64,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(484, 401);
+            label3.Location = new Point(484, 375);
             label3.Name = "label3";
             label3.Size = new Size(192, 25);
             label3.TabIndex = 4;
@@ -74,7 +74,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTotal.Location = new Point(752, 401);
+            lblTotal.Location = new Point(752, 375);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(36, 25);
             lblTotal.TabIndex = 5;
@@ -88,7 +88,7 @@
             dgvProductos.Location = new Point(12, 97);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowTemplate.Height = 25;
-            dgvProductos.Size = new Size(776, 301);
+            dgvProductos.Size = new Size(776, 264);
             dgvProductos.TabIndex = 6;
             dgvProductos.CellContentClick += dgvProductos_CellContentClick;
             // 

@@ -45,6 +45,7 @@
             label4 = new Label();
             lblTotal = new Label();
             label6 = new Label();
+            btnComprobante = new Button();
             gbSede.SuspendLayout();
             gbEmpleado.SuspendLayout();
             gbCliente.SuspendLayout();
@@ -213,11 +214,22 @@
             label6.TabIndex = 16;
             label6.Text = "Total en Productos:  $";
             // 
+            // btnComprobante
+            // 
+            btnComprobante.Location = new Point(547, 35);
+            btnComprobante.Name = "btnComprobante";
+            btnComprobante.Size = new Size(165, 23);
+            btnComprobante.TabIndex = 18;
+            btnComprobante.Text = "Descargar Comprobante";
+            btnComprobante.UseVisualStyleBackColor = true;
+            btnComprobante.Click += btnComprobante_Click;
+            // 
             // FrmMDEncabezado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnComprobante);
             Controls.Add(lblTotal);
             Controls.Add(label6);
             Controls.Add(lblTotalServicios);
@@ -261,5 +273,6 @@
         private Label label4;
         private Label lblTotal;
         private Label label6;
+        private Button btnComprobante;
     }
 }
