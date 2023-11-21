@@ -28,19 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnSiguiente = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
-            // MaestroDetalle
+            // btnSiguiente
+            // 
+            btnSiguiente.Location = new Point(588, 385);
+            btnSiguiente.Name = "btnSiguiente";
+            btnSiguiente.Size = new Size(75, 23);
+            btnSiguiente.TabIndex = 1;
+            btnSiguiente.Text = "Siguiente";
+            btnSiguiente.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(127, 385);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 2;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // FrmMaestroDetalle
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "MaestroDetalle";
+            Controls.Add(btnCancelar);
+            Controls.Add(btnSiguiente);
+            Name = "FrmMaestroDetalle";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MaestroDetalle";
             ResumeLayout(false);
         }
 
         #endregion
+        private Button btnSiguiente;
+        private Button btnCancelar;
     }
 }

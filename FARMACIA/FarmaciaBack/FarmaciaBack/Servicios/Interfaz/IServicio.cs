@@ -30,6 +30,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool ActualizarProducto(Producto producto);
         bool EliminarProducto(int id);
 
+
         //Login
         bool Login(LoginModel login);
 
