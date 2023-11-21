@@ -111,7 +111,6 @@ namespace FrontVR.Presentacion.MaestroDetalle
             factura.Cliente = (Cliente)cboCliente.SelectedItem;
             factura.Envio = (FormaEnvio)cboEnvio.SelectedItem;
             factura.FormaPago = (FormaPago)cboPago.SelectedItem;
-
         }
 
         private void btnComprobante_Click(object sender, EventArgs e)

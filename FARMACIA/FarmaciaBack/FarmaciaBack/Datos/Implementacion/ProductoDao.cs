@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Datos.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -202,6 +203,35 @@ namespace FarmaciaBack.Datos.Implementacion
                 aux = true;
             }
             return aux;
+        }
+        public List<ProductoDTO> ListarProductos()
+        {
+            ProductoDTO producto;
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PRODUCTOS", new List<Parametro>());
+            List<ProductoDTO> lista = new List<ProductoDTO>();
+
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow row in tabla.Rows)
+                {
+                    producto = new ProductoDTO()
+                    {
+                        Id = Convert.ToInt32(row.ItemArray[0]),
+                        Nombre = row.ItemArray[1].ToString(),
+                        Descripcion = row.ItemArray[2].ToString(),
+                        Caracteristica = Convert.ToInt32(row.ItemArray[3]),
+                        TipoProducto = Convert.ToInt32(row.ItemArray[4]),
+                        Marca = Convert.ToInt32(row.ItemArray[5]),
+                        Proveedor = Convert.ToInt32(row.ItemArray[6]),
+                        Pais = Convert.ToInt32(row.ItemArray[7]),
+                        Stock = Convert.ToInt32(row.ItemArray[8]),
+                        Precio = Convert.ToDouble(row.ItemArray[9])
+                    };
+
+                    lista.Add(producto);
+                }
+            }
+            return lista;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,6 @@ namespace FarmaciaBack.Datos.Interfaz
         bool PostProducto(Producto oProducto);
         bool PutProducto(Producto producto);
         bool DeleteProducto(int id);
+        List<ProductoDTO> ListarProductos();
     }
 }

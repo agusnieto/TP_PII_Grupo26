@@ -111,6 +111,10 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return productoDao.GetCaracteristica();
         }
+        public List<ProductoDTO> ListarProducto()
+        {
+            return productoDao.ListarProductos();
+        }
 
         public bool Login(LoginModel login)
         {

@@ -79,7 +79,19 @@ namespace FarmaciaBack.Datos.DTOs
             Nombre = nombre;
             Marca = marca;
             Proveedor = proveedor;
-
+        }
+        public ProductoDTO(int id, string nombre, string descripcion, int caracteristica, int tipo, int marca, int proveedor, int pais, int stock, double precio)
+        {
+            Id = id;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            Caracteristica = caracteristica;
+            TipoProducto = tipo;
+            Marca = marca;
+            Proveedor = proveedor;
+            Pais = pais;
+            Stock = stock;
+            Precio = precio;
         }
         public ProductoDTO()
         {
