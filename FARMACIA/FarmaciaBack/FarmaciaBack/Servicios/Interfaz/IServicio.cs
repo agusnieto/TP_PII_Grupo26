@@ -51,8 +51,8 @@ namespace FarmaciaBack.Servicio.Interfaz
         List<ObraSocial> ConsultarObrasSociales();
         List<Medico> ConsultarMedicos();
         Medico ConsultarMedico(int id);
-        bool ActualizarMedico(Medico medico);
-        bool CargarMedico(Medico medico);
+        bool ActualizarMedico(MedicoDTO medico);
+        bool CargarMedico(MedicoDTO medico);
         bool EliminarMedico(int id);
         public List<MedicoDTO> ConsultarMedicosDTO();
         public MedicoDTO ConsultarMedicoDTO(int id);

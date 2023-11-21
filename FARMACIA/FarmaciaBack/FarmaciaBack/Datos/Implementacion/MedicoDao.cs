@@ -83,7 +83,7 @@ namespace FarmaciaBack.Datos.Implementacion
         public MedicoDTO GetMedicoDTO(int id)
         {
             MedicoDTO medico = null;
-            
+
             DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_MEDICOS", new List<Parametro>()
             {
                 new Parametro("@ID", id)
@@ -98,7 +98,7 @@ namespace FarmaciaBack.Datos.Implementacion
                         Id = Convert.ToInt32(row.ItemArray[0]),
                         NombreCompleto = row.ItemArray[2].ToString() + ", " + row.ItemArray[3].ToString()
                     };
-                    
+
                 }
             }
             return medico;
@@ -179,30 +179,7 @@ namespace FarmaciaBack.Datos.Implementacion
         }
 
 
-        public bool PostMedico(Medico medico)
-        {
-            bool ok = false;
-            List<Parametro> parametros = new List<Parametro>()
-            {
-                new Parametro("@ID", medico.Id),
-                new Parametro("@MATRICULA", medico.Matricula),
-                new Parametro("@APELLIDO", medico.Apellido),
-                new Parametro("@NOMBRE", medico.Nombre),
-                new Parametro("@OBRA_SOCIAL", medico.ObraSocial.Id),
-                new Parametro("@SEDE", medico.Sede.Id),
-                new Parametro("@FECHA_INGRESO", medico.FechaIngreso),
-                new Parametro("@TELEFONO", medico.Telefono),
-                new Parametro("@EMAIL", medico.Email)
-            };
-            int aux = HelperDB.ObtenerInstancia().EjecutarSQL("SP_UPDATE_MEDICO", parametros);
-            if (aux == 1)
-            {
-                ok = true;
-            }
-            return ok;
-        }
-
-        public bool PutMedico(Medico medico)
+        public bool PostMedico(MedicoDTO medico)
         {
             bool ok = false;
             List<Parametro> parametros = new List<Parametro>()
@@ -210,8 +187,8 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@MATRICULA", medico.Matricula),
                 new Parametro("@APELLIDO", medico.Apellido),
                 new Parametro("@NOMBRE", medico.Nombre),
-                new Parametro("@OBRA_SOCIAL", medico.ObraSocial.Id),
-                new Parametro("@SEDE", medico.Sede.Id),
+                new Parametro("@OBRA_SOCIAL", medico.ObraSocial),
+                new Parametro("@SEDE", medico.Sede),
                 new Parametro("@FECHA_INGRESO", medico.FechaIngreso),
                 new Parametro("@TELEFONO", medico.Telefono),
                 new Parametro("@EMAIL", medico.Email)
@@ -224,7 +201,30 @@ namespace FarmaciaBack.Datos.Implementacion
             return ok;
         }
 
-        
+        public bool PutMedico(MedicoDTO medico)
+        {
+            bool ok = false;
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@ID", medico.Id),
+                new Parametro("@MATRICULA", medico.Matricula),
+                new Parametro("@APELLIDO", medico.Apellido),
+                new Parametro("@NOMBRE", medico.Nombre),
+                new Parametro("@OBRA_SOCIAL", medico.ObraSocial),
+                new Parametro("@SEDE", medico.Sede),
+                new Parametro("@FECHA_INGRESO", medico.FechaIngreso),
+                new Parametro("@TELEFONO", medico.Telefono),
+                new Parametro("@EMAIL", medico.Email)
+            };
+            int aux = HelperDB.ObtenerInstancia().EjecutarSQL("SP_UPDATE_MEDICO", parametros);
+            if (aux == 1)
+            {
+                ok = true;
+            }
+            return ok;
+        }
+
+
     }
 }
 

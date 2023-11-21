@@ -45,3 +45,44 @@ C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMA
 C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.pdb
 C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.genruntimeconfig.cache
 C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\ref\FarmaciaWebApi.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\appsettings.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaWebApi.exe
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaWebApi.deps.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaWebApi.runtimeconfig.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaWebApi.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaWebApi.pdb
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaBack.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\bin\Debug\net6.0\FarmaciaBack.pdb
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.csproj.AssemblyReference.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.AssemblyInfoInputs.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.AssemblyInfo.cs
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.csproj.CoreCompileInputs.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets\msbuild.FarmaciaWebApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.FarmaciaWebApi.props
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FarmaciaWebApi.props
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FarmaciaWebApi.props
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\scopedcss\bundle\FarmaciaWebApi.styles.css
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.csproj.CopyComplete
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\refint\FarmaciaWebApi.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.pdb
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\FarmaciaWebApi.genruntimeconfig.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\obj\Debug\net6.0\ref\FarmaciaWebApi.dll

@@ -10,7 +10,7 @@ namespace FarmaciaBack.Datos
 
         private HelperDB()
         {
-            cnn = new SqlConnection(@"Data Source=NEHO-PC\SQLEXPRESS;Initial Catalog=VITAFARMA;Integrated Security=True");//INSERTAR CADENA DE CONEXION
+            cnn = new SqlConnection(@"Data Source=LAPTOP-FC0TODPF\SQLEXPRESS;Initial Catalog=VITAFARMA;Integrated Security=True");//INSERTAR CADENA DE CONEXION
         }
 
         public static HelperDB ObtenerInstancia()
@@ -42,17 +42,17 @@ namespace FarmaciaBack.Datos
         public int EjecutarSQL(string strSql, List<Parametro> values)
         {
             int afectadas = 0;
-            SqlTransaction t = null;
+            //SqlTransaction t = null;
 
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
+            //try
+            //{
+            SqlCommand cmd = new SqlCommand();
                 cnn.Open();
-                t = cnn.BeginTransaction();
+                //t = cnn.BeginTransaction();
                 cmd.Connection = cnn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = strSql;
-                cmd.Transaction = t;
+                //cmd.Transaction = t;
 
                 if (values != null)
                 {
@@ -63,18 +63,18 @@ namespace FarmaciaBack.Datos
                 }
 
                 afectadas = cmd.ExecuteNonQuery();
-                t.Commit();
-            }
-            catch (SqlException)
-            {
-                if (t != null) { t.Rollback(); }
-            }
-            finally
-            {
-                if (cnn != null && cnn.State == ConnectionState.Open)
-                    cnn.Close();
+            //t.Commit();
+            //}
+            //catch (SqlException)
+            //{
+            //if (t != null) { t.Rollback(); }
+            //}
+            //finally
+            //{
+            //if (cnn != null && cnn.State == ConnectionState.Open)
+            cnn.Close();
 
-            }
+            // }
 
             return afectadas;
         }

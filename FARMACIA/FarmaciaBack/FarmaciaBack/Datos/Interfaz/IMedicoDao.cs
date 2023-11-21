@@ -14,8 +14,8 @@ namespace FarmaciaBack.Datos.Interfaz
         List<ObraSocial> GetObrasSociales();//
         List<Medico> GetMedicos();//
         Medico GetMedico(int id);//
-        bool PutMedico(Medico medico);//
-        bool PostMedico(Medico medico);//
+        bool PutMedico(MedicoDTO medico);//
+        bool PostMedico(MedicoDTO medico);//
         bool DeleteMedico(int id);//
         public List<MedicoDTO> GetMedicosDTO();
         public MedicoDTO GetMedicoDTO(int id);

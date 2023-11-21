@@ -10,3 +10,15 @@ C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMA
 C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\refint\FarmaciaBack.dll
 C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.pdb
 C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\ref\FarmaciaBack.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\bin\Debug\net6.0\FarmaciaBack.deps.json
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\bin\Debug\net6.0\FarmaciaBack.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\bin\Debug\net6.0\FarmaciaBack.pdb
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.csproj.AssemblyReference.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.AssemblyInfoInputs.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.AssemblyInfo.cs
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.csproj.CoreCompileInputs.cache
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\refint\FarmaciaBack.dll
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.pdb
+C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\ref\FarmaciaBack.dll

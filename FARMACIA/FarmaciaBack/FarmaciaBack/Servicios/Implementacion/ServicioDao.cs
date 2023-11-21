@@ -162,14 +162,14 @@ namespace FarmaciaBack.Servicio.Implementacion
             return medicoDao.GetMedico(id);
         }
 
-        public bool CargarMedico(Medico medico)
+        public bool CargarMedico(MedicoDTO medico)
         {
             return medicoDao.PostMedico(medico);
         }
 
-        public bool ActualizarMedico(Medico medico)
+        public bool ActualizarMedico(MedicoDTO medico)
         {
-            return medicoDao.PostMedico(medico);
+            return medicoDao.PutMedico(medico);
         }
 
         public bool EliminarMedico(int id)
