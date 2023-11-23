@@ -2,6 +2,7 @@
 using FarmaciaBack.Datos;
 using FarmaciaBack.Datos.Dominio;
 using FarmaciaBack.Datos.DTOs;
+using FarmaciaBack.Servicio.Implementacion;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,11 @@ namespace FrontVR.Presentacion.MaestroDetalle
         {
             InitializeComponent();
             this.factura = factura;
+        }
+
+        public FrmMDEncabezado()
+        {
+            InitializeComponent();
         }
 
         private void FrmMDEncabezado_Load(object sender, EventArgs e)
@@ -81,6 +87,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
         }
         public void ActualizarTotales()
         {
+          
             lblTotalProductos.Text = factura.TotalProductos().ToString();
             lblTotalServicios.Text = factura.TotalServicios().ToString();
             lblTotal.Text = factura.Total().ToString();
@@ -88,7 +95,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
         private void cboEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
         private async void CargarEmpleados(Sede sede)
         {
@@ -111,6 +118,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             factura.Cliente = (Cliente)cboCliente.SelectedItem;
             factura.Envio = (FormaEnvio)cboEnvio.SelectedItem;
             factura.FormaPago = (FormaPago)cboPago.SelectedItem;
+
         }
 
         private void btnComprobante_Click(object sender, EventArgs e)
@@ -122,6 +130,27 @@ namespace FrontVR.Presentacion.MaestroDetalle
         {
             cboEmpleado.Items.Clear();
             CargarEmpleados(((Sede)cboSede.SelectedItem));
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            FinalizarCompra();
+        }
+
+
+        private void FinalizarCompra()
+        {
+            ActualizarFactura();
+            bool aux = ServicioDao.ObtenerServicio().CargarFactura(factura);
+            if (aux == false)
+            {
+                MessageBox.Show("Ha ocurrido un error", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Factura {factura.NroFactura} creada con éxito", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }

@@ -56,7 +56,7 @@ namespace FarmaciaBack.Datos.DTOs
             set { marca = value; }
         }
 
-        public int TipoProducto
+        public int TipoProd
         {
             get { return tipo_producto; }
             set { tipo_producto = value; }
@@ -86,13 +86,14 @@ namespace FarmaciaBack.Datos.DTOs
             Nombre = nombre;
             Descripcion = descripcion;
             Caracteristica = caracteristica;
-            TipoProducto = tipo;
+            TipoProd = tipo;
             Marca = marca;
             Proveedor = proveedor;
             Pais = pais;
             Stock = stock;
             Precio = precio;
         }
+
         public ProductoDTO()
         {
 

@@ -41,7 +41,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return clienteDao.PostCliente(oCliente);
         }
 
-        public bool ActualizarProducto(Producto producto)
+        public bool ActualizarProducto(ProductoDTO producto)
         {
             return productoDao.PutProducto(producto);
         }
@@ -52,7 +52,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return clienteDao.PostCliente(oCliente);
         }
 
-        public bool CargarProducto(Producto oProducto)
+        public bool CargarProducto(ProductoDTO oProducto)
         {
             return productoDao.PostProducto(oProducto);
         }
@@ -111,11 +111,11 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return productoDao.GetCaracteristica();
         }
+
         public List<ProductoDTO> ListarProducto()
         {
             return productoDao.ListarProductos();
         }
-
         public bool Login(LoginModel login)
         {
             return loginDao.Login(login);

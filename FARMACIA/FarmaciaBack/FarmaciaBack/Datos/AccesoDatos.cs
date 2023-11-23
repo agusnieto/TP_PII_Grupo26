@@ -17,7 +17,7 @@ namespace FarmaciaBack.Datos
         private SqlConnection cnn;
         private AccesoDatos()
         {
-            cnn = new SqlConnection(@"Data Source=localhost;Initial Catalog=LOGINFORM1;Integrated Security=True");
+            cnn = new SqlConnection(@"Data Source=172.16.10.196;Initial Catalog=VITAFARMA;User ID=alumno1w1;Password=alumno1w1");
         }
 
         public static AccesoDatos ObtenerInstancia() 

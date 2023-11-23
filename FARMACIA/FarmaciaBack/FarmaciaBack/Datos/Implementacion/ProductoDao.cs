@@ -1,5 +1,4 @@
 ﻿using FarmaciaBack.Datos.Dominio;
-using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Datos.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -7,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FarmaciaBack.Datos.DTOs;
 
 
 namespace FarmaciaBack.Datos.Implementacion
@@ -15,20 +15,20 @@ namespace FarmaciaBack.Datos.Implementacion
     {
         public ProductoDao() { }
 
-        public bool PostProducto(Producto oProducto)
+        public bool PostProducto(ProductoDTO oProducto)
         {
             bool aux = false;
             List<Parametro> parametros = new List<Parametro>()
             {
                 new Parametro("@NOMBRE", oProducto.Nombre),
                 new Parametro("@DESCRIPCION", oProducto.Descripcion),
-                new Parametro("@TIPO_PRODUCTO", oProducto.TipoProducto.Id),
-                new Parametro("@MARCA", oProducto.Marca.Id),
-                new Parametro("@PROVEEDOR", oProducto.Proveedor.Id),
-                new Parametro("@PAIS", oProducto.Pais.Id),
+                new Parametro("@TIPO_PRODUCTO", oProducto.TipoProd),
+                new Parametro("@MARCA", oProducto.Marca),
+                new Parametro("@PROVEEDOR", oProducto.Proveedor),
+                new Parametro("@PAIS", oProducto.Pais),
                 new Parametro("@STOCK", oProducto.Stock),
                 new Parametro("@PRECIO", oProducto.Precio),
-                new Parametro("@CARACTERISTICA", oProducto.Caracteristica.Id)
+                new Parametro("@CARACTERISTICA", oProducto.Caracteristica)
             };
 
             if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_INSERT_PRODUCTO", parametros) == 1)
@@ -167,7 +167,7 @@ namespace FarmaciaBack.Datos.Implementacion
             return lista;
         }
 
-        public bool PutProducto(Producto producto)
+        public bool PutProducto(ProductoDTO producto)
         {
             bool aux = false;
             List<Parametro> parametros = new List<Parametro>()
@@ -175,10 +175,10 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@ID_PRODUCTO", producto.Id),
                 new Parametro("@NOMBRE", producto.Nombre),
                 new Parametro("@DESCRIPCION", producto.Descripcion),
-                new Parametro("@TIPO_PRODUCTO", producto.TipoProducto.Id),
-                new Parametro("@MARCA", producto.Marca.Id),
-                new Parametro("@PROVEEDOR", producto.Proveedor.Id),
-                new Parametro("@PAIS", producto.Pais.Id),
+                new Parametro("@TIPO_PRODUCTO", producto.TipoProd),
+                new Parametro("@MARCA", producto.Marca),
+                new Parametro("@PROVEEDOR", producto.Proveedor),
+                new Parametro("@PAIS", producto.Pais),
                 new Parametro("@STOCK", producto.Stock),
                 new Parametro("@PRECIO", producto.Precio)
             };
@@ -220,7 +220,7 @@ namespace FarmaciaBack.Datos.Implementacion
                         Nombre = row.ItemArray[1].ToString(),
                         Descripcion = row.ItemArray[2].ToString(),
                         Caracteristica = Convert.ToInt32(row.ItemArray[3]),
-                        TipoProducto = Convert.ToInt32(row.ItemArray[4]),
+                        TipoProd = Convert.ToInt32(row.ItemArray[4]),
                         Marca = Convert.ToInt32(row.ItemArray[5]),
                         Proveedor = Convert.ToInt32(row.ItemArray[6]),
                         Pais = Convert.ToInt32(row.ItemArray[7]),
@@ -233,5 +233,6 @@ namespace FarmaciaBack.Datos.Implementacion
             }
             return lista;
         }
+
     }
 }

@@ -28,37 +28,7 @@ namespace Farmacia
 
         public FrmMaestroDetalle()
         {
-            /*
-            detalleServicio = new List<DetalleServicio>();
-            detalleFactura = new List<DetalleFactura>();
-            this.factura = new Factura();
-            factura.DetalleFactura = detalleFactura;
-            factura.DetalleServicio = detalleServicio;
-
             InitializeComponent();
-
-            formProd = new FrmMDProductos(factura);
-            formProd.TopLevel = false;
-            formProd.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(formProd);
-            formProd.Location = new Point(40, 80);
-
-            formServ = new FrmMDServicios(factura);
-            formServ.TopLevel = false;
-            formServ.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(formServ);
-            formServ.Location = new Point(40, 80);
-
-            formEncabezado = new FrmMDEncabezado(factura);
-            formEncabezado.TopLevel = false;
-            formEncabezado.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(formEncabezado);
-            formEncabezado.Location = new Point(40, 80);
-
-            steps = new List<Form>();
-            steps.Add(formProd);
-            steps.Add(formServ);
-            steps.Add(formEncabezado);*/
         }
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
@@ -137,6 +107,20 @@ namespace Farmacia
         }
 
         private void btnSiguiente_Click_1(object sender, EventArgs e)
+        {
+            FrmMDProductos nuevo = new FrmMDProductos();
+            nuevo.Show();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir?","Salir del Formulario",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                Dispose();
+            }
+        }
+
+        private void FrmMaestroDetalle_Load(object sender, EventArgs e)
         {
 
         }

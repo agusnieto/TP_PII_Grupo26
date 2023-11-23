@@ -27,11 +27,11 @@ namespace FarmaciaBack.Servicio.Interfaz
         List<Marca> ConsultarMarcas();
         List<Proveedor> ConsultarProveedores();
         List<Pais> ConsultarPaises();
-        bool CargarProducto(Producto oProducto);
-        bool ActualizarProducto(Producto producto);
+        bool CargarProducto(ProductoDTO oProducto);
+        bool ActualizarProducto(ProductoDTO producto);
         bool EliminarProducto(int id);
-        List<ProductoDTO> ListarProducto();
 
+        List<ProductoDTO> ListarProducto();
         //Login
         bool Login(LoginModel login);
 

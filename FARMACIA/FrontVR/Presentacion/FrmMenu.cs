@@ -1,4 +1,5 @@
 ﻿using Farmacia;
+using FrontVR.Presentacion.ABM;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +51,7 @@ namespace FrontVR
 
         private void MostrarSubMenu(Panel submenu)
         {
+            
             if (submenu.Visible == false)
             {
                 OcutarSubmenu();
@@ -137,16 +139,11 @@ namespace FrontVR
 
         }
 
-        private void btnFacturacion_Click_1(object sender, EventArgs e)
-        {
-            //mostrar formulario
-
-            //MostrarSubMenu(PanelSubMenuFacturacion);
-        }
+  
 
         private void btnObrasSociales_Click_1(object sender, EventArgs e)
         {
-            //MostrarSubMenu(PanelSubMenuObrasSociales);
+            MostrarSubMenu(PanelSubMenuObrasSociales);
         }
 
         private void Logo_Click(object sender, EventArgs e)
@@ -156,47 +153,25 @@ namespace FrontVR
 
         private void btnArticulos_Click(object sender, EventArgs e)
         {
-            //MostrarSubMenu(PanelSubMenuArticulos);
+            MostrarSubMenu(PanelSubMenuArticulos);
         }
 
-        private void btnNuevaFactura_Click(object sender, EventArgs e)
-        {
-            // frmFactura nuevo = new frmFactura();
-            //nuevo.ShowDialog();
-            FrmDatosPersonales nuevo = new FrmDatosPersonales();
-            nuevo.Show();
+       
 
-
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            FrmMaestroDetalle nuevo = new FrmMaestroDetalle();
-            nuevo.Show();
-        }
+     
 
         //-----------------------------------------------------------------------
         private void btnInventario_Click(object sender, EventArgs e)
-
         {
 
             MostrarSubMenu(PanelSubMenuArticulos);
         }
 
-        private void btnFacturacion_Click_2(object sender, EventArgs e)
-        {
-            MostrarSubMenu(PanelSubMenuFacturacion);
-        }
+       
 
-        private void btnObrasSociales_Click(object sender, EventArgs e)
-        {
-            MostrarSubMenu(PanelSubMenuObrasSociales);
-        }
+     
 
-        private void btnArticulos_Click_1(object sender, EventArgs e)
-        {
-            MostrarSubMenu(PanelSubMenuArticulos);
-        }
+      
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -236,15 +211,49 @@ namespace FrontVR
             }
         }
 
-        private void btnAMC_Click(object sender, EventArgs e)
-        {
-           FrmAbmc nuevo = new FrmAbmc();
-            nuevo.Show();
-        }
+       
 
         private void PanelMostrar_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnFacturacion_Click_1(object sender, EventArgs e)
+        {
+            MostrarSubMenu(PanelSubMenuFacturacion);
+        }
+
+        private void btnObrasSociales_Click_2(object sender, EventArgs e)
+        {
+            MostrarSubMenu(PanelSubMenuObrasSociales);
+        }
+
+        private void btnArticulos_Click_2(object sender, EventArgs e)
+        {
+            MostrarSubMenu(PanelSubMenuArticulos);
+        }
+
+        private void btnAMC_Click_1(object sender, EventArgs e)
+        {
+            FrmCompras compras = new FrmCompras();
+            compras.Show();
+        }
+
+        private void btnNuevaFactura_Click_1(object sender, EventArgs e)
+        {
+            FrmDatosPersonales datos = new FrmDatosPersonales();
+            datos.Show();
+        }
+
+        private void btnClientes_Click_2(object sender, EventArgs e)
+        {
+            FrmMaestroDetalle nuevo = new FrmMaestroDetalle();
+            nuevo.Show();
+        }
+
+        private void btnInventario_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

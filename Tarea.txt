@@ -28,7 +28,7 @@ https://localhost:7071/api/Medico/{id}
 https://localhost:7071/api/Producto/Marcas
 https://localhost:7071/api/Producto/Paises
 https://localhost:7071/api/Producto/{id}
-https://localhost:7071/api/Producto/Proveedores
+https://localhost:7071/api/Producto (agregar nombre de proveedores)
 https://localhost:7071/api/Producto [POST]
 https://localhost:7071/api/Producto [PUT]
 https://localhost:7071/api/Producto [DELETE]

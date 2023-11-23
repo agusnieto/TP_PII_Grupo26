@@ -27,6 +27,11 @@ namespace FrontVR.Presentacion.MaestroDetalle
             this.detalleServicios = factura.DetalleServicio;
         }
 
+        public FrmMDServicios()
+        {
+            InitializeComponent();
+        }
+
         private async void FrmMDServicios_Load(object sender, EventArgs e)
         {
             CargarCombosAsync();
@@ -53,6 +58,25 @@ namespace FrontVR.Presentacion.MaestroDetalle
             cboServicio.DisplayMember = "Nombre";
             cboServicio.ValueMember = "Id";
             cboMedico.SelectedIndex = 0;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir?", "Salir del Formulario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Dispose();
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            FrmMDEncabezado nuevo = new FrmMDEncabezado();
+            nuevo.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
     }

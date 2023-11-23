@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,10 +26,20 @@ namespace FrontVR.Presentacion.MaestroDetalle
             this.factura = factura;
             this.detalleFactura = factura.DetalleFactura;
         }
+
+        public FrmMDProductos()
+        {
+            InitializeComponent();
+            factura = new Factura();
+            detalleFactura = new List<DetalleFactura>(); // Inicializar como una nueva lista vacía
+        }
+
         private async void AgregarProducto(string codigo)
         {
-            string url = "https://localhost:7071/api/Factura/Productos";
-            var result = await HelperHttp.GetInstance().GetAsync(url);
+            string url = "https://localhost:7071/api/Factura/Productos?id=5&codigo="; // Asegúrate de tener el separador correcto
+
+            string urlExitosa = $"{url}{codigo}";
+            var result = await HelperHttp.GetInstance().GetAsync(urlExitosa);
             Producto prod = JsonConvert.DeserializeObject<Producto>(result.Data);
 
             if (prod != null)
@@ -38,6 +49,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
                 ActualizarTotal();
             }
         }
+
         private void ActualizarTotal()
         {
             lblTotal.Text = factura.TotalProductos().ToString();
@@ -94,6 +106,45 @@ namespace FrontVR.Presentacion.MaestroDetalle
                 dgvProductos.Rows.RemoveAt(dgvProductos.CurrentRow.Index);
                 lblTotal.Text = factura.TotalProductos().ToString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir?", "Salir del Formulario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Dispose();
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            FrmMDServicios nuevo = new FrmMDServicios();
+            nuevo.Show();
+        }
+
+        private void FrmMDProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != String.Empty)
+            {
+                AgregarProducto(txtCodigo.Text);
+                txtCodigo.Text = String.Empty;
+                ActualizarDgv();
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_KeyDown(object sender, KeyEventArgs e)
+        {
+          
         }
     }
 }

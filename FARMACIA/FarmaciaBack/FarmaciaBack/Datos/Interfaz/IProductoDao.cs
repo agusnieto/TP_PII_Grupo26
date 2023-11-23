@@ -1,10 +1,10 @@
 ﻿using FarmaciaBack.Datos.Dominio;
-using FarmaciaBack.Datos.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FarmaciaBack.Datos.DTOs;
 
 
 namespace FarmaciaBack.Datos.Interfaz
@@ -17,9 +17,10 @@ namespace FarmaciaBack.Datos.Interfaz
         List<Proveedor> GetProveedores();
         List<Pais> GetPaises();
         List<Caracteristica> GetCaracteristica();
-        bool PostProducto(Producto oProducto);
-        bool PutProducto(Producto producto);
+        bool PostProducto(ProductoDTO oProducto);
+        bool PutProducto(ProductoDTO producto);
         bool DeleteProducto(int id);
+
         List<ProductoDTO> ListarProductos();
     }
 }

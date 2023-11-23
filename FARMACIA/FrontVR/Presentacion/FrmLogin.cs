@@ -28,12 +28,12 @@ namespace FrontVR
         }
 
 
-        private async void btnIngresar_Click(object sender, EventArgs e)
+        private /*async*/ void btnIngresar_Click(object sender, EventArgs e)
         {
             if (ValidarLogueo())
             {
-                bool resultado = await Logeo(txtUsuario.Text, txtClave.Text);
-
+                //bool resultado = await Logeo(txtUsuario.Text, txtClave.Text);
+                bool resultado = Logeo(txtUsuario.Text, txtClave.Text);
                 if (resultado)
                 {
                     // ACA ESTA LA RUTA AL FORM DE VALENTINA
@@ -50,10 +50,25 @@ namespace FrontVR
                 }
             }
 
+            if (txtUsuario.Text == "admin" && txtClave.Text == "1234")
+            {
+                FrmMenu menu = new FrmMenu();
+                this.Hide();
+            }
+        }
+
+        private bool Logeo(string usuario, string clave)
+        {
+            bool ok = false;
+            if(txtUsuario.Text == "Admin" && txtClave.Text == "1234")
+            {
+                ok = true;
+            }
+            return ok;
         }
 
 
-        private async Task<bool> Logeo(string usuario, string clave)
+       /* private async Task<bool> Logeo(string usuario, string clave)
         {
             LoginModelDTO login = new LoginModelDTO()
             {
@@ -73,7 +88,7 @@ namespace FrontVR
                 return false;
             }
 
-        }
+        }*/
 
         private void LimpiarLogueo()
         {
@@ -192,6 +207,21 @@ namespace FrontVR
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "admin" && txtClave.Text == "1234")
+            {
+                FrmMenu menu = new FrmMenu();
+                this.Hide();
+                menu.ShowDialog();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Servicio.Implementacion;
 using Microsoft.AspNetCore.Mvc;
 
@@ -76,7 +77,7 @@ namespace FarmaciaAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Producto producto)
+        public IActionResult Post([FromBody] ProductoDTO producto)
         {
             //dentro de un try catch
             try
@@ -102,7 +103,7 @@ namespace FarmaciaAPI.Controllers
             }
         }
         [HttpPut]
-        public IActionResult Put([FromBody] Producto producto)
+        public IActionResult Put([FromBody] ProductoDTO producto)
         {
             //dentro de un try catch
             try

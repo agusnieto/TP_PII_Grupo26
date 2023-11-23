@@ -80,7 +80,7 @@ namespace FrontVR.Presentacion.ABM
             cboTipoProducto.SelectedIndex = 0;
 
             cboMarca.Items.Clear();
-            string url3 = "https://localhost:7071/api/Factura/Envios";
+            string url3 = "https://localhost:7071/api/Producto/Marcas";
             var result3 = await HelperHttp.GetInstance().GetAsync(url3);
             List<Marca> lst3 = JsonConvert.DeserializeObject<List<Marca>>(result3.Data);
             cboMarca.DataSource = lst3;
@@ -134,7 +134,7 @@ namespace FrontVR.Presentacion.ABM
                 txtStock.Text = producto.Stock.ToString();
                 txtPrecio.Text = producto.Precio.ToString();
                 cboCaracteristica.SelectedValue = producto.Caracteristica;
-                cboTipoProducto.SelectedValue = producto.TipoProducto;
+                cboTipoProducto.SelectedValue = producto.TipoProd;
                 cboMarca.SelectedValue = producto.Marca;
                 cboPais.SelectedValue = producto.Pais;
                 cboProveedor.SelectedValue = producto.Proveedor;
@@ -149,32 +149,33 @@ namespace FrontVR.Presentacion.ABM
             //validacion de los datos
             if (ValidarDatos())
             {
+
                 //crear objeto
-                Producto producto = new Producto();
+                ProductoDTO producto = new ProductoDTO();
+
                 producto.Nombre = txtNombre.Text;
-                producto.Nombre = txtNombre.Text;
-                producto.Stock = Convert.ToInt32(txtNombre.Text);
+                producto.Stock = Convert.ToInt32(txtStock.Text);
+                producto.TipoProd = Convert.ToInt32(cboTipoProducto.SelectedValue);
+                producto.Caracteristica = Convert.ToInt32(cboCaracteristica.SelectedValue);
+                producto.Proveedor = Convert.ToInt32(cboProveedor.SelectedValue);
+                producto.Pais = Convert.ToInt32(cboPais.SelectedValue);
+                producto.Stock = Convert.ToInt32(cboPais.SelectedValue);
                 producto.Precio = Convert.ToDouble(txtPrecio.Text);
-                producto.TipoProducto.Id = (int)cboTipoProducto.SelectedValue;
-                producto.TipoProducto.Tipo = (string)cboTipoProducto.ValueMember;
-                producto.Caracteristica.Id = (int)cboCaracteristica.SelectedValue;
-                producto.Caracteristica.Tipo = (string)cboCaracteristica.ValueMember;
-                producto.Marca.Id = (int)cboMarca.SelectedValue;
-                producto.Marca.Nombre = (string)cboMarca.ValueMember;
-                producto.Proveedor.Id = (int)cboProveedor.SelectedValue;
-                producto.Proveedor.Nombre = (string)cboProveedor.ValueMember;
-                producto.Pais.Id = (int)cboPais.SelectedValue;
-                producto.Pais.Nombre = (string)cboPais.ValueMember;
+                producto.Descripcion = txtDescripcion.Text;
+
 
                 if (ServicioDao.ObtenerServicio().CargarProducto(producto))
                 {
-                    MessageBox.Show("Se ha grabado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha grabado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information,  MessageBoxDefaultButton.Button1);
+                    Habilitar(true);
+                    LimpiarCampos();
+                    CargarLista();
+                    btnSalir.Text = "Salir";
                 }
-
-                Habilitar(true);
-                LimpiarCampos();
-                CargarLista();
-                btnSalir.Text = "Salir";
+                else
+                {
+                    MessageBox.Show("No se podido grabar el producto!", "Eroor", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                }                
             }
         }
 
