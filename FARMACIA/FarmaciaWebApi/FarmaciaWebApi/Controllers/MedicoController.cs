@@ -69,59 +69,57 @@ namespace FarmaciaWebApi.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] MedicoDTO medico)
         {
-            {
-                //dentro de un try catch
-                try
-                {
-                    if (medico == null)
-                    {
-                        return BadRequest("Se esperaba un medico con todos los datos");
-                    }
-                    //if (cliente.) validaciones por si es un objeto valido.
-                    if (ServicioDao.ObtenerServicio().CargarMedico(medico))
-                    {
-                        return Ok("Cliente registrado con exito");
-                    }
-                    else
-                    {
-                        return StatusCode(500, "No se pudo registrar el cliente");
-                    }
-                }
-                catch (Exception)
-                {
 
-                    return StatusCode(500, "Error interno, intente nuevamente mas tarde");
+            //dentro de un try catch
+            try
+            {
+                if (medico == null)
+                {
+                    return BadRequest("Se esperaba un medico con todos los datos");
+                }
+                //if (cliente.) validaciones por si es un objeto valido.
+                if (ServicioDao.ObtenerServicio().CargarMedico(medico))
+                {
+                    return Ok("Medico registrado con exito");
+                }
+                else
+                {
+                    return StatusCode(500, "No se pudo registrar el medico");
                 }
             }
+            catch (Exception)
+            {
+
+                return StatusCode(500, "Error interno, intente nuevamente mas tarde");
+            }
+
         }
 
         // PUT api/<MedicoController>/5
         [HttpPut]
         public IActionResult Put([FromBody] MedicoDTO medico)
         {
-            {
-                //dentro de un try catch
-                try
-                {
-                    if (medico == null)
-                    {
-                        return BadRequest("Se esperaba un medico con todos los datos");
-                    }
-                    //if (cliente.) validaciones por si es un objeto valido.
-                    if (ServicioDao.ObtenerServicio().ActualizarMedico(medico))
-                    {
-                        return Ok("Medico actualizado con exito");
-                    }
-                    else
-                    {
-                        return StatusCode(500, "No se pudo actualizar el medico");
-                    }
-                }
-                catch (Exception)
-                {
 
-                    return StatusCode(500, "Error interno, intente nuevamente mas tarde");
+            //dentro de un try catch
+            try
+            {
+                if (medico == null)
+                {
+                    return BadRequest("Se esperaba un medico con todos los datos");
                 }
+                //if (cliente.) validaciones por si es un objeto valido.
+                if (ServicioDao.ObtenerServicio().ActualizarMedico(medico))
+                {
+                    return Ok("Medico actualizado con exito");
+                }
+                else
+                {
+                    return StatusCode(500, "No se pudo actualizar el medico");
+                }
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
 

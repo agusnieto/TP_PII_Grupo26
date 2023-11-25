@@ -189,7 +189,6 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@NOMBRE", medico.Nombre),
                 new Parametro("@OBRA_SOCIAL", medico.ObraSocial),
                 new Parametro("@SEDE", medico.Sede),
-                new Parametro("@FECHA_INGRESO", medico.FechaIngreso),
                 new Parametro("@TELEFONO", medico.Telefono),
                 new Parametro("@EMAIL", medico.Email)
             };
@@ -206,13 +205,11 @@ namespace FarmaciaBack.Datos.Implementacion
             bool ok = false;
             List<Parametro> parametros = new List<Parametro>()
             {
-                new Parametro("@ID", medico.Id),
-                new Parametro("@MATRICULA", medico.Matricula),
+                new Parametro("@ID", medico.Id),                
                 new Parametro("@APELLIDO", medico.Apellido),
                 new Parametro("@NOMBRE", medico.Nombre),
                 new Parametro("@OBRA_SOCIAL", medico.ObraSocial),
-                new Parametro("@SEDE", medico.Sede),
-                new Parametro("@FECHA_INGRESO", medico.FechaIngreso),
+                new Parametro("@SEDE", medico.Sede),                
                 new Parametro("@TELEFONO", medico.Telefono),
                 new Parametro("@EMAIL", medico.Email)
             };

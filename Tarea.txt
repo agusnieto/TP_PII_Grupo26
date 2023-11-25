@@ -1,36 +1,38 @@
-https://localhost:7071/api/Cliente/Barrio
-https://localhost:7071/api/Cliente
-https://localhost:7071/api/Cliente [POST]
-https://localhost:7071/api/Cliente [PUT]
-https://localhost:7071/api/Cliente/{id} [Get]
-https://localhost:7071/api/Cliente/{id} [DELETE]
+https://localhost:7071/api/Cliente/Barrio .....	[Get]
+https://localhost:7071/api/Cliente ...........	[Get]
+https://localhost:7071/api/Cliente ...........	[POST]
+https://localhost:7071/api/Cliente ...........	[PUT]
+https://localhost:7071/api/Cliente/{id} ......	[Get]
+https://localhost:7071/api/Cliente/{id} ......	[DELETE]
 
-https://localhost:7071/api/Factura [POST]
-https://localhost:7071/api/Factura/Sedes
-https://localhost:7071/api/Factura/ServicioDTO
-https://localhost:7071/api/Factura/EmpleadosDTO
-https://localhost:7071/api/Factura/{sede}
-https://localhost:7071/api/Factura/ClientesDTO
-https://localhost:7071/api/Factura/Pagos
-https://localhost:7071/api/Factura/Envios
-https://localhost:7071/api/Factura/Productos
-
-
-https://localhost:7071/api/Medico
----------[PENDIENTE] /api/Medico POST Y PUT
-https://localhost:7071/api/Medico/MedicoDTO
-https://localhost:7071/api/Medico/Sedes
-https://localhost:7071/api/Medico/ObrasSociales
-https://localhost:7071/api/Medico/{id}
----------[PENDIENTE] DELETE MEDICO
+https://localhost:7071/api/Factura ...........	[POST]
+https://localhost:7071/api/Factura/Sedes......  [Get]
+https://localhost:7071/api/Factura/ServicioDTO..[Get]
+https://localhost:7071/api/Factura/EmpleadosDTO [Get]
+https://localhost:7071/api/Factura/{sede}...... [Get]
+https://localhost:7071/api/Factura/ClientesDTO..[Get]
+https://localhost:7071/api/Factura/Pagos....... [Get]
+https://localhost:7071/api/Factura/Envios...... [Get]
+https://localhost:7071/api/Factura/Productos... [Get]
 
 
-https://localhost:7071/api/Producto/Marcas
-https://localhost:7071/api/Producto/Paises
-https://localhost:7071/api/Producto/{id}
-https://localhost:7071/api/Producto (agregar nombre de proveedores)
-https://localhost:7071/api/Producto [POST]
-https://localhost:7071/api/Producto [PUT]
-https://localhost:7071/api/Producto [DELETE]
-https://localhost:7071/api/Producto/TiposProducto
-https://localhost:7071/api/Producto/Caracteristicas
+https://localhost:7071/api/Medico ............	[Get]
+https://localhost:7071/api/Medico ............	[Post]
+https://localhost:7071/api/Medico ............	[Put]
+https://localhost:7071/api/Medico/MedicoDTO ...	[Get]
+https://localhost:7071/api/Medico/Sedes	.......	[Get]
+https://localhost:7071/api/Medico/ObrasSociales [Get]
+https://localhost:7071/api/Medico/{id}	.......	[Get]
+https://localhost:7071/api/Medico/{id}	.......	[Delete]
+
+
+https://localhost:7071/api/Producto/Marcas ....	[Get]
+https://localhost:7071/api/Producto/Paises.....	[Get]
+https://localhost:7071/api/Producto/{id}.......	[Get]
+https://localhost:7071/api/Producto/Proveedores [Get]
+https://localhost:7071/api/Producto ...........	[Get]
+https://localhost:7071/api/Producto ...........	[POST]
+https://localhost:7071/api/Producto ...........	[PUT]
+https://localhost:7071/api/Producto ...........	[DELETE]
+https://localhost:7071/api/Producto/TiposProducto [Get]
+https://localhost:7071/api/Producto/Caracteristicas [Get]

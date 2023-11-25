@@ -76,7 +76,7 @@ namespace FarmaciaBack.Datos
                     cnn.Close();
                 }
             }
-            return afectadas;        
+            return afectadas;
         }
 
 
