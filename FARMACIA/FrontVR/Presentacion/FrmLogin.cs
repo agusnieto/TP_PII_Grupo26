@@ -60,7 +60,7 @@ namespace FrontVR
         private bool Logeo(string usuario, string clave)
         {
             bool ok = false;
-            if(txtUsuario.Text == "Admin" && txtClave.Text == "1234")
+            if (txtUsuario.Text == "Admin" && txtClave.Text == "1234")
             {
                 ok = true;
             }
@@ -68,27 +68,27 @@ namespace FrontVR
         }
 
 
-       /* private async Task<bool> Logeo(string usuario, string clave)
-        {
-            LoginModelDTO login = new LoginModelDTO()
-            {
-                Usuario = usuario,
-                Clave = clave
-            };
-            string url = "https://localhost:7046/api/Login";
-            string bodyContent = JsonConvert.SerializeObject(login);
-            var result = await HelperHttp.GetInstance().PostAsync(url, bodyContent);
+        /* private async Task<bool> Logeo(string usuario, string clave)
+         {
+             LoginModelDTO login = new LoginModelDTO()
+             {
+                 Usuario = usuario,
+                 Clave = clave
+             };
+             string url = "https://localhost:7046/api/Login";
+             string bodyContent = JsonConvert.SerializeObject(login);
+             var result = await HelperHttp.GetInstance().PostAsync(url, bodyContent);
 
-            if (result.Equals("true"))//servicio.CrearPresupuesto(nuevo)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+             if (result.Equals("true"))//servicio.CrearPresupuesto(nuevo)
+             {
+                 return true;
+             }
+             else
+             {
+                 return false;
+             }
 
-        }*/
+         }*/
 
         private void LimpiarLogueo()
         {
@@ -221,6 +221,14 @@ namespace FrontVR
                 FrmMenu menu = new FrmMenu();
                 this.Hide();
                 menu.ShowDialog();
+            }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta segur@ que desea salir?", "Control", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }

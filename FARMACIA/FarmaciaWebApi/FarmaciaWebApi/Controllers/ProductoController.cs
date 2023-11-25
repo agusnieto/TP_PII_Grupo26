@@ -45,6 +45,16 @@ namespace FarmaciaAPI.Controllers
             }
             return NoContent();
         }
+        [HttpGet]
+        public IActionResult GetProductos()
+        {
+            List<ProductoDTO> productos = ServicioDao.ObtenerServicio().ConsultarProductos();
+            if (productos != null)
+            {
+                return Ok(productos);
+            }
+            return NoContent();
+        }
         [HttpGet("Proveedores")]
         public IActionResult GetProveedores()
         {
@@ -115,7 +125,7 @@ namespace FarmaciaAPI.Controllers
 
                 if (ServicioDao.ObtenerServicio().CargarProducto(producto))
                 {
-                    return Ok("Producto registrado con exito");
+                    return Ok("Producto actualizado con exito");
                 }
                 else
                 {
@@ -131,8 +141,8 @@ namespace FarmaciaAPI.Controllers
         }
 
 
-        [HttpDelete]
-        public IActionResult Delete([FromBody] int id)
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
         {
             //dentro de un try catch
             try
@@ -144,11 +154,11 @@ namespace FarmaciaAPI.Controllers
 
                 if (ServicioDao.ObtenerServicio().EliminarProducto(id))
                 {
-                    return Ok("Cliente eliminado con exito");
+                    return Ok("Producto eliminado con exito");
                 }
                 else
                 {
-                    return StatusCode(500, "No se pudo eliminar el cliente");
+                    return StatusCode(500, "No se pudo eliminar el producto");
 
                 }
             }

@@ -140,8 +140,9 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
         private void FinalizarCompra()
         {
+            
             ActualizarFactura();
-            bool aux = ServicioDao.ObtenerServicio().CargarFactura(factura);
+            bool aux = ServicioDao.ObtenerServicio().CargarFactura(/*factura*/new FacturaDTO());
             if (aux == false)
             {
                 MessageBox.Show("Ha ocurrido un error", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -14,16 +14,16 @@ namespace FarmaciaBack.Datos.Implementacion
 {
     public class FacturaDao : IFacturaDao
     {
-        public bool PostFactura(Factura factura)
+        public bool PostFactura(FacturaDTO factura)
         {
             bool resultado = false;
             List<Parametro> parametros = new List<Parametro>()
             {
-                new Parametro("@LEGAJO", factura.Empleado.Legajo),
-                new Parametro("@CLIENTE", factura.Cliente.IdCliente),
-                new Parametro("@PAGO", factura.FormaPago.Id),
-                new Parametro("@SEDE", factura.Sede.Id),
-                new Parametro("@ENVIO", factura.Envio.Id)
+                new Parametro("@LEGAJO", factura.Empleado),
+                new Parametro("@CLIENTE", factura.Cliente),
+                new Parametro("@PAGO", factura.FormaPago),
+                new Parametro("@SEDE", factura.Sede),
+                new Parametro("@ENVIO", factura.Envio)
             };
             int nro_factura = HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_FACTURAS", parametros, "@FACTURA");
 
@@ -36,32 +36,32 @@ namespace FarmaciaBack.Datos.Implementacion
 
                 if (factura.DetalleServicio != null)
                 {
-                    foreach (DetalleServicio ds in factura.DetalleServicio)
+                    foreach (DetalleServicioDTO ds in factura.DetalleServicio)
                     {
                         List<Parametro> detalleS = new List<Parametro>()
                     {
                     new Parametro("@FACTURA", factura.NroFactura),
-                    new Parametro("@MEDICO", ds.Medico.Id),
-                    new Parametro("@SERVICIO", ds.Servicio.Id),
+                    new Parametro("@MEDICO", ds.Medico),
+                    new Parametro("@SERVICIO", ds.Servicio),
                     new Parametro("@PRECIO", ds.Precio),
-                    new Parametro("@ATENCION", ds.Precio),
-                    new Parametro("@DESCUENTO", ds.Precio)   //REVISAR SI DESCUENTO ESTA BIEN ACA O VA EN FACTURA           
+                    new Parametro("@ATENCION", ds.Atencion),
+                    new Parametro("@DESCUENTO", ds.Descuento)   //REVISAR SI DESCUENTO ESTA BIEN ACA O VA EN FACTURA           
                     };
-                        auxser += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_SERVICIO", parametros, "");
+                        auxser += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_SERVICIO", detalleS, "");
                     }
                 }
                 if (factura.DetalleFactura != null)
                 {
-                    foreach (DetalleFactura df in factura.DetalleFactura)
+                    foreach (DetalleFacturaDTO df in factura.DetalleFactura)
                     {
-                        List<Parametro> detalleS = new List<Parametro>()
+                        List<Parametro> detalleF = new List<Parametro>()
                     {
                     new Parametro("@FACTURA", factura.NroFactura),
-                    new Parametro("@PRODUCTO", df.Producto.Id),
+                    new Parametro("@PRODUCTO", df.Producto),
                     new Parametro("@CANTIDAD", df.Cantidad),
                     new Parametro("@PRECIO", df.Precio)
                     };
-                        auxfact += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_FACTURA", parametros, "");
+                        auxfact += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_FACTURA", detalleF, "");
                     }
                 }
 

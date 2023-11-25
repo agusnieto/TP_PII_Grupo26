@@ -18,7 +18,7 @@ namespace FarmaciaBack.Datos.Interfaz
         List<FormaPago> GetFormasPago();
         List<Sede> GetSedes();
         List<FormaEnvio> GetFormasEnvio();
-        bool PostFactura(Factura factura);
+        bool PostFactura(FacturaDTO factura);
         public List<ServicioDTO> GetServicioDTO();
         Producto GetProduto(int id);
 

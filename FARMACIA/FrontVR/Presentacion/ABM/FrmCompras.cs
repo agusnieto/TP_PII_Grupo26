@@ -55,7 +55,7 @@ namespace FrontVR.Presentacion.ABM
         {
             listaProducto.Clear();
             listBoxProductos.Items.Clear();
-            listaProducto = ServicioDao.ObtenerServicio().ListarProducto();
+            listaProducto = ServicioDao.ObtenerServicio().ConsultarProductos();
             listBoxProductos.Items.AddRange(listaProducto.ToArray());
         }
 
@@ -155,18 +155,19 @@ namespace FrontVR.Presentacion.ABM
 
                 producto.Nombre = txtNombre.Text;
                 producto.Stock = Convert.ToInt32(txtStock.Text);
+                producto.Precio = Convert.ToDouble(txtPrecio.Text);
+                producto.Descripcion = txtDescripcion.Text;
+
                 producto.TipoProd = Convert.ToInt32(cboTipoProducto.SelectedValue);
                 producto.Caracteristica = Convert.ToInt32(cboCaracteristica.SelectedValue);
                 producto.Proveedor = Convert.ToInt32(cboProveedor.SelectedValue);
                 producto.Pais = Convert.ToInt32(cboPais.SelectedValue);
-                producto.Stock = Convert.ToInt32(cboPais.SelectedValue);
-                producto.Precio = Convert.ToDouble(txtPrecio.Text);
-                producto.Descripcion = txtDescripcion.Text;
+                producto.Marca = Convert.ToInt32(cboMarca.SelectedValue);
 
 
                 if (ServicioDao.ObtenerServicio().CargarProducto(producto))
                 {
-                    MessageBox.Show("Se ha grabado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information,  MessageBoxDefaultButton.Button1);
+                    MessageBox.Show("Se ha grabado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                     Habilitar(true);
                     LimpiarCampos();
                     CargarLista();
@@ -175,7 +176,7 @@ namespace FrontVR.Presentacion.ABM
                 else
                 {
                     MessageBox.Show("No se podido grabar el producto!", "Eroor", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                }                
+                }
             }
         }
 

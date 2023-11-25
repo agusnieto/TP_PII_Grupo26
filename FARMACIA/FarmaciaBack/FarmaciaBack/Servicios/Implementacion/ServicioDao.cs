@@ -111,11 +111,6 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return productoDao.GetCaracteristica();
         }
-
-        public List<ProductoDTO> ListarProducto()
-        {
-            return productoDao.ListarProductos();
-        }
         public bool Login(LoginModel login)
         {
             return loginDao.Login(login);
@@ -146,7 +141,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return facturaDao.GetFormasEnvio();
         }
 
-        public bool CargarMaestroDetalle(Factura factura)
+        public bool CargarMaestroDetalle(FacturaDTO factura)
         {
             return facturaDao.PostFactura(factura);
         }
@@ -215,9 +210,14 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return facturaDao.GetProduto(id);
         }
-        public bool CargarFactura(Factura factura)
+        public bool CargarFactura(FacturaDTO factura)
         {
             return facturaDao.PostFactura(factura);
+        }
+
+        public List<ProductoDTO> ConsultarProductos()
+        {
+            return productoDao.GetProductos();
         }
     }
 }

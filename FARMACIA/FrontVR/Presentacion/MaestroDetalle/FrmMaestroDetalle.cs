@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Servicio.Implementacion;
 using FrontVR.Presentacion.MaestroDetalle;
 using System;
@@ -93,8 +94,9 @@ namespace Farmacia
         }
         private void FinalizarCompra()
         {
+            FacturaDTO paraEvitarElEroor = new FacturaDTO();
             formEncabezado.ActualizarFactura();
-            bool aux = ServicioDao.ObtenerServicio().CargarFactura(factura);
+            bool aux = ServicioDao.ObtenerServicio().CargarFactura(paraEvitarElEroor);
             if (aux == false)
             {
                 MessageBox.Show("Ha ocurrido un error", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

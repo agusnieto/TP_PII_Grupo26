@@ -17,7 +17,7 @@ namespace FarmaciaWebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Factura factura)
+        public IActionResult Post([FromBody] FacturaDTO factura)
         {
             //dentro de un try catch
             try

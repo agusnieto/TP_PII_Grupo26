@@ -204,7 +204,7 @@ namespace FarmaciaBack.Datos.Implementacion
             }
             return aux;
         }
-        public List<ProductoDTO> ListarProductos()
+        public List<ProductoDTO> GetProductos()
         {
             ProductoDTO producto;
             DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PRODUCTOS", new List<Parametro>());

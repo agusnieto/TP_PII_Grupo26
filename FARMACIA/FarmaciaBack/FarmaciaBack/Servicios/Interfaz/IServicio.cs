@@ -30,8 +30,8 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool CargarProducto(ProductoDTO oProducto);
         bool ActualizarProducto(ProductoDTO producto);
         bool EliminarProducto(int id);
-
-        List<ProductoDTO> ListarProducto();
+        List<ProductoDTO> ConsultarProductos();
+        
         //Login
         bool Login(LoginModel login);
 
@@ -46,7 +46,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool ActualizarMaestroDetalle(Factura factura);
         List<ServicioDTO> GetServicioDTO();
         Producto GetProduto(int id);
-        bool CargarFactura(Factura factura);
+        bool CargarFactura(FacturaDTO factura);
 
         //MEDICO        
         List<ObraSocial> ConsultarObrasSociales();
