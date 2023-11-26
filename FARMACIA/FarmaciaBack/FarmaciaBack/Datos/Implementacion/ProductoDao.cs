@@ -233,6 +233,40 @@ namespace FarmaciaBack.Datos.Implementacion
             }
             return lista;
         }
+        public List<Producto> ControlStock(string nombre)
+        {
+            Producto producto;
+            List<Producto> productos = new List<Producto>();
+
+            List<Parametro> parametros = new List<Parametro>()
+            {
+                new Parametro("@NOMBRE", nombre),
+            };
+            string sp = "SP_CONSULTA_STOCK";
+
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL(sp, parametros);
+
+            productos = new List<Producto>();
+            if (tabla.Rows.Count > 0)
+            {
+                foreach (DataRow row in tabla.Rows)
+                {
+
+                    producto = new Producto()
+                    {
+                        Id = Convert.ToInt32(row["ID"]),
+                        Nombre = row["PRODUCTO"].ToString(),
+                        Descripcion = row["DETALLE"].ToString(),
+                        Proveedor = new Proveedor() { Nombre = row["PROVEEDOR"].ToString() },
+                        Pais = new Pais() { Nombre = row["PAIS"].ToString() },
+                        Stock = Convert.ToInt32(row["STOCK"]),
+                        Precio = Convert.ToDouble(row["PRECIO"]),
+                    };
+                    productos.Add(producto);
+                }
+            }
+            return productos;
+        }
 
     }
 }

@@ -284,11 +284,14 @@ namespace FarmaciaBack.Servicio.Implementacion
             return empleadoDao.GetEmpleadosDTO();
         }
 
+<<<<<<< HEAD
         /*public EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id)
         {
             return empleadoDao.GetEmpleadoDTO(id);
         }*/
 
+=======
+>>>>>>> 26b4dde95d66fc9f39cdb4c0e73787f240f5b1d2
         public bool CargarEmpleado(EmpleadoDTO empleado)
         {
             return empleadoDao.PostEmpleado(empleado);
@@ -302,6 +305,10 @@ namespace FarmaciaBack.Servicio.Implementacion
         public bool EliminarEmpleado(int id)
         {
             return empleadoDao.DeleteEmpleado(id);
+        }
+        public List<Producto> ControlStock(string nombre)
+        {
+            return productoDao.ControlStock(nombre);
         }
     }
 }

@@ -1,5 +1,6 @@
 using Farmacia;
 using FrontVR.Presentacion.ABM;
+using FrontVR.Presentacion.Agenda;
 using FrontVR.Presentacion.MaestroDetalle;
 
 namespace FrontVR
@@ -15,7 +16,7 @@ namespace FrontVR
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmContactos());
+            Application.Run(new FrmStock());
         }
     }
 }

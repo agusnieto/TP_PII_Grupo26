@@ -34,7 +34,12 @@ namespace FarmaciaWebApi.Controllers
         }
 
         // GET api/<EmpleadoController>/5
+<<<<<<< HEAD
         /*[HttpGet("{id}")]
+=======
+        /*
+        [HttpGet("{id}")]
+>>>>>>> 26b4dde95d66fc9f39cdb4c0e73787f240f5b1d2
         public IActionResult Get(int id)
         {
             EmpleadoDTO empleado = ServicioDao.ObtenerServicio().ConsultarEmpleadoDTOCompleto(id);
