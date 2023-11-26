@@ -978,19 +978,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vivib\\.nuget\\packages\\": {}
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj",
       "projectName": "FrontVR",
-      "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj",
-      "packagesPath": "C:\\Users\\vivib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\obj\\",
+      "projectPath": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vivib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1004,8 +1004,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj": {
-              "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj"
+            "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj"
             }
           }
         }
@@ -1044,7 +1044,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

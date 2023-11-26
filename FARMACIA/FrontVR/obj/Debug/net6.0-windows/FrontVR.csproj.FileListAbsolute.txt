@@ -334,3 +334,5 @@ C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-win
 C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.pdb
 C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.genruntimeconfig.cache
 C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\ref\FrontVR.dll
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.Presentacion.ABM.FrmCompras.resources
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.Presentacion.ABM.FrmContactos.resources
