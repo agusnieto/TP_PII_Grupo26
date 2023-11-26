@@ -112,103 +112,26 @@ namespace FarmaciaAPI.Controllers
                 {
                     return BadRequest("Se esperaba un identificador de un cliente");
                 }
-                /*if (ValidarDatos())
-                {
-                ID_CLIENTE INT,
-                NOMBRE VARCHAR(50),
-                APELLIDO VARCHAR(50),
-                ID_OBRASOCIAL INT,
-                ID_BARRIO INT,
-                DNI BIGINT,
-                TELEFONO BIGINT,
-                EMAIL VARCHAR(50),
-                SEXO BIT
-                }*/
-                if (ServicioDao.ObtenerServicio().ConsultarCliente(id) != null)
-                {
-                    if (ServicioDao.ObtenerServicio().EliminarCliente(id))
-                    {
-                        return Ok("Cliente eliminado con exito");
-                    }
-                    else
-                    {
-                        return StatusCode(500, "No se pudo eliminar el cliente");
 
-                    }
+                if (ServicioDao.ObtenerServicio().EliminarCliente(id))
+                {
+                    return Ok("Cliente eliminado con exito");
                 }
                 else
                 {
-                    return NotFound("No hay clientes con ese identificador asociado");
+                    return StatusCode(500, "No se pudo eliminar el cliente");
+
                 }
+
             }
             catch (Exception)
             {
 
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
-        }
-
-        /*private bool ValidarDatos(ClienteDTO cliente)
-        {
-            private bool ValidarDatos()
-            {
-                int n = 0;
-                if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrWhiteSpace(txtApellido.Text))
-                {
-                    n = 1;
-                }
-                else
-                {
-                    foreach (char c in txtApellido.Text)
-                    {
-                        if (c <= 31 && c > 32 || c < 65 && c > 90 || c < 97 && c > 122)
-                        {
-                            n = 1;
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
-                {
-                    n = 2;
-                }
-                else
-                {
-                    foreach (char c in txtNombre.Text)
-                    {
-                        if (c <= 31 && c > 32 || c < 65 && c > 90 || c < 97 && c > 122)
-                        {
-                            n = 2;
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrWhiteSpace(txtEmail.Text))
-                {
-                    n = 3;
-                }
-                else
-                {
-                    foreach (char c in txtEmail.Text)
-                    {
-                        if (c <= 31 && c >= 33 || c <= 45 && c >= 47 || c < 64 && c > 90 || c < 97 && c > 122)
-                        {
-                            n = 3;
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(txtTelefono.Text) || !int.TryParse(txtTelefono.Text, out _))
-                {
-                    n = 4;
-                }
-                if (string.IsNullOrEmpty(cboBarrio.Text))
-                {
-                    n = 5;
-                }
-                switch (n)
-                {
-
-                }*/
+        }        
     }
 }
-    
+
 
 

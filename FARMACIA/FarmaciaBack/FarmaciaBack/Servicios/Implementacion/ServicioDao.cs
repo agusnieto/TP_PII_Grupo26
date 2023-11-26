@@ -6,6 +6,7 @@ using FarmaciaBack.Servicio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,8 @@ namespace FarmaciaBack.Servicio.Implementacion
         private ILoginDao loginDao;
         private IFacturaDao facturaDao;
         private IMedicoDao medicoDao;
+        private IProveedorDao proveedorDao;
+        private IEmpleadoDao empleadoDao;
         private ServicioDao()
         {
             clienteDao = new ClienteDao();
@@ -26,6 +29,8 @@ namespace FarmaciaBack.Servicio.Implementacion
             loginDao = new LoginDao();
             facturaDao = new FacturaDao();
             medicoDao = new MedicoDao();
+            proveedorDao = new ProveedorDao();
+            empleadoDao = new EmpleadoDao();
         }
         public static ServicioDao ObtenerServicio()
         {
@@ -116,12 +121,12 @@ namespace FarmaciaBack.Servicio.Implementacion
             return loginDao.Login(login);
         }
 
-        public List<EmpleadoDTO> ConsultarEmpleados(int sede)
+        public List<EmpleadoDTO> ConsultarEmpleadosXSede(int sede)
         {
             return facturaDao.GetEmpleados(sede);
         }
 
-        public EmpleadoDTO ConsultarEmpleado(int id)
+        public EmpleadoDTO ConsultarEmpleadoDTO(int id)
         {
             return facturaDao.GetEmpleado(id);
         }
@@ -218,6 +223,81 @@ namespace FarmaciaBack.Servicio.Implementacion
         public List<ProductoDTO> ConsultarProductos()
         {
             return productoDao.GetProductos();
+        }
+
+        public List<RazonSocial> ConsultarRazonesSociales()
+        {
+            return proveedorDao.GetRazonesSociales();
+        }
+
+        public List<ProveedorDTO> ConsultarProveedoresDTO()
+        {
+            return proveedorDao.GetProveedoresDTO();
+        }
+
+        public ProveedorDTO ConsultarProveedorDTO(int id)
+        {
+            return proveedorDao.GetProveedorDTO(id);
+        }
+
+        public Proveedor ConsultarProveedor(int id)
+        {
+            return proveedorDao.GetProveedor(id);
+        }
+
+        public bool CargarProveedor(ProveedorDTO proveedor)
+        {
+            return proveedorDao.PostProveedor(proveedor);
+        }
+
+        public bool ActualizarProveedor(ProveedorDTO proveedor)
+        {
+            return proveedorDao.PutProveedor(proveedor);
+        }
+
+        public bool EliminarProveedor(int id)
+        {
+            return proveedorDao.DeleteProveedor(id);
+        }
+
+        public List<Puesto> ConsultarPuestos()
+        {
+            return empleadoDao.GetPuestos();
+        }
+
+        public List<Empleado> ConsultarEmpleados()
+        {
+            return empleadoDao.GetEmpleados();
+        }
+
+        public Empleado ConsultarEmpleado(int id)
+        {
+            return empleadoDao.GetEmpleado(id);
+        }
+
+        public List<EmpleadoDTO> ConsultarEmpleadosDTO()
+        {
+            return empleadoDao.GetEmpleadosDTO());
+        }
+
+        public EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id)
+        {
+            return empleadoDao.GetEmpleadoDTO(id);
+        }
+
+        public bool CargarEmpleado(EmpleadoDTO empleado)
+        {
+            return empleadoDao.PostEmpleado(empleado);
+        }
+
+        public bool ActualizarEmpleado(EmpleadoDTO empleado)
+        {
+            return empleadoDao.PutEmpleado(empleado);
+        }
+
+        public bool EliminarEmpleado(int id)
+        {
+            return empleadoDao.DeleteEmpleado(id);
         }
     }
 }

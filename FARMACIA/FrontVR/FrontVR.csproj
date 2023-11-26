@@ -9,11 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="140.340.80" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj" />
+    <ProjectReference Include="..\Reporte\Reporte.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using Farmacia;
 using FrontVR.Presentacion.ABM;
+using Reporte;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 namespace FrontVR
 {
     public partial class FrmMenu : Form
-    {
+    {        
         int posx;
         int posy;
         public FrmMenu()
@@ -51,7 +52,7 @@ namespace FrontVR
 
         private void MostrarSubMenu(Panel submenu)
         {
-            
+
             if (submenu.Visible == false)
             {
                 OcutarSubmenu();
@@ -139,7 +140,7 @@ namespace FrontVR
 
         }
 
-  
+
 
         private void btnObrasSociales_Click_1(object sender, EventArgs e)
         {
@@ -156,9 +157,9 @@ namespace FrontVR
             MostrarSubMenu(PanelSubMenuArticulos);
         }
 
-       
 
-     
+
+
 
         //-----------------------------------------------------------------------
         private void btnInventario_Click(object sender, EventArgs e)
@@ -167,11 +168,11 @@ namespace FrontVR
             MostrarSubMenu(PanelSubMenuArticulos);
         }
 
-       
 
-     
 
-      
+
+
+
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -211,7 +212,7 @@ namespace FrontVR
             }
         }
 
-       
+
 
         private void PanelMostrar_Paint_1(object sender, PaintEventArgs e)
         {
@@ -254,6 +255,11 @@ namespace FrontVR
         private void btnInventario_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void PanelMenuLateral_Paint(object sender, PaintEventArgs e)
+        {
+             new Form1().Show();
         }
     }
 }
