@@ -34,7 +34,7 @@ namespace FarmaciaWebApi.Controllers
         }
 
         // GET api/<EmpleadoController>/5
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             ProveedorDTO proveedor = ServicioDao.ObtenerServicio().ConsultarProveedorDTO(id);
@@ -43,7 +43,7 @@ namespace FarmaciaWebApi.Controllers
                 return Ok(proveedor);
             }
             return NoContent();
-        }*/
+        }
 
         // POST api/<EmpleadoController>
         [HttpPost]

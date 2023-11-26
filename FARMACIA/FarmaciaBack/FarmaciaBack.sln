@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaBack", "FarmaciaBack\FarmaciaBack.csproj", "{EC7BEAE6-D1F8-4525-9AF7-74F8FE5A6726}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaciaWebApi", "..\..\..\..\..\source\repos\TP_PII_Grupo26\FARMACIA\FarmaciaWebApi\FarmaciaWebApi\FarmaciaWebApi.csproj", "{C65A9393-C0AE-45EC-BBB8-0917884B26A0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontVR", "..\..\..\..\..\source\repos\TP_PII_Grupo26\FARMACIA\FrontVR\FrontVR.csproj", "{6CFD20C1-CD11-43E4-AB6A-CEB4CEF377B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaBack", "FarmaciaBack\FarmaciaBack.csproj", "{EC7BEAE6-D1F8-4525-9AF7-74F8FE5A6726}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +15,6 @@ Global
 		{EC7BEAE6-D1F8-4525-9AF7-74F8FE5A6726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC7BEAE6-D1F8-4525-9AF7-74F8FE5A6726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC7BEAE6-D1F8-4525-9AF7-74F8FE5A6726}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C65A9393-C0AE-45EC-BBB8-0917884B26A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C65A9393-C0AE-45EC-BBB8-0917884B26A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C65A9393-C0AE-45EC-BBB8-0917884B26A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C65A9393-C0AE-45EC-BBB8-0917884B26A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CFD20C1-CD11-43E4-AB6A-CEB4CEF377B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CFD20C1-CD11-43E4-AB6A-CEB4CEF377B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CFD20C1-CD11-43E4-AB6A-CEB4CEF377B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CFD20C1-CD11-43E4-AB6A-CEB4CEF377B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
