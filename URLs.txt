@@ -1,3 +1,4 @@
+CLIENTE
 https://localhost:7071/api/Cliente/Barrio .....	[Get]
 https://localhost:7071/api/Cliente ...........	[Get]
 https://localhost:7071/api/Cliente ...........	[POST]
@@ -5,6 +6,7 @@ https://localhost:7071/api/Cliente ...........	[PUT]
 https://localhost:7071/api/Cliente/{id} ......	[Get]
 https://localhost:7071/api/Cliente/{id} ......	[DELETE]
 
+FACTURA
 https://localhost:7071/api/Factura ...........	[POST]
 https://localhost:7071/api/Factura/Sedes......  [Get]
 https://localhost:7071/api/Factura/ServicioDTO..[Get]
@@ -15,7 +17,7 @@ https://localhost:7071/api/Factura/Pagos....... [Get]
 https://localhost:7071/api/Factura/Envios...... [Get]
 https://localhost:7071/api/Factura/Productos... [Get]
 
-
+MEDICO
 https://localhost:7071/api/Medico ............	[Get]
 https://localhost:7071/api/Medico ............	[Post]
 https://localhost:7071/api/Medico ............	[Put]
@@ -25,7 +27,7 @@ https://localhost:7071/api/Medico/ObrasSociales [Get]
 https://localhost:7071/api/Medico/{id}	.......	[Get]
 https://localhost:7071/api/Medico/{id}	.......	[Delete]
 
-
+PRODUCTO
 https://localhost:7071/api/Producto/Marcas ....	[Get]
 https://localhost:7071/api/Producto/Paises.....	[Get]
 https://localhost:7071/api/Producto/{id}.......	[Get]
@@ -33,6 +35,21 @@ https://localhost:7071/api/Producto/Proveedores [Get]
 https://localhost:7071/api/Producto ...........	[Get]
 https://localhost:7071/api/Producto ...........	[POST]
 https://localhost:7071/api/Producto ...........	[PUT]
-https://localhost:7071/api/Producto ...........	[DELETE]
+https://localhost:7071/api/Producto/{id}........[DELETE]
 https://localhost:7071/api/Producto/TiposProducto [Get]
 https://localhost:7071/api/Producto/Caracteristicas [Get]
+
+PROVEEDOR
+https://localhost:7071/api/Proveedor...........	[Get]
+https://localhost:7071/api/Proveedor/RazonesSociales...	[Get]
+https://localhost:7071/api/Proveedor...........	[POST]
+https://localhost:7071/api/Proveedor...........	[PUT]
+https://localhost:7071/api/Proveedor/{id},......[DELETE]
+
+EMPLEADO
+https://localhost:7071/api/Empleado...........	[Get]
+https://localhost:7071/api/Empleado/Puestos....	[Get]
+https://localhost:7071/api/Empleado...........	[POST]
+https://localhost:7071/api/Empleado...........	[PUT]
+https://localhost:7071/api/Empleado/{id},.......[DELETE]
+

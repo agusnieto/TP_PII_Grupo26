@@ -284,10 +284,10 @@ namespace FarmaciaBack.Servicio.Implementacion
             return empleadoDao.GetEmpleadosDTO();
         }
 
-        public EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id)
+        /*public EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id)
         {
             return empleadoDao.GetEmpleadoDTO(id);
-        }
+        }*/
 
         public bool CargarEmpleado(EmpleadoDTO empleado)
         {

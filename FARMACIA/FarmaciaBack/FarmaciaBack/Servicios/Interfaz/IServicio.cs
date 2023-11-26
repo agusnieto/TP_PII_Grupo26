@@ -73,7 +73,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         List<Empleado> ConsultarEmpleados();
         Empleado ConsultarEmpleadoCompleto(int id);
         List<EmpleadoDTO> ConsultarEmpleadosDTO();
-        EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id);
+        //EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id);
         bool CargarEmpleado(EmpleadoDTO empleado);
         bool ActualizarEmpleado(EmpleadoDTO empleado);
         bool EliminarEmpleado(int id);
