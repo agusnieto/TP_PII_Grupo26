@@ -14,7 +14,6 @@ namespace FarmaciaBack.Datos.Interfaz
         List<Empleado> GetEmpleados();
         Empleado GetEmpleado(int id);
         List<EmpleadoDTO> GetEmpleadosDTO();
-        EmpleadoDTO GetEmpleadoDTO(int id);
         bool PostEmpleado(EmpleadoDTO empleado);
         bool PutEmpleado(EmpleadoDTO empleado);
         bool DeleteEmpleado(int id);

@@ -21,5 +21,6 @@ namespace FarmaciaBack.Datos.Interfaz
         bool PutProducto(ProductoDTO producto);
         bool DeleteProducto(int id);
         List<ProductoDTO> GetProductos();
+        List<Producto> ControlStock(string nombre);
     }
 }

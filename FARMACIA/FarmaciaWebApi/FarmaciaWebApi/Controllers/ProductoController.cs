@@ -168,5 +168,16 @@ namespace FarmaciaAPI.Controllers
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
+
+        [HttpGet("Stock/{nombre}")]
+        public IActionResult GetStock(string nombre)
+        {
+            List<Producto> lista = ServicioDao.ObtenerServicio().ControlStock(nombre);
+            if (lista != null)
+            {
+                return Ok(lista);
+            }
+            return NoContent();
+        }
     }
 }

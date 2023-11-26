@@ -34,6 +34,7 @@ namespace FarmaciaWebApi.Controllers
         }
 
         // GET api/<EmpleadoController>/5
+        /*
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -43,7 +44,7 @@ namespace FarmaciaWebApi.Controllers
                 return Ok(empleado);
             }
             return NoContent();
-        }
+        }*/
 
         // POST api/<EmpleadoController>
         [HttpPost]

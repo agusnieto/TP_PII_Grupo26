@@ -31,7 +31,8 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool ActualizarProducto(ProductoDTO producto);
         bool EliminarProducto(int id);
         List<ProductoDTO> ConsultarProductos();
-        
+        List<Producto> ControlStock(string nombre);
+
         //Login
         bool Login(LoginModel login);
 
@@ -73,7 +74,6 @@ namespace FarmaciaBack.Servicio.Interfaz
         List<Empleado> ConsultarEmpleados();
         Empleado ConsultarEmpleadoCompleto(int id);
         List<EmpleadoDTO> ConsultarEmpleadosDTO();
-        EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id);
         bool CargarEmpleado(EmpleadoDTO empleado);
         bool ActualizarEmpleado(EmpleadoDTO empleado);
         bool EliminarEmpleado(int id);
