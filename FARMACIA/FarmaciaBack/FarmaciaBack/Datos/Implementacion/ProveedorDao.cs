@@ -50,7 +50,22 @@ namespace FarmaciaBack.Datos.Implementacion
                         Calle = row.ItemArray[6].ToString(),
                         Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
                     };
-
+                    if (row.ItemArray[8].Equals(null))
+                    {
+                        proveedor.Telefono = 0;
+                    }
+                    else
+                    {
+                        proveedor.Telefono = Convert.ToInt64(row.ItemArray[8]);
+                    }
+                    if (row.ItemArray[9].Equals(null))
+                    {
+                        proveedor.Email = string.Empty;
+                    }
+                    else
+                    {
+                        proveedor.Email = row.ItemArray[9].ToString();
+                    }
                 }
 
             }
@@ -73,10 +88,24 @@ namespace FarmaciaBack.Datos.Implementacion
                         RazonSocial = Convert.ToInt32(row.ItemArray[2]),
                         Barrio = Convert.ToInt32(row.ItemArray[4]),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString()),
-                        Telefono = Convert.ToInt64(row.ItemArray[8].ToString()),
-                        Email = row.ItemArray[9].ToString()
+                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
                     };
+                    if (row.ItemArray[8].Equals(null))
+                    {
+                        proveedor.Telefono = 0;
+                    }
+                    else
+                    {
+                        proveedor.Telefono = Convert.ToInt64(row.ItemArray[8]);
+                    }
+                    if (row.ItemArray[9].Equals(null))
+                    {
+                        proveedor.Email = string.Empty;
+                    }
+                    else
+                    {
+                        proveedor.Email = row.ItemArray[9].ToString();
+                    }
                 }
 
             }
@@ -100,10 +129,24 @@ namespace FarmaciaBack.Datos.Implementacion
                         Razon = new RazonSocial(Convert.ToInt32(row.ItemArray[2]), row.ItemArray[3].ToString()),
                         Barrio = new Barrio(Convert.ToInt32(row.ItemArray[4]), row.ItemArray[5].ToString(), new Provincia()),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString()),
-                        Telefono = Convert.ToInt64(row.ItemArray[8].ToString()),
-                        Email = row.ItemArray[9].ToString()
+                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
                     };
+                    if (row.ItemArray[8].Equals(null))
+                    {
+                        proveedor.Telefono = 0;
+                    }
+                    else
+                    {
+                        proveedor.Telefono = Convert.ToInt64(row.ItemArray[8]);
+                    }
+                    if (row.ItemArray[9].Equals(null))
+                    {
+                        proveedor.Email = string.Empty;
+                    }
+                    else
+                    {
+                        proveedor.Email = row.ItemArray[9].ToString();
+                    }
                     lista.Add(proveedor);
                 }
 
@@ -128,10 +171,26 @@ namespace FarmaciaBack.Datos.Implementacion
                         RazonSocial = Convert.ToInt32(row.ItemArray[2]),
                         Barrio = Convert.ToInt32(row.ItemArray[4]),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString()),
-                        Telefono = Convert.ToInt64(row.ItemArray[8].ToString()),
-                        Email = row.ItemArray[9].ToString()
+                        Cuit = Convert.ToInt64(row.ItemArray[7].ToString())
                     };
+
+                    if (row.ItemArray[8].Equals(null))
+                    {
+                        proveedor.Telefono = 0;
+                    }
+                    else
+                    {
+                        proveedor.Telefono = Convert.ToInt64(row.ItemArray[8]);
+                    }
+                    if (row.ItemArray[9].Equals(null))
+                    {
+                        proveedor.Email = string.Empty;
+                    }
+                    else
+                    {
+                        proveedor.Email = row.ItemArray[9].ToString();
+                    }
+
                     lista.Add(proveedor);
                 }
 
@@ -141,7 +200,7 @@ namespace FarmaciaBack.Datos.Implementacion
 
         public List<RazonSocial> GetRazonesSociales()
         {
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PROVEEDORES", new List<Parametro>());
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_RAZON_SOCIAL", new List<Parametro>());
             RazonSocial razon;
             List<RazonSocial> lista = new List<RazonSocial>();
 
@@ -167,7 +226,7 @@ namespace FarmaciaBack.Datos.Implementacion
             int resultado = HelperDB.ObtenerInstancia().EjecutarSQL("SP_INSERT_PROVEEDOR", new List<Parametro>()
             {
                 new Parametro("@NOMBRE", proveedor.Nombre),
-                new Parametro("@RAZON_SOCIAL", proveedor.RazonSocial),
+                new Parametro("@RAZON", proveedor.RazonSocial),
                 new Parametro("@BARRIO", proveedor.Barrio),
                 new Parametro("@CALLE", proveedor.Calle),
                 new Parametro("@CUIT", proveedor.Cuit),
@@ -191,7 +250,7 @@ namespace FarmaciaBack.Datos.Implementacion
             {
                 new Parametro("@ID", proveedor.Id),
                 new Parametro("@NOMBRE", proveedor.Nombre),
-                new Parametro("@RAZON_SOCIAL", proveedor.RazonSocial),
+                new Parametro("@RAZON", proveedor.RazonSocial),
                 new Parametro("@BARRIO", proveedor.Barrio),
                 new Parametro("@CALLE", proveedor.Calle),
                 new Parametro("@CUIT", proveedor.Cuit),
