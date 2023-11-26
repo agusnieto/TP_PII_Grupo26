@@ -52,7 +52,7 @@ namespace FarmaciaBack.Datos.Implementacion
                         },
                         Sueldo = Convert.ToDouble(row.ItemArray[7]),
                         Fecha_ingreso = Convert.ToDateTime(row.ItemArray[8]),
-                        Fecha_baja = Convert.ToDateTime(row.ItemArray[9]),
+                        FechaBaja = Convert.ToDateTime(row.ItemArray[9]),
                         Telefono = Convert.ToInt64(row.ItemArray[10]),
                         Email = row.ItemArray[11].ToString(),
                         Activo = Convert.ToBoolean(row.ItemArray[12])
@@ -112,7 +112,7 @@ namespace FarmaciaBack.Datos.Implementacion
                         },
                         Sueldo = Convert.ToDouble(row.ItemArray[7]),
                         Fecha_ingreso = Convert.ToDateTime(row.ItemArray[8]),
-                        Fecha_baja = Convert.ToDateTime(row.ItemArray[9]),
+                        FechaBaja = Convert.ToDateTime(row.ItemArray[9]),
                         Telefono = Convert.ToInt64(row.ItemArray[10]),
                         Email = row.ItemArray[11].ToString(),
                         Activo = Convert.ToBoolean(row.ItemArray[12])
@@ -182,7 +182,7 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@APELLIDO", empleado.Apellido),
                 new Parametro("@PUESTO", empleado.Puesto),
                 new Parametro("@SEDE", empleado.Sede),
-                new Parametro("@Sueldo", empleado.Sueldo),
+                new Parametro("@SUELDO", empleado.Sueldo),
                 new Parametro("@TELEFONO", empleado.Telefono),
                 new Parametro("@EMAIL", empleado.Email)
             });

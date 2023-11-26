@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {}
+    "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {
+    "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+        "projectUniqueName": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
         "projectName": "FarmaciaBack",
-        "projectPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+        "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
         "packagesPath": "C:\\Users\\vivib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\obj\\",
+        "outputPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vivib\\AppData\\Roaming\\NuGet\\NuGet.Config",

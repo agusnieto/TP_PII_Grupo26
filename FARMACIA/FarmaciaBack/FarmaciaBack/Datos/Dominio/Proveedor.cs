@@ -13,9 +13,14 @@ namespace FarmaciaBack.Datos.Dominio
         private RazonSocial razon;
         private Barrio barrio;
         private string calle;
-        private int cuit;
+        private long cuit;
+        private long telefono;
+        private string email;
 
-        public int Cuit
+        public long Telefono {  get; set; }
+        public string Email { get; set; }
+
+        public long Cuit
         {
             get { return cuit; }
             set { cuit = value; }

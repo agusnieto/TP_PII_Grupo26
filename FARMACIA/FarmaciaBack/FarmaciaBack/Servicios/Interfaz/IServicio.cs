@@ -36,8 +36,8 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool Login(LoginModel login);
 
         //Factura
-        List<EmpleadoDTO> ConsultarEmpleados(int sede);
-        EmpleadoDTO ConsultarEmpleado(int id);
+        List<EmpleadoDTO> ConsultarEmpleadosXSede(int sede);
+        EmpleadoDTO ConsultarEmpleadoDTO(int id);
         List<ClienteDTO> ConsultarClientesDTO();
         ClienteDTO ConsultarClienteDTO(int id);
         List<FormaPago> ConsultarFormasPago();
@@ -57,6 +57,26 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool EliminarMedico(int id);
         public List<MedicoDTO> ConsultarMedicosDTO();
         public MedicoDTO ConsultarMedicoDTO(int id);
+
+        //PROVEEDOR
+        List<RazonSocial> ConsultarRazonesSociales();
+        List<ProveedorDTO> ConsultarProveedoresDTO();
+        ProveedorDTO ConsultarProveedorDTO(int id);
+        List<Proveedor> ConsultarProveedoresCompletos();
+        Proveedor ConsultarProveedor(int id);
+        bool CargarProveedor(ProveedorDTO proveedor);
+        bool ActualizarProveedor(ProveedorDTO proveedor);
+        bool EliminarProveedor(int id);
+
+        //EMPLEADO
+        List<Puesto> ConsultarPuestos();
+        List<Empleado> ConsultarEmpleados();
+        Empleado ConsultarEmpleadoCompleto(int id);
+        List<EmpleadoDTO> ConsultarEmpleadosDTO();
+        EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id);
+        bool CargarEmpleado(EmpleadoDTO empleado);
+        bool ActualizarEmpleado(EmpleadoDTO empleado);
+        bool EliminarEmpleado(int id);
 
 
     }

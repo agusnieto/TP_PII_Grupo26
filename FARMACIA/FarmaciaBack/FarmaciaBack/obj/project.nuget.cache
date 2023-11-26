@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HuAJku8jy2DtK4zTcp0YvqDYCS9J8c7CsKftlsh53P6s33boAdCNMdJSrcqHY3twcSQCto14PImKRi6oZwB+Qw==",
+  "dgSpecHash": "kJvFAqxEDpOSDcwZ3hWshgrHL58me++wl1Q24EWaBUJ9tzcY941jy6dn7ma3MAT+YckrT8qdmHICE+6YMKVKaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+  "projectFilePath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivib\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\vivib\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

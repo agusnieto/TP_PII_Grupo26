@@ -124,7 +124,7 @@ namespace FarmaciaBack.Datos.Implementacion
                 {
                     empleado = new EmpleadoDTO()
                     {
-                        Id = Convert.ToInt32(row.ItemArray[0]),
+                        Legajo = Convert.ToInt32(row.ItemArray[0]),
                         NombreCompleto = row.ItemArray[2].ToString() + ", " + row.ItemArray[1].ToString()
                     };
                     lista.Add(empleado);
@@ -148,7 +148,7 @@ namespace FarmaciaBack.Datos.Implementacion
                 {
                     empleado = new EmpleadoDTO()
                     {
-                        Id = Convert.ToInt32(row.ItemArray[0]),
+                        Legajo = Convert.ToInt32(row.ItemArray[0]),
                         NombreCompleto = row.ItemArray[1].ToString() + ", " + row.ItemArray[2].ToString()
                     };
                 }

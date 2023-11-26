@@ -240,6 +240,10 @@ namespace FarmaciaBack.Servicio.Implementacion
             return proveedorDao.GetProveedorDTO(id);
         }
 
+        public List<Proveedor> ConsultarProveedoresCompletos()
+        {
+            return proveedorDao.GetProveedores();
+        }
         public Proveedor ConsultarProveedor(int id)
         {
             return proveedorDao.GetProveedor(id);
@@ -270,14 +274,14 @@ namespace FarmaciaBack.Servicio.Implementacion
             return empleadoDao.GetEmpleados();
         }
 
-        public Empleado ConsultarEmpleado(int id)
+        public Empleado ConsultarEmpleadoCompleto(int id)
         {
             return empleadoDao.GetEmpleado(id);
         }
 
         public List<EmpleadoDTO> ConsultarEmpleadosDTO()
         {
-            return empleadoDao.GetEmpleadosDTO());
+            return empleadoDao.GetEmpleadosDTO();
         }
 
         public EmpleadoDTO ConsultarEmpleadoDTOCompleto(int id)

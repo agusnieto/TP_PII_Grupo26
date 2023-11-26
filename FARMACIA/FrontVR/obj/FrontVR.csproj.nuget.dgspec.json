@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FrontVR\\FrontVR.csproj": {}
+    "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {
+    "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+        "projectUniqueName": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
         "projectName": "FarmaciaBack",
-        "projectPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+        "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
         "packagesPath": "C:\\Users\\vivib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\obj\\",
+        "outputPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vivib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj": {
+    "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj",
         "projectName": "FarmaciaWebApi",
-        "projectPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj",
+        "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj",
         "packagesPath": "C:\\Users\\vivib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\obj\\",
+        "outputPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vivib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -93,8 +93,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {
-                "projectPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj"
+              "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj": {
+                "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj"
               }
             }
           }
@@ -109,10 +109,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[140.340.80, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -141,14 +137,14 @@
         }
       }
     },
-    "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FrontVR\\FrontVR.csproj": {
+    "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FrontVR\\FrontVR.csproj",
+        "projectUniqueName": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj",
         "projectName": "FrontVR",
-        "projectPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FrontVR\\FrontVR.csproj",
+        "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\FrontVR.csproj",
         "packagesPath": "C:\\Users\\vivib\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FrontVR\\obj\\",
+        "outputPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FrontVR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vivib\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -165,8 +161,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj": {
-                "projectPath": "C:\\Users\\vivib\\BACKUP TPPROG\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj"
+              "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj": {
+                "projectPath": "C:\\Users\\vivib\\source\\repos\\TP_PII_Grupo26\\FARMACIA\\FarmaciaWebApi\\FarmaciaWebApi\\FarmaciaWebApi.csproj"
               }
             }
           }
@@ -181,10 +177,6 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[140.340.80, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"

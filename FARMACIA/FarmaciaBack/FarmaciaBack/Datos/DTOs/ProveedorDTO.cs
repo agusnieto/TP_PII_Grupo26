@@ -15,6 +15,8 @@ namespace FarmaciaBack.Datos.DTOs
         public int Barrio { get; set; }
         public string? Calle { get; set; }
         public int Cuit { get; set; }       
+        public long Telefono { get; set; }
+        public string Email { get; set; }
 
     }
 }

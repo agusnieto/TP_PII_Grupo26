@@ -59,7 +59,7 @@ namespace FarmaciaBack.Datos.Implementacion
 
         public ProveedorDTO GetProveedorDTO(int id)
         {
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PROVEEDOR", new List<Parametro>());
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PROVEEDORES", new List<Parametro>());
             ProveedorDTO proveedor = new ProveedorDTO();
 
             if (tabla.Rows.Count > 0)
@@ -73,7 +73,9 @@ namespace FarmaciaBack.Datos.Implementacion
                         RazonSocial = Convert.ToInt32(row.ItemArray[2]),
                         Barrio = Convert.ToInt32(row.ItemArray[4]),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
+                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString()),
+                        Telefono = Convert.ToInt64(row.ItemArray[8].ToString()),
+                        Email = row.ItemArray[9].ToString()
                     };
                 }
 
@@ -83,7 +85,7 @@ namespace FarmaciaBack.Datos.Implementacion
 
         public List<Proveedor> GetProveedores()
         {
-            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PROVEEDOR", new List<Parametro>());
+            DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL("SP_GET_PROVEEDORES", new List<Parametro>());
             Proveedor proveedor;
             List<Proveedor> lista = new List<Proveedor>();
 
@@ -98,7 +100,9 @@ namespace FarmaciaBack.Datos.Implementacion
                         Razon = new RazonSocial(Convert.ToInt32(row.ItemArray[2]), row.ItemArray[3].ToString()),
                         Barrio = new Barrio(Convert.ToInt32(row.ItemArray[4]), row.ItemArray[5].ToString(), new Provincia()),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
+                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString()),
+                        Telefono = Convert.ToInt64(row.ItemArray[8].ToString()),
+                        Email = row.ItemArray[9].ToString()
                     };
                     lista.Add(proveedor);
                 }
@@ -124,7 +128,9 @@ namespace FarmaciaBack.Datos.Implementacion
                         RazonSocial = Convert.ToInt32(row.ItemArray[2]),
                         Barrio = Convert.ToInt32(row.ItemArray[4]),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
+                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString()),
+                        Telefono = Convert.ToInt64(row.ItemArray[8].ToString()),
+                        Email = row.ItemArray[9].ToString()
                     };
                     lista.Add(proveedor);
                 }
@@ -164,7 +170,9 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@RAZON_SOCIAL", proveedor.RazonSocial),
                 new Parametro("@BARRIO", proveedor.Barrio),
                 new Parametro("@CALLE", proveedor.Calle),
-                new Parametro("@CUIT", proveedor.Cuit)
+                new Parametro("@CUIT", proveedor.Cuit),
+                new Parametro("@TELEFONO", proveedor.Telefono),
+                new Parametro("@EMAIL", proveedor.Email)
             }
             );
 
@@ -186,7 +194,9 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@RAZON_SOCIAL", proveedor.RazonSocial),
                 new Parametro("@BARRIO", proveedor.Barrio),
                 new Parametro("@CALLE", proveedor.Calle),
-                new Parametro("@CUIT", proveedor.Cuit)
+                new Parametro("@CUIT", proveedor.Cuit),
+                new Parametro("@TELEFONO", proveedor.Telefono),
+                new Parametro("@EMAIL", proveedor.Email)
             }
             );
 
