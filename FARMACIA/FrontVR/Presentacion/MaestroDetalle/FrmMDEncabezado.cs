@@ -40,6 +40,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             string url5 = "https://localhost:7071/api/Factura/Sedes";
             var result5 = await HelperHttp.GetInstance().GetAsync(url5);
             List<Sede> lst5 = JsonConvert.DeserializeObject<List<Sede>>(result5.Data);
+            cboSede.DropDownStyle = ComboBoxStyle.DropDownList;
             cboSede.DataSource = lst5;
             cboSede.DisplayMember = "Nombre";
             cboSede.ValueMember = "Id";
@@ -49,6 +50,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             string url = "https://localhost:7071/api/Factura/ClientesDTO";
             var result = await HelperHttp.GetInstance().GetAsync(url);
             List<ClienteDTO> lst = JsonConvert.DeserializeObject<List<ClienteDTO>>(result.Data);
+            cboCliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCliente.DataSource = lst;
             cboCliente.DisplayMember = "NombreCompleto";
             cboCliente.ValueMember = "IdCliente";
@@ -58,6 +60,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             string url3 = "https://localhost:7071/api/Factura/Envios";
             var result3 = await HelperHttp.GetInstance().GetAsync(url3);
             List<FormaEnvio> lst3 = JsonConvert.DeserializeObject<List<FormaEnvio>>(result3.Data);
+            cboEnvio.DropDownStyle = ComboBoxStyle.DropDownList;
             cboEnvio.DataSource = lst3;
             cboEnvio.DisplayMember = "Forma";
             cboEnvio.ValueMember = "Id";
@@ -67,6 +70,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             string url4 = "https://localhost:7071/api/Factura/Pagos";
             var result4 = await HelperHttp.GetInstance().GetAsync(url4);
             List<FormaPago> lst4 = JsonConvert.DeserializeObject<List<FormaPago>>(result4.Data);
+            cboPago.DropDownStyle = ComboBoxStyle.DropDownList;
             cboPago.DataSource = lst4;
             cboPago.DisplayMember = "Forma";
             cboPago.ValueMember = "Id";
@@ -89,10 +93,12 @@ namespace FrontVR.Presentacion.MaestroDetalle
             List<EmpleadoDTO> listaEmpleados = JsonConvert.DeserializeObject<List<EmpleadoDTO>>(resultado.Data);*/
 
             List<EmpleadoDTO> listaEmpleados = ServicioDao.ObtenerServicio().ConsultarEmpleadosXSede(sede.Id);
+
             foreach (EmpleadoDTO e in listaEmpleados)
             {
                 cboEmpleado.Items.Add(e);
             }
+            cboEmpleado.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
         public void ActualizarFactura()

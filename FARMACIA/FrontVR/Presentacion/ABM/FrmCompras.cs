@@ -71,6 +71,7 @@ namespace FrontVR.Presentacion.ABM
             var result = await HelperHttp.GetInstance().GetAsync(url);
             List<Caracteristica> lst = JsonConvert.DeserializeObject<List<Caracteristica>>(result.Data);
             cboCaracteristica.DataSource = lst;
+            cboCaracteristica.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCaracteristica.DisplayMember = "Tipo";
             cboCaracteristica.ValueMember = "Id";
             cboCaracteristica.SelectedIndex = 0;
@@ -80,6 +81,7 @@ namespace FrontVR.Presentacion.ABM
             var result2 = await HelperHttp.GetInstance().GetAsync(url2);
             List<TipoProducto> lst2 = JsonConvert.DeserializeObject<List<TipoProducto>>(result2.Data);
             cboTipoProducto.DataSource = lst2;
+            cboTipoProducto.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTipoProducto.DisplayMember = "Tipo";
             cboTipoProducto.ValueMember = "Id";
             cboTipoProducto.SelectedIndex = 0;
@@ -89,6 +91,7 @@ namespace FrontVR.Presentacion.ABM
             var result3 = await HelperHttp.GetInstance().GetAsync(url3);
             List<Marca> lst3 = JsonConvert.DeserializeObject<List<Marca>>(result3.Data);
             cboMarca.DataSource = lst3;
+            cboMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMarca.DisplayMember = "Nombre";
             cboMarca.ValueMember = "Id";
             cboMarca.SelectedIndex = 0;
@@ -98,6 +101,7 @@ namespace FrontVR.Presentacion.ABM
             var result4 = await HelperHttp.GetInstance().GetAsync(url4);
             List<Proveedor> lst4 = JsonConvert.DeserializeObject<List<Proveedor>>(result4.Data);
             cboProveedor.DataSource = lst4;
+            cboProveedor.DropDownStyle = ComboBoxStyle.DropDownList;
             cboProveedor.DisplayMember = "Nombre";
             cboProveedor.ValueMember = "Id";
             cboProveedor.SelectedIndex = 0;
@@ -108,6 +112,7 @@ namespace FrontVR.Presentacion.ABM
             var result5 = await HelperHttp.GetInstance().GetAsync(url5);
             List<Pais> lst5 = JsonConvert.DeserializeObject<List<Pais>>(result5.Data);
             cboPais.DataSource = lst5;
+            cboPais.DropDownStyle = ComboBoxStyle.DropDownList;
             cboPais.DisplayMember = "Nombre";
             cboPais.ValueMember = "Id";
             cboPais.SelectedIndex = 0;

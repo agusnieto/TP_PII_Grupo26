@@ -1,5 +1,6 @@
 ﻿using Farmacia;
 using FrontVR.Presentacion.ABM;
+using FrontVR.Presentacion.Agenda;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace FrontVR
 
         private void MostrarSubMenu(Panel submenu)
         {
-            
+
             if (submenu.Visible == false)
             {
                 OcutarSubmenu();
@@ -139,7 +140,7 @@ namespace FrontVR
 
         }
 
-  
+
 
         private void btnObrasSociales_Click_1(object sender, EventArgs e)
         {
@@ -156,9 +157,9 @@ namespace FrontVR
             MostrarSubMenu(PanelSubMenuArticulos);
         }
 
-       
 
-     
+
+
 
         //-----------------------------------------------------------------------
         private void btnInventario_Click(object sender, EventArgs e)
@@ -167,11 +168,11 @@ namespace FrontVR
             MostrarSubMenu(PanelSubMenuArticulos);
         }
 
-       
 
-     
 
-      
+
+
+
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -211,7 +212,7 @@ namespace FrontVR
             }
         }
 
-       
+
 
         private void PanelMostrar_Paint_1(object sender, PaintEventArgs e)
         {
@@ -253,7 +254,8 @@ namespace FrontVR
 
         private void btnInventario_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
+            FrmStock stock = new FrmStock();
+            stock.ShowDialog();
         }
     }
 }

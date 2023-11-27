@@ -41,8 +41,9 @@ namespace FrontVR.Presentacion.MaestroDetalle
             string url = "https://localhost:7071/api/Factura/ServicioDTO";
             var result = await HelperHttp.GetInstance().GetAsync(url);
             var lst = JsonConvert.DeserializeObject<List<Servicio>>(result.Data);
-
+            
             cboServicio.DataSource = lst;
+            cboServicio.DropDownStyle = ComboBoxStyle.DropDownList;
             cboServicio.DisplayMember = "Nombre";
             cboServicio.ValueMember = "Id";
             cboServicio.SelectedIndex = 0;
@@ -53,10 +54,12 @@ namespace FrontVR.Presentacion.MaestroDetalle
             var result2 = await HelperHttp.GetInstance().GetAsync(url2);
             var lst2 = JsonConvert.DeserializeObject<List<Medico>>(result2.Data);
 
+
             foreach (Medico e in lst2)
             {
                 cboMedico.Items.Add(e);
             }
+            cboMedico.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMedico.DisplayMember = "Nombre";
             cboMedico.ValueMember = "Id";
             cboMedico.SelectedIndex = 0;

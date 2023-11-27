@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtCodigo = new TextBox();
             label2 = new Label();
             label3 = new Label();
             lblTotal = new Label();
@@ -46,17 +45,12 @@
             btnAgregar = new Button();
             gbCantidad = new GroupBox();
             nudCantidad = new NumericUpDown();
+            nudCodigo = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             gbCantidad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCodigo).BeginInit();
             SuspendLayout();
-            // 
-            // txtCodigo
-            // 
-            txtCodigo.Location = new Point(203, 61);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(163, 23);
-            txtCodigo.TabIndex = 0;
             // 
             // label2
             // 
@@ -209,11 +203,23 @@
             nudCantidad.ThousandsSeparator = true;
             nudCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
+            // nudCodigo
+            // 
+            nudCodigo.Location = new Point(191, 61);
+            nudCodigo.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
+            nudCodigo.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudCodigo.Name = "nudCodigo";
+            nudCodigo.Size = new Size(79, 23);
+            nudCodigo.TabIndex = 10;
+            nudCodigo.ThousandsSeparator = true;
+            nudCodigo.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
             // FrmMDProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(nudCodigo);
             Controls.Add(gbCantidad);
             Controls.Add(btnAgregar);
             Controls.Add(btnSiguiente);
@@ -223,7 +229,6 @@
             Controls.Add(lblTotal);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtCodigo);
             MaximumSize = new Size(816, 489);
             MinimumSize = new Size(816, 489);
             Name = "FrmMDProductos";
@@ -233,12 +238,12 @@
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             gbCantidad.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCodigo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private TextBox txtCodigo;
         private Label label2;
         private Label label3;
         private Label lblTotal;
@@ -256,5 +261,6 @@
         private DataGridViewTextBoxColumn ColCantidad;
         private DataGridViewTextBoxColumn ColSubtotal;
         private DataGridViewButtonColumn ColQuitar;
+        private NumericUpDown nudCodigo;
     }
 }

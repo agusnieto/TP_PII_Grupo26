@@ -32,7 +32,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             this.detalleServicio = factura.DetalleServicio;
         }
 
-        private async void AgregarProducto(string codigo)
+        private async void AgregarProducto(int codigo)
         {
             string url = "https://localhost:7071/api/Factura/Productos?id="; // Asegúrate de tener el separador correcto
 
@@ -126,13 +126,11 @@ namespace FrontVR.Presentacion.MaestroDetalle
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            if (txtCodigo.Text != String.Empty)
-            {
-                AgregarProducto(txtCodigo.Text);
-                txtCodigo.Text = String.Empty;
-                ActualizarDgv();
-            }
+        { 
+            AgregarProducto(Convert.ToInt32(nudCodigo.Value));
+            nudCodigo.Value = 1;
+            ActualizarDgv();
+            
         }
     }
 }
