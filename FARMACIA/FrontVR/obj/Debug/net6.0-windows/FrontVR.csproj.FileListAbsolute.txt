@@ -366,8 +366,6 @@ C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.Presentacion.ABM.FrmCompras.resources
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.Presentacion.ABM.FrmContactos.resources
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.Presentacion.Agenda.FrmStock.resources
-C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\Farmacia.FrmAbmc.resources
-C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\Farmacia.FrmDatosPersonales.resources
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.frmLogin.resources
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\FrontVR.FrmMenu.resources
 C:\Users\vivib\Desktop\tp_prog\TP_PII_Grupo26\FARMACIA\FrontVR\obj\Debug\net6.0-windows\Farmacia.FrmMaestroDetalle.resources

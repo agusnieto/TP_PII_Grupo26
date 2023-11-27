@@ -514,19 +514,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
+    "C:\\Users\\vivib\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\Nato\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+      "projectUniqueName": "C:\\Users\\vivib\\Desktop\\Tp_prog\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
       "projectName": "FarmaciaBack",
-      "projectPath": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\Nato\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
-      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\Documents\\TUP\\2do Cuatrimestre\\PII\\TPI\\GIT\\Nato\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\obj\\",
+      "projectPath": "C:\\Users\\vivib\\Desktop\\Tp_prog\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\FarmaciaBack.csproj",
+      "packagesPath": "C:\\Users\\vivib\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vivib\\Desktop\\Tp_prog\\TP_PII_Grupo26\\FARMACIA\\FarmaciaBack\\FarmaciaBack\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vivib\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -577,7 +577,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

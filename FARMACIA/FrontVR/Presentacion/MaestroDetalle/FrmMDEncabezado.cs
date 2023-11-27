@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,12 +116,14 @@ namespace FrontVR.Presentacion.MaestroDetalle
         }
 
 
-        private void FinalizarCompra()
+        private async void FinalizarCompra()
         {
             ActualizarFactura();
-
-            bool aux = ServicioDao.ObtenerServicio().CargarFactura(factura); //hacerlo con api
-            if (aux == false)
+            string body = JsonConvert.SerializeObject(factura);
+            string url = "https://localhost:7071/api/Factura";
+            var result = await HelperHttp.GetInstance().PostAsync(url, body);
+            //bool aux = ServicioDao.ObtenerServicio().CargarFactura(factura); //hacerlo con api
+            if (result.StatusCode == HttpStatusCode.OK)
             {
                 MessageBox.Show("Ha ocurrido un error", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

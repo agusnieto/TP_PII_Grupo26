@@ -34,7 +34,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
         private async void AgregarProducto(string codigo)
         {
-            string url = "https://localhost:7071/api/Factura/Productos?id=5&codigo="; // Asegúrate de tener el separador correcto
+            string url = "https://localhost:7071/api/Factura/Productos?id="; // Asegúrate de tener el separador correcto
 
             string urlExitosa = $"{url}{codigo}";
             var result = await HelperHttp.GetInstance().GetAsync(urlExitosa);
@@ -66,8 +66,8 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
                     det.Cantidad,
 
-                    det.Precio = det.Producto.Precio * det.Cantidad
-
+                    det.Precio = det.Producto.Precio * det.Cantidad,
+                    "Quitar"
                     });
             }
         }
@@ -117,7 +117,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             servicios = new FrmMDServicios(factura);
-            servicios.Show();
+            servicios.ShowDialog();
         }
 
         private void FrmMDProductos_Load(object sender, EventArgs e)

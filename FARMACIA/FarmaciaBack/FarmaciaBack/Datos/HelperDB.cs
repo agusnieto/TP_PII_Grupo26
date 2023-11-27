@@ -10,7 +10,7 @@ namespace FarmaciaBack.Datos
 
         private HelperDB()
         {
-            cnn = new SqlConnection(@"Data Source=NEHO-PC\SQLEXPRESS;Initial Catalog=VITAFARMA;Integrated Security=True");//INSERTAR CADENA DE CONEXION
+            cnn = new SqlConnection(@"Data Source=LAPTOP-FC0TODPF\SQLEXPRESS;Initial Catalog=VITAFARMA;Integrated Security=True");//INSERTAR CADENA DE CONEXION
         }
 
         public static HelperDB ObtenerInstancia()
@@ -21,40 +21,20 @@ namespace FarmaciaBack.Datos
         }
         public DataTable ConsultaSQL(string spNombre, List<Parametro> values)
         {
-            SqlTransaction t = null;
             DataTable tabla = new DataTable();
-            try
+            cnn.Open();
+
+            SqlCommand cmd = new SqlCommand(spNombre, cnn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            if (values != null)
             {
-                cnn.Open();
-                t = cnn.BeginTransaction();
-                SqlCommand cmd = new SqlCommand(spNombre, cnn, t);
-                cmd.CommandType = CommandType.StoredProcedure;
-                if (values != null)
+                foreach (Parametro oParametro in values)
                 {
-                    foreach (Parametro oParametro in values)
-                    {
-                        cmd.Parameters.AddWithValue(oParametro.Clave, oParametro.Valor);
-                    }
-                }
-                tabla.Load(cmd.ExecuteReader());
-                t.Commit();
-            }
-            catch (Exception)
-            {
-                if(tabla != null)
-                {
-                    tabla = null;
-                }
-                t.Rollback();
-            }
-            finally
-            {
-                if(cnn != null && cnn.State == ConnectionState.Open)
-                {
-                    cnn.Close();
+                    cmd.Parameters.AddWithValue(oParametro.Clave, oParametro.Valor);
                 }
             }
-            
+            tabla.Load(cmd.ExecuteReader());
+            cnn.Close();
             return tabla;
         }
 

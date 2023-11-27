@@ -132,7 +132,8 @@ namespace FrontVR.Presentacion.MaestroDetalle
                     det.Medico.ToString(),
                     det.Atencion.ToString(),
                     det.Precio.ToString(),
-                    det.Precio + det.Atencion
+                    det.Precio + det.Atencion,
+                    "Quitar"
                 });
             }
         }

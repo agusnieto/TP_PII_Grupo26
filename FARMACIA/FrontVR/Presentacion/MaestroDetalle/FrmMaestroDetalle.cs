@@ -36,7 +36,7 @@ namespace Farmacia
         private void btnSiguiente_Click_1(object sender, EventArgs e)
         {
             formProd = new FrmMDProductos(factura);
-            formProd.Show();
+            formProd.ShowDialog();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
