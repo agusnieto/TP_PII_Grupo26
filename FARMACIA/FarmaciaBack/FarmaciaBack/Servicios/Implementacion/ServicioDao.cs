@@ -41,7 +41,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return instancia;
         }
 
-        public bool ActualizarCliente(Cliente oCliente)
+        public bool ActualizarCliente(ClienteDTO oCliente)
         {
             return clienteDao.PostCliente(oCliente);
         }
@@ -52,7 +52,7 @@ namespace FarmaciaBack.Servicio.Implementacion
         }
 
 
-        public bool CargarCliente(Cliente oCliente)
+        public bool CargarCliente(ClienteDTO oCliente)
         {
             return clienteDao.PostCliente(oCliente);
         }
@@ -146,7 +146,7 @@ namespace FarmaciaBack.Servicio.Implementacion
             return facturaDao.GetFormasEnvio();
         }
 
-        public bool CargarMaestroDetalle(FacturaDTO factura)
+        public bool CargarMaestroDetalle(Factura factura)
         {
             return facturaDao.PostFactura(factura);
         }
@@ -215,7 +215,7 @@ namespace FarmaciaBack.Servicio.Implementacion
         {
             return facturaDao.GetProduto(id);
         }
-        public bool CargarFactura(FacturaDTO factura)
+        public bool CargarFactura(Factura factura)
         {
             return facturaDao.PostFactura(factura);
         }

@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Datos.Interfaz;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,15 @@ namespace FarmaciaBack.Datos.Implementacion
 {
     public class ClienteDao : IClienteDao
     {
-        public bool PostCliente(Cliente oCliente)
+        public bool PostCliente(ClienteDTO oCliente)
         {
             bool aux = false;
             List<Parametro> parametros = new List<Parametro>()
             {
                 new Parametro("@NOMBRE", oCliente.Nombre),
                 new Parametro("@APELLIDO", oCliente.Apellido),
-                new Parametro("@OBRA_SOCIAL", oCliente.ObraSocial.Id),
-                new Parametro("@BARRIO", oCliente.Barrio.Id),
+                new Parametro("@OBRA_SOCIAL", oCliente.ObraSocial),
+                new Parametro("@BARRIO", oCliente.Barrio),
                 new Parametro("@DNI", oCliente.Dni),
                 new Parametro("@TELEFONO", oCliente.Telefono),
                 new Parametro("@EMAIL", oCliente.Email),
@@ -126,7 +127,7 @@ namespace FarmaciaBack.Datos.Implementacion
         }
         return lista;
     }
-    public bool PutCliente(Cliente oCliente)
+    public bool PutCliente(ClienteDTO oCliente)
     {
             bool aux = false;
             List<Parametro> parametros = new List<Parametro>()
@@ -134,8 +135,8 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@ID", oCliente.IdCliente),
                 new Parametro("@NOMBRE", oCliente.Nombre),
                 new Parametro("@APELLIDO", oCliente.Apellido),
-                new Parametro("@OBRA_SOCIAL", oCliente.ObraSocial.Id),
-                new Parametro("@BARRIO", oCliente.Barrio.Id),
+                new Parametro("@OBRA_SOCIAL", oCliente.ObraSocial),
+                new Parametro("@BARRIO", oCliente.Barrio),
                 new Parametro("@DNI", oCliente.Dni),
                 new Parametro("@TELEFONO", oCliente.Telefono),
                 new Parametro("@EMAIL", oCliente.Email),

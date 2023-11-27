@@ -17,19 +17,18 @@ namespace FrontVR.Presentacion.MaestroDetalle
 {
     public partial class FrmMDServicios : Form
     {
-        List<DetalleServicio> detalleServicios;
-        Factura factura = new Factura();
+        FrmMDEncabezado encabezado;
 
+        List<DetalleFactura> detalleFactura;
+        List<DetalleServicio> detalleServicio;
+        Factura factura;
         public FrmMDServicios(Factura factura)
         {
             InitializeComponent();
-            this.factura = factura;
-            this.detalleServicios = factura.DetalleServicio;
-        }
 
-        public FrmMDServicios()
-        {
-            InitializeComponent();
+            this.factura = factura;
+            this.detalleFactura = factura.DetalleFactura;
+            this.detalleServicio = factura.DetalleServicio;
         }
 
         private async void FrmMDServicios_Load(object sender, EventArgs e)
@@ -50,15 +49,49 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
 
             cboMedico.Items.Clear();
-            string url2 = "https://localhost:7071/api/Medico/MedicoDTO";
+            string url2 = "https://localhost:7071/api/Medico";
             var result2 = await HelperHttp.GetInstance().GetAsync(url2);
-            var lst2 = JsonConvert.DeserializeObject<List<MedicoDTO>>(result2.Data);
+            var lst2 = JsonConvert.DeserializeObject<List<Medico>>(result2.Data);
 
-            cboServicio.DataSource = lst2;
-            cboServicio.DisplayMember = "Nombre";
-            cboServicio.ValueMember = "Id";
+            foreach (Medico e in lst2)
+            {
+                cboMedico.Items.Add(e);
+            }
+            cboMedico.DisplayMember = "Nombre";
+            cboMedico.ValueMember = "Id";
             cboMedico.SelectedIndex = 0;
 
+        }
+        private async void AgregarServicio(Servicio servicio, Medico medico, int atencion, double precio)
+        {
+            if (MedicoServicioDuplicado(servicio, medico))
+            {
+                MessageBox.Show("Servicio y Medico ya ingresado", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                detalleServicio.Add(new DetalleServicio()
+                {
+                    Medico = medico,
+                    Servicio = servicio,
+                    Atencion = atencion,
+                    Precio = precio,
+                });
+            }
+        }
+
+        private bool MedicoServicioDuplicado(Servicio servicio, Medico medico)
+        {
+            bool ok = false;
+
+            foreach (DetalleServicio det in factura.DetalleServicio)
+            {
+                if (det.Servicio.Id == servicio.Id && det.Medico.Id == medico.Id)
+                {
+                    ok = true;
+                }
+            }
+            return ok;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,13 +104,47 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            FrmMDEncabezado nuevo = new FrmMDEncabezado();
-            nuevo.ShowDialog();
+            encabezado = new FrmMDEncabezado(factura);
+            encabezado.ShowDialog();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
+            AgregarServicio((Servicio)cboServicio.SelectedItem, (Medico)cboMedico.SelectedItem,
+                Convert.ToInt32(nudAtencion.Value), Convert.ToDouble(nudPrecio.Value));
+            ActualizarDgv();
+            ActualizarTotal();
+        }
 
+        private void ActualizarTotal()
+        {
+            lblTotal.Text = factura.TotalServicios().ToString();
+        }
+
+        private void ActualizarDgv()
+        {
+            dgvDetalleServicio.Rows.Clear();
+            foreach (DetalleServicio det in detalleServicio)
+            {
+                dgvDetalleServicio.Rows.Add(new object[]
+                {
+                    det.Servicio.ToString(),
+                    det.Medico.ToString(),
+                    det.Atencion.ToString(),
+                    det.Precio.ToString(),
+                    det.Precio + det.Atencion
+                });
+            }
+        }
+
+        private void dgvDetalleServicio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvDetalleServicio.CurrentCell.ColumnIndex == 5)
+            {
+                factura.QuitarDetalleServicio(dgvDetalleServicio.CurrentRow.Index);
+                dgvDetalleServicio.Rows.RemoveAt(dgvDetalleServicio.CurrentRow.Index);
+                lblTotal.Text = factura.TotalServicios().ToString();
+            }
         }
     }
 }

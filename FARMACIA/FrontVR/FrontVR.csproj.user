@@ -10,12 +10,6 @@
     <Compile Update="Presentacion\Agenda\FrmStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Presentacion\FrmAbmc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Presentacion\FrmDatosPersonales.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Presentacion\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

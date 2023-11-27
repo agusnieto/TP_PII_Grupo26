@@ -19,7 +19,7 @@ namespace FarmaciaBack.Datos.DTOs
         private int barrio;
         private int dni;
         private bool sexo;
-        private int telefono;
+        private long telefono;
         private string email;
         private string nombreCompleto;
 
@@ -29,7 +29,7 @@ namespace FarmaciaBack.Datos.DTOs
             set { nombreCompleto = value; }
         }
 
-        public int Telefono
+        public long Telefono
         {
             get { return telefono; }
             set { telefono = value; }

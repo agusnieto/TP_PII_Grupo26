@@ -34,7 +34,7 @@
             lblTotal = new Label();
             dgvProductos = new DataGridView();
             ColumnId = new DataGridViewTextBoxColumn();
-            ColTipo = new DataGridViewTextBoxColumn();
+            ColMarca = new DataGridViewTextBoxColumn();
             ColNombre = new DataGridViewTextBoxColumn();
             ColPrecio = new DataGridViewTextBoxColumn();
             ColCantidad = new DataGridViewTextBoxColumn();
@@ -43,26 +43,27 @@
             label1 = new Label();
             button1 = new Button();
             btnSiguiente = new Button();
-            button2 = new Button();
+            btnAgregar = new Button();
+            gbCantidad = new GroupBox();
+            nudCantidad = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
+            gbCantidad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(334, 91);
-            txtCodigo.Margin = new Padding(3, 4, 3, 4);
+            txtCodigo.Location = new Point(203, 61);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(186, 27);
-            txtCodigo.TabIndex = 1;
-            txtCodigo.TextChanged += txtCodigo_TextChanged;
-            txtCodigo.KeyDown += txtCodigo_KeyDown;
+            txtCodigo.Size = new Size(163, 23);
+            txtCodigo.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(257, 95);
+            label2.Location = new Point(136, 64);
             label2.Name = "label2";
-            label2.Size = new Size(61, 20);
+            label2.Size = new Size(49, 15);
             label2.TabIndex = 2;
             label2.Text = "Codigo:";
             // 
@@ -70,9 +71,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(553, 500);
+            label3.Location = new Point(484, 375);
             label3.Name = "label3";
-            label3.Size = new Size(244, 32);
+            label3.Size = new Size(192, 25);
             label3.TabIndex = 4;
             label3.Text = "Total en Productos:  $";
             // 
@@ -80,9 +81,9 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTotal.Location = new Point(859, 500);
+            lblTotal.Location = new Point(752, 375);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(44, 32);
+            lblTotal.Size = new Size(36, 25);
             lblTotal.TabIndex = 5;
             lblTotal.Text = "---";
             // 
@@ -90,14 +91,13 @@
             // 
             dgvProductos.AllowUserToAddRows = false;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColTipo, ColNombre, ColPrecio, ColCantidad, ColSubtotal, ColQuitar });
-            dgvProductos.Location = new Point(14, 129);
-            dgvProductos.Margin = new Padding(3, 4, 3, 4);
+            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColMarca, ColNombre, ColPrecio, ColCantidad, ColSubtotal, ColQuitar });
+            dgvProductos.Location = new Point(12, 97);
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowHeadersWidth = 51;
             dgvProductos.RowTemplate.Height = 25;
-            dgvProductos.Size = new Size(887, 352);
-            dgvProductos.TabIndex = 6;
+            dgvProductos.Size = new Size(776, 264);
+            dgvProductos.TabIndex = 5;
             dgvProductos.CellContentClick += dgvProductos_CellContentClick;
             // 
             // ColumnId
@@ -107,12 +107,12 @@
             ColumnId.Name = "ColumnId";
             ColumnId.Width = 80;
             // 
-            // ColTipo
+            // ColMarca
             // 
-            ColTipo.HeaderText = "Tipo";
-            ColTipo.MinimumWidth = 6;
-            ColTipo.Name = "ColTipo";
-            ColTipo.Width = 160;
+            ColMarca.HeaderText = "Marca";
+            ColMarca.MinimumWidth = 6;
+            ColMarca.Name = "ColMarca";
+            ColMarca.Width = 160;
             // 
             // ColNombre
             // 
@@ -153,51 +153,69 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(14, 28);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(366, 37);
+            label1.Size = new Size(289, 30);
             label1.TabIndex = 9;
             label1.Text = "Agregar Productos al Carrito";
             // 
             // button1
             // 
-            button1.Location = new Point(199, 528);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(174, 396);
             button1.Name = "button1";
-            button1.Size = new Size(86, 31);
-            button1.TabIndex = 11;
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 3;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(390, 528);
-            btnSiguiente.Margin = new Padding(3, 4, 3, 4);
+            btnSiguiente.Location = new Point(341, 396);
             btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(86, 31);
-            btnSiguiente.TabIndex = 12;
+            btnSiguiente.Size = new Size(75, 23);
+            btnSiguiente.TabIndex = 4;
             btnSiguiente.Text = "Siguiente";
             btnSiguiente.UseVisualStyleBackColor = true;
             btnSiguiente.Click += btnSiguiente_Click;
             // 
-            // button2
+            // btnAgregar
             // 
-            button2.Location = new Point(553, 91);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(86, 31);
-            button2.TabIndex = 13;
-            button2.Text = "Agregar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnAgregar.Location = new Point(514, 61);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.TabIndex = 2;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += button2_Click;
+            // 
+            // gbCantidad
+            // 
+            gbCantidad.Controls.Add(nudCantidad);
+            gbCantidad.Location = new Point(393, 39);
+            gbCantidad.Name = "gbCantidad";
+            gbCantidad.Size = new Size(93, 52);
+            gbCantidad.TabIndex = 1;
+            gbCantidad.TabStop = false;
+            gbCantidad.Text = "Cantidad";
+            // 
+            // nudCantidad
+            // 
+            nudCantidad.Location = new Point(6, 22);
+            nudCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudCantidad.Name = "nudCantidad";
+            nudCantidad.Size = new Size(79, 23);
+            nudCantidad.TabIndex = 0;
+            nudCantidad.ThousandsSeparator = true;
+            nudCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // FrmMDProductos
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
-            Controls.Add(button2);
+            ClientSize = new Size(800, 450);
+            Controls.Add(gbCantidad);
+            Controls.Add(btnAgregar);
             Controls.Add(btnSiguiente);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -206,11 +224,15 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(txtCodigo);
-            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "FrmMDProductos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmMDProductos";
             Load += FrmMDProductos_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
+            gbCantidad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -221,16 +243,18 @@
         private Label label3;
         private Label lblTotal;
         private DataGridView dgvProductos;
+        private Label label1;
+        private Button button1;
+        private Button btnSiguiente;
+        private Button btnAgregar;
+        private GroupBox gbCantidad;
+        private NumericUpDown nudCantidad;
         private DataGridViewTextBoxColumn ColumnId;
-        private DataGridViewTextBoxColumn ColTipo;
+        private DataGridViewTextBoxColumn ColMarca;
         private DataGridViewTextBoxColumn ColNombre;
         private DataGridViewTextBoxColumn ColPrecio;
         private DataGridViewTextBoxColumn ColCantidad;
         private DataGridViewTextBoxColumn ColSubtotal;
         private DataGridViewButtonColumn ColQuitar;
-        private Label label1;
-        private Button button1;
-        private Button btnSiguiente;
-        private Button button2;
     }
 }

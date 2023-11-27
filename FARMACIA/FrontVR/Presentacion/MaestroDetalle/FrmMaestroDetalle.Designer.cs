@@ -35,23 +35,21 @@
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Location = new Point(173, 186);
-            btnSiguiente.Margin = new Padding(3, 4, 3, 4);
+            btnSiguiente.Location = new Point(133, 97);
             btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(86, 31);
+            btnSiguiente.Size = new Size(75, 23);
             btnSiguiente.TabIndex = 1;
-            btnSiguiente.Text = "Siguiente";
+            btnSiguiente.Text = "Agregar";
             btnSiguiente.UseVisualStyleBackColor = true;
             btnSiguiente.Click += btnSiguiente_Click_1;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(58, 186);
-            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Location = new Point(33, 97);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(86, 31);
-            btnCancelar.TabIndex = 2;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 0;
+            btnCancelar.Text = "Volver";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -59,21 +57,22 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(102, 55);
+            label1.Location = new Point(76, 35);
             label1.Name = "label1";
-            label1.Size = new Size(101, 37);
-            label1.TabIndex = 9;
+            label1.Size = new Size(79, 30);
+            label1.TabIndex = 2;
             label1.Text = "Carrito";
             // 
             // FrmMaestroDetalle
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 298);
+            ClientSize = new Size(234, 146);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnSiguiente);
-            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(250, 185);
+            MinimumSize = new Size(250, 185);
             Name = "FrmMaestroDetalle";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MaestroDetalle";

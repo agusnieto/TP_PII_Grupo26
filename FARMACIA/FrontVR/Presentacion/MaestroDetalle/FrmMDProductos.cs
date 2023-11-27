@@ -1,5 +1,6 @@
 ﻿using FarmaciaBack.Datos;
 using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Datos.Implementacion;
 using FarmaciaBack.Datos.Interfaz;
 using Newtonsoft.Json;
@@ -18,20 +19,17 @@ namespace FrontVR.Presentacion.MaestroDetalle
 {
     public partial class FrmMDProductos : Form
     {
+        FrmMDServicios servicios;
+
         List<DetalleFactura> detalleFactura;
+        List<DetalleServicio> detalleServicio;
         Factura factura;
         public FrmMDProductos(Factura factura)
         {
             InitializeComponent();
             this.factura = factura;
             this.detalleFactura = factura.DetalleFactura;
-        }
-
-        public FrmMDProductos()
-        {
-            InitializeComponent();
-            factura = new Factura();
-            detalleFactura = new List<DetalleFactura>(); // Inicializar como una nueva lista vacía
+            this.detalleServicio = factura.DetalleServicio;
         }
 
         private async void AgregarProducto(string codigo)
@@ -57,7 +55,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
         private void ActualizarDgv()
         {
             dgvProductos.Rows.Clear();
-            foreach (DetalleFactura det in detalleFactura)
+            foreach (DetalleFactura det in factura.DetalleFactura)
             {
                 dgvProductos.Rows.Add(new object[] {
 
@@ -78,7 +76,7 @@ namespace FrontVR.Presentacion.MaestroDetalle
             bool existe = false;
             if (prod != null)
             {
-                foreach (DetalleFactura det in detalleFactura)
+                foreach (DetalleFactura det in factura.DetalleFactura)
                 {
                     if (prod.Id == det.Producto.Id)
                     {
@@ -89,10 +87,10 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
                 if (!existe)
                 {
-                    detalleFactura.Add(new DetalleFactura()
+                    factura.DetalleFactura.Add(new DetalleFactura()
                     {
                         Producto = prod,
-                        Cantidad = 1,
+                        Cantidad = Convert.ToInt32(nudCantidad.Value),
                         Precio = prod.Precio
                     });
                 }
@@ -118,8 +116,8 @@ namespace FrontVR.Presentacion.MaestroDetalle
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            FrmMDServicios nuevo = new FrmMDServicios();
-            nuevo.Show();
+            servicios = new FrmMDServicios(factura);
+            servicios.Show();
         }
 
         private void FrmMDProductos_Load(object sender, EventArgs e)
@@ -135,16 +133,6 @@ namespace FrontVR.Presentacion.MaestroDetalle
                 txtCodigo.Text = String.Empty;
                 ActualizarDgv();
             }
-        }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigo_KeyDown(object sender, KeyEventArgs e)
-        {
-          
         }
     }
 }

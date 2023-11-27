@@ -15,7 +15,7 @@ namespace FarmaciaWebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            List<EmpleadoDTO> lista = ServicioDao.ObtenerServicio().ConsultarEmpleadosDTO();
+            List<Empleado> lista = ServicioDao.ObtenerServicio().ConsultarEmpleados();
             if (lista != null)
             {
                 return Ok(lista);

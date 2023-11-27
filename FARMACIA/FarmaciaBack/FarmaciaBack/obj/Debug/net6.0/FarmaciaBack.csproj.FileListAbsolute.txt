@@ -82,3 +82,15 @@ C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\ob
 C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\refint\FarmaciaBack.dll
 C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.pdb
 C:\Users\vivib\source\repos\TP_PII_Grupo26\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\ref\FarmaciaBack.dll
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\bin\Debug\net6.0\FarmaciaBack.deps.json
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\bin\Debug\net6.0\FarmaciaBack.dll
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\bin\Debug\net6.0\FarmaciaBack.pdb
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.csproj.AssemblyReference.cache
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.AssemblyInfo.cs
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.dll
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\refint\FarmaciaBack.dll
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\FarmaciaBack.pdb
+C:\Users\USUARIO\Documents\TUP\2do Cuatrimestre\PII\TPI\GIT\Nato\FARMACIA\FarmaciaBack\FarmaciaBack\obj\Debug\net6.0\ref\FarmaciaBack.dll

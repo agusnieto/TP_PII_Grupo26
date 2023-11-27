@@ -29,5 +29,9 @@ namespace FarmaciaBack.Datos.DTOs
             Legajo = id;
             NombreCompleto = nombreCompleto;
         }
+        public override string ToString()
+        {
+            return Apellido + ", " + Nombre;
+        }
     }
 }

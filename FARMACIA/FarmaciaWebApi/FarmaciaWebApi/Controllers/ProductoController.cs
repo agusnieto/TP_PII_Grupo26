@@ -123,7 +123,7 @@ namespace FarmaciaAPI.Controllers
                     return BadRequest("Se esperaba un producto completo");
                 }
 
-                if (ServicioDao.ObtenerServicio().CargarProducto(producto))
+                if (ServicioDao.ObtenerServicio().ActualizarProducto(producto))
                 {
                     return Ok("Producto actualizado con exito");
                 }

@@ -180,7 +180,8 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@PROVEEDOR", producto.Proveedor),
                 new Parametro("@PAIS", producto.Pais),
                 new Parametro("@STOCK", producto.Stock),
-                new Parametro("@PRECIO", producto.Precio)
+                new Parametro("@PRECIO", producto.Precio),
+                new Parametro("@CARACTERISTICA", producto.Caracteristica)
             };
 
             if (HelperDB.ObtenerInstancia().EjecutarSQL("SP_UPDATE_PRODUCTO", parametros) == 1)

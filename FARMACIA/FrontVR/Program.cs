@@ -16,7 +16,7 @@ namespace FrontVR
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmStock());
+            Application.Run(new FrmMaestroDetalle());
         }
     }
 }

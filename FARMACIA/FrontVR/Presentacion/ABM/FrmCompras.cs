@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FarmaciaBack.Servicio.Implementacion;
+using System.Net;
+using System.Reflection;
 
 namespace FrontVR.Presentacion.ABM
 {
@@ -51,11 +53,14 @@ namespace FrontVR.Presentacion.ABM
             btnBorrar.Enabled = !v;
         }
 
-        private void CargarLista()
+        private async void CargarLista()
         {
             listaProducto.Clear();
             listBoxProductos.Items.Clear();
-            listaProducto = ServicioDao.ObtenerServicio().ConsultarProductos();
+            string url = "https://localhost:7071/api/Producto";
+            var result = await HelperHttp.GetInstance().GetAsync(url);
+            listaProducto = JsonConvert.DeserializeObject<List<ProductoDTO>>(result.Data);
+
             listBoxProductos.Items.AddRange(listaProducto.ToArray());
         }
 
@@ -139,20 +144,32 @@ namespace FrontVR.Presentacion.ABM
                 cboPais.SelectedValue = producto.Pais;
                 cboProveedor.SelectedValue = producto.Proveedor;
 
+                //cargar campos 
+                txtNombre.Text = listaProducto[selected].Nombre;
+                txtStock.Text = listaProducto[selected].Stock.ToString();
+                txtPrecio.Text = listaProducto[selected].Precio.ToString();
+                txtDescripcion.Text = listaProducto[selected].Descripcion.ToString();
+
+                cboCaracteristica.SelectedValue = listaProducto[selected].Caracteristica;
+                cboMarca.SelectedValue = listaProducto[selected].Marca;
+                cboPais.SelectedValue = listaProducto[selected].Pais;
+                cboProveedor.SelectedValue = listaProducto[selected].Proveedor;
+                cboTipoProducto.SelectedValue = listaProducto[selected].TipoProd;
 
                 btnEditar.Enabled = true;
                 btnBorrar.Enabled = true;
             }
         }
-        private void btnGrabar_Click(object sender, EventArgs e)
+        private async void btnGrabar_Click(object sender, EventArgs e)
         {
+            int index = listBoxProductos.SelectedIndex;
             //validacion de los datos
             if (ValidarDatos())
             {
 
                 //crear objeto
                 ProductoDTO producto = new ProductoDTO();
-
+                producto.Id = listaProducto[index].Id;
                 producto.Nombre = txtNombre.Text;
                 producto.Stock = Convert.ToInt32(txtStock.Text);
                 producto.Precio = Convert.ToDouble(txtPrecio.Text);
@@ -164,18 +181,39 @@ namespace FrontVR.Presentacion.ABM
                 producto.Pais = Convert.ToInt32(cboPais.SelectedValue);
                 producto.Marca = Convert.ToInt32(cboMarca.SelectedValue);
 
-
-                if (ServicioDao.ObtenerServicio().CargarProducto(producto))
+                string body = JsonConvert.SerializeObject(producto);
+                string url = "https://localhost:7071/api/Producto";
+                if (btnGrabar.Text == "Confirmar")
                 {
-                    MessageBox.Show("Se ha grabado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                    Habilitar(true);
-                    LimpiarCampos();
-                    CargarLista();
-                    btnSalir.Text = "Salir";
+                    var result = await HelperHttp.GetInstance().PutAsync(url, body);
+                    if (result.StatusCode == HttpStatusCode.OK)
+                    {
+                        MessageBox.Show("Producto actualizado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                        Habilitar(true);
+                        LimpiarCampos();
+                        CargarLista();
+                        btnSalir.Text = "Salir";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar el producto!", "Eroor", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se podido grabar el producto!", "Eroor", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    var result = await HelperHttp.GetInstance().PostAsync(url, body);
+                    if (result.StatusCode == HttpStatusCode.OK)
+                    {
+                        MessageBox.Show("Producto cargado exitosamente!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                        Habilitar(true);
+                        LimpiarCampos();
+                        CargarLista();
+                        btnSalir.Text = "Salir";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se podido cargar el producto!", "Eroor", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    }
                 }
             }
         }
@@ -247,22 +285,32 @@ namespace FrontVR.Presentacion.ABM
             btnEditar.Enabled = false;
             LimpiarCampos();
             btnSalir.Text = "Cancelar";
+
+
+
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private async void btnEditar_Click(object sender, EventArgs e)
         {
             Habilitar(false);
             btnBorrar.Enabled = false;
             btnEditar.Enabled = false;
             btnSalir.Text = "Cancelar";
+            btnSalir.Enabled = true;
+            btnGrabar.Text = "Confirmar";
+
         }
 
-        private void btnBorrar_Click(object sender, EventArgs e)
+        private async void btnBorrar_Click(object sender, EventArgs e)//PROGRAMAR CON URL
         {
             int index = listBoxProductos.SelectedIndex;
             if (MessageBox.Show("Seguro que desea borrar el producto seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (ServicioDao.ObtenerServicio().EliminarProducto(listaProducto[index].Id))
+                string urlProducto = "https://localhost:7071/api/Producto/";
+                string urlConParametro = $"{urlProducto}{listaProducto[index].Id}";
+                var result = await HelperHttp.GetInstance().DeleteAsync(urlConParametro);
+
+                if (result.StatusCode == HttpStatusCode.OK)
                 {
                     MessageBox.Show("El Producto fue eliminado!", "Informacion");
                     Habilitar(true);

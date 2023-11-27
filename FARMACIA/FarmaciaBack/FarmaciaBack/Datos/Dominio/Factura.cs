@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarmaciaBack.Datos.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,8 @@ namespace FarmaciaBack.Datos.Dominio
     {
         public int NroFactura { get; set; }
         public DateTime Fecha { get; set; }
-        public Empleado Empleado { get; set; }
-        public Cliente Cliente { get; set; }
+        public EmpleadoDTO Empleado { get; set; }
+        public ClienteDTO Cliente { get; set; }
         public FormaPago FormaPago { get; set; }
         public Sede Sede { get; set; }
         public FormaEnvio Envio { get; set; }

@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace FarmaciaBack.Datos.Interfaz
 {
     public interface IClienteDao
     {
-        bool PostCliente(Cliente oCliente);
-        bool PutCliente(Cliente oCliente);
+        bool PostCliente(ClienteDTO oCliente);
+        bool PutCliente(ClienteDTO oCliente);
         bool DeleteCliente(int id);
         List<Barrio> GetBarrios();
         List<Cliente> GetClientes();

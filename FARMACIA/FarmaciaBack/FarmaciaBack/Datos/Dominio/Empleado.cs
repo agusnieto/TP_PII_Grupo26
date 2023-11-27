@@ -20,7 +20,7 @@ namespace FarmaciaBack.Datos.Dominio
         private long telefono;
         private string email;
         private DateTime fecha_baja;
-        public DateTime FechaBaja {  get; set; }
+        public DateTime FechaBaja { get; set; }
         public int Legajo
         {
             get { return legajo; }
@@ -73,17 +73,21 @@ namespace FarmaciaBack.Datos.Dominio
         }
 
 
-        public Empleado(int legajo, string apellido, string nombre,  DateTime fecha_ingreso)
+        public Empleado(int legajo, string apellido, string nombre, DateTime fecha_ingreso)
         {
             Legajo = legajo;
-            Apellido = apellido; 
+            Apellido = apellido;
             Nombre = nombre;
             Fecha_ingreso = fecha_ingreso;
 
         }
         public Empleado()
         {
-            
+
+        }
+        public override string ToString()
+        {
+            return Legajo + "-" + Apellido + ", " + Nombre;
         }
     }
 }

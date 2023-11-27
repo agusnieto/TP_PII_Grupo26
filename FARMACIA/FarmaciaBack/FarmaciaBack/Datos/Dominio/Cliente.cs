@@ -84,7 +84,7 @@ namespace FarmaciaBack.Datos.Dominio
 
         public override string ToString()
         {
-            return base.ToString() + "\nId del Cliente: " + IdCliente + "Obra Social: " + ObraSocial.Nombre;
+            return IdCliente.ToString() + " " + Apellido + ", " + Nombre;
         }
     }
 }

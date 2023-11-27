@@ -30,5 +30,9 @@ namespace FarmaciaBack.Datos.Dominio
         {
 
         }
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

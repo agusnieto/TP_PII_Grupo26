@@ -12,8 +12,8 @@ namespace FarmaciaBack.Servicio.Interfaz
     public interface IServicio
     {
         //Cliente
-        bool CargarCliente(Cliente oCliente);
-        bool ActualizarCliente(Cliente oCliente);
+        bool CargarCliente(ClienteDTO oCliente);
+        bool ActualizarCliente(ClienteDTO oCliente);
         bool EliminarCliente(int id);
         List<Barrio> ConsultarBarrios();
         List<Cliente> ConsultarClientes();
@@ -47,7 +47,7 @@ namespace FarmaciaBack.Servicio.Interfaz
         bool ActualizarMaestroDetalle(Factura factura);
         List<ServicioDTO> GetServicioDTO();
         Producto GetProduto(int id);
-        bool CargarFactura(FacturaDTO factura);
+        bool CargarFactura(Factura factura);
 
         //MEDICO        
         List<ObraSocial> ConsultarObrasSociales();

@@ -69,7 +69,7 @@ namespace FarmaciaBack.Datos.Dominio
 
         public override string ToString()
         {
-            return Nombre;
+            return Id + "-" + Nombre + " " + Razon;
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using FarmaciaBack.Datos.Dominio;
+using FarmaciaBack.Datos.DTOs;
 using FarmaciaBack.Servicio.Implementacion;
 using FarmaciaBack.Servicio.Interfaz;
 using Microsoft.AspNetCore.Mvc;
@@ -51,8 +52,9 @@ namespace FarmaciaAPI.Controllers
 
         // POST api/<ClienteController>
         [HttpPost]
-        public IActionResult Post([FromBody] Cliente cliente)
+        public IActionResult Post([FromBody] ClienteDTO cliente)
         {
+
             //dentro de un try catch
             try
             {
@@ -75,10 +77,15 @@ namespace FarmaciaAPI.Controllers
 
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
+
         }
+
+
+        // PUT api/<MedicoController>
         [HttpPut]
-        public IActionResult Put([FromBody] Cliente cliente)
+        public IActionResult Put([FromBody] ClienteDTO cliente)
         {
+
             //dentro de un try catch
             try
             {
@@ -89,16 +96,15 @@ namespace FarmaciaAPI.Controllers
                 //if (cliente.) validaciones por si es un objeto valido.
                 if (ServicioDao.ObtenerServicio().ActualizarCliente(cliente))
                 {
-                    return Ok("Cliente registrado con exito");
+                    return Ok("Cliente actualizado con exito");
                 }
                 else
                 {
-                    return StatusCode(500, "No se pudo registrar el cliente");
+                    return StatusCode(500, "No se pudo actualizar el cliente");
                 }
             }
             catch (Exception)
             {
-
                 return StatusCode(500, "Error interno, intente nuevamente mas tarde");
             }
         }
@@ -148,67 +154,10 @@ namespace FarmaciaAPI.Controllers
             }
         }
 
-        /*private bool ValidarDatos(ClienteDTO cliente)
-        {
-            private bool ValidarDatos()
-            {
-                int n = 0;
-                if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrWhiteSpace(txtApellido.Text))
-                {
-                    n = 1;
-                }
-                else
-                {
-                    foreach (char c in txtApellido.Text)
-                    {
-                        if (c <= 31 && c > 32 || c < 65 && c > 90 || c < 97 && c > 122)
-                        {
-                            n = 1;
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
-                {
-                    n = 2;
-                }
-                else
-                {
-                    foreach (char c in txtNombre.Text)
-                    {
-                        if (c <= 31 && c > 32 || c < 65 && c > 90 || c < 97 && c > 122)
-                        {
-                            n = 2;
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrWhiteSpace(txtEmail.Text))
-                {
-                    n = 3;
-                }
-                else
-                {
-                    foreach (char c in txtEmail.Text)
-                    {
-                        if (c <= 31 && c >= 33 || c <= 45 && c >= 47 || c < 64 && c > 90 || c < 97 && c > 122)
-                        {
-                            n = 3;
-                        }
-                    }
-                }
-                if (string.IsNullOrEmpty(txtTelefono.Text) || !int.TryParse(txtTelefono.Text, out _))
-                {
-                    n = 4;
-                }
-                if (string.IsNullOrEmpty(cboBarrio.Text))
-                {
-                    n = 5;
-                }
-                switch (n)
-                {
 
-                }*/
     }
 }
-    
+
+
 
 

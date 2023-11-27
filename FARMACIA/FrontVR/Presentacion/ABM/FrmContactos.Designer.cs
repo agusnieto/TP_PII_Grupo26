@@ -95,7 +95,7 @@
             txtEmail.Location = new Point(68, 106);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(162, 23);
-            txtEmail.TabIndex = 0;
+            txtEmail.TabIndex = 3;
             // 
             // label1
             // 
@@ -120,7 +120,7 @@
             txtNombre.Location = new Point(68, 22);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(162, 23);
-            txtNombre.TabIndex = 2;
+            txtNombre.TabIndex = 0;
             // 
             // label3
             // 
@@ -136,7 +136,7 @@
             txtApellido.Location = new Point(68, 51);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(162, 23);
-            txtApellido.TabIndex = 4;
+            txtApellido.TabIndex = 1;
             // 
             // gbCliente
             // 
@@ -148,7 +148,7 @@
             gbCliente.Controls.Add(cboBarrioCliente);
             gbCliente.Controls.Add(label2);
             gbCliente.Controls.Add(cboObraCliente);
-            gbCliente.Location = new Point(595, 153);
+            gbCliente.Location = new Point(846, 327);
             gbCliente.Name = "gbCliente";
             gbCliente.Size = new Size(245, 152);
             gbCliente.TabIndex = 6;
@@ -161,7 +161,7 @@
             rbtHombre.Location = new Point(116, 116);
             rbtHombre.Name = "rbtHombre";
             rbtHombre.Size = new Size(69, 19);
-            rbtHombre.TabIndex = 12;
+            rbtHombre.TabIndex = 4;
             rbtHombre.TabStop = true;
             rbtHombre.Text = "Hombre";
             rbtHombre.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             rbtMujer.Location = new Point(40, 116);
             rbtMujer.Name = "rbtMujer";
             rbtMujer.Size = new Size(56, 19);
-            rbtMujer.TabIndex = 11;
+            rbtMujer.TabIndex = 3;
             rbtMujer.TabStop = true;
             rbtMujer.Text = "Mujer";
             rbtMujer.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@
             txtDni.Location = new Point(88, 87);
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(121, 23);
-            txtDni.TabIndex = 7;
+            txtDni.TabIndex = 2;
             // 
             // cboBarrioCliente
             // 
@@ -208,7 +208,7 @@
             cboBarrioCliente.Location = new Point(88, 58);
             cboBarrioCliente.Name = "cboBarrioCliente";
             cboBarrioCliente.Size = new Size(121, 23);
-            cboBarrioCliente.TabIndex = 9;
+            cboBarrioCliente.TabIndex = 1;
             // 
             // label2
             // 
@@ -225,7 +225,7 @@
             cboObraCliente.Location = new Point(88, 29);
             cboObraCliente.Name = "cboObraCliente";
             cboObraCliente.Size = new Size(121, 23);
-            cboObraCliente.TabIndex = 7;
+            cboObraCliente.TabIndex = 0;
             // 
             // label6
             // 
@@ -241,7 +241,7 @@
             txtTelefono.Location = new Point(68, 80);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(162, 23);
-            txtTelefono.TabIndex = 9;
+            txtTelefono.TabIndex = 2;
             // 
             // gbEmpleado
             // 
@@ -254,7 +254,7 @@
             gbEmpleado.Location = new Point(595, 17);
             gbEmpleado.Name = "gbEmpleado";
             gbEmpleado.Size = new Size(245, 123);
-            gbEmpleado.TabIndex = 11;
+            gbEmpleado.TabIndex = 7;
             gbEmpleado.TabStop = false;
             gbEmpleado.Text = "Empleado";
             // 
@@ -281,7 +281,7 @@
             txtSueldo.Location = new Point(98, 85);
             txtSueldo.Name = "txtSueldo";
             txtSueldo.Size = new Size(121, 23);
-            txtSueldo.TabIndex = 12;
+            txtSueldo.TabIndex = 2;
             // 
             // cboSedeEmpleado
             // 
@@ -289,7 +289,7 @@
             cboSedeEmpleado.Location = new Point(98, 56);
             cboSedeEmpleado.Name = "cboSedeEmpleado";
             cboSedeEmpleado.Size = new Size(121, 23);
-            cboSedeEmpleado.TabIndex = 13;
+            cboSedeEmpleado.TabIndex = 1;
             // 
             // label8
             // 
@@ -306,7 +306,7 @@
             cboPuesto.Location = new Point(98, 27);
             cboPuesto.Name = "cboPuesto";
             cboPuesto.Size = new Size(121, 23);
-            cboPuesto.TabIndex = 11;
+            cboPuesto.TabIndex = 0;
             // 
             // gbMedico
             // 
@@ -319,7 +319,7 @@
             gbMedico.Location = new Point(846, 18);
             gbMedico.Name = "gbMedico";
             gbMedico.Size = new Size(245, 139);
-            gbMedico.TabIndex = 12;
+            gbMedico.TabIndex = 8;
             gbMedico.TabStop = false;
             gbMedico.Text = "Medico";
             // 
@@ -337,7 +337,7 @@
             txtMatricula.Location = new Point(98, 89);
             txtMatricula.Name = "txtMatricula";
             txtMatricula.Size = new Size(121, 23);
-            txtMatricula.TabIndex = 17;
+            txtMatricula.TabIndex = 2;
             // 
             // label11
             // 
@@ -354,7 +354,7 @@
             cboSedeMedico.Location = new Point(98, 60);
             cboSedeMedico.Name = "cboSedeMedico";
             cboSedeMedico.Size = new Size(121, 23);
-            cboSedeMedico.TabIndex = 15;
+            cboSedeMedico.TabIndex = 1;
             // 
             // label10
             // 
@@ -371,7 +371,7 @@
             cboObraMedico.Location = new Point(98, 31);
             cboObraMedico.Name = "cboObraMedico";
             cboObraMedico.Size = new Size(121, 23);
-            cboObraMedico.TabIndex = 9;
+            cboObraMedico.TabIndex = 0;
             // 
             // gbProveedor
             // 
@@ -386,7 +386,7 @@
             gbProveedor.Location = new Point(846, 163);
             gbProveedor.Name = "gbProveedor";
             gbProveedor.Size = new Size(245, 158);
-            gbProveedor.TabIndex = 13;
+            gbProveedor.TabIndex = 9;
             gbProveedor.TabStop = false;
             gbProveedor.Text = "Proveedor";
             // 
@@ -404,7 +404,7 @@
             txtCuit.Location = new Point(98, 117);
             txtCuit.Name = "txtCuit";
             txtCuit.Size = new Size(121, 23);
-            txtCuit.TabIndex = 21;
+            txtCuit.TabIndex = 3;
             // 
             // label15
             // 
@@ -420,7 +420,7 @@
             txtCalle.Location = new Point(98, 88);
             txtCalle.Name = "txtCalle";
             txtCalle.Size = new Size(121, 23);
-            txtCalle.TabIndex = 19;
+            txtCalle.TabIndex = 2;
             // 
             // label14
             // 
@@ -437,7 +437,7 @@
             cboBarrioProv.Location = new Point(98, 59);
             cboBarrioProv.Name = "cboBarrioProv";
             cboBarrioProv.Size = new Size(121, 23);
-            cboBarrioProv.TabIndex = 13;
+            cboBarrioProv.TabIndex = 1;
             // 
             // label13
             // 
@@ -454,7 +454,7 @@
             cboRazon.Location = new Point(98, 29);
             cboRazon.Name = "cboRazon";
             cboRazon.Size = new Size(121, 23);
-            cboRazon.TabIndex = 11;
+            cboRazon.TabIndex = 0;
             // 
             // lstContactos
             // 
@@ -463,7 +463,7 @@
             lstContactos.Location = new Point(257, 117);
             lstContactos.Name = "lstContactos";
             lstContactos.Size = new Size(226, 409);
-            lstContactos.TabIndex = 14;
+            lstContactos.TabIndex = 5;
             lstContactos.SelectedIndexChanged += lstContactos_SelectedIndexChanged;
             // 
             // chkCliente
@@ -472,7 +472,7 @@
             chkCliente.Location = new Point(222, 51);
             chkCliente.Name = "chkCliente";
             chkCliente.Size = new Size(63, 19);
-            chkCliente.TabIndex = 15;
+            chkCliente.TabIndex = 0;
             chkCliente.Text = "Cliente";
             chkCliente.UseVisualStyleBackColor = true;
             chkCliente.CheckedChanged += chkCliente_CheckedChanged;
@@ -503,7 +503,7 @@
             chkProveedor.Location = new Point(326, 76);
             chkProveedor.Name = "chkProveedor";
             chkProveedor.Size = new Size(80, 19);
-            chkProveedor.TabIndex = 18;
+            chkProveedor.TabIndex = 3;
             chkProveedor.Text = "Proveedor";
             chkProveedor.UseVisualStyleBackColor = true;
             chkProveedor.CheckedChanged += chkProveedor_CheckedChanged;
@@ -514,7 +514,7 @@
             chkMedico.Location = new Point(326, 51);
             chkMedico.Name = "chkMedico";
             chkMedico.Size = new Size(66, 19);
-            chkMedico.TabIndex = 19;
+            chkMedico.TabIndex = 1;
             chkMedico.Text = "Medico";
             chkMedico.UseVisualStyleBackColor = true;
             chkMedico.CheckedChanged += chkMedico_CheckedChanged;
@@ -525,7 +525,7 @@
             chkEmpleado.Location = new Point(222, 76);
             chkEmpleado.Name = "chkEmpleado";
             chkEmpleado.Size = new Size(79, 19);
-            chkEmpleado.TabIndex = 20;
+            chkEmpleado.TabIndex = 2;
             chkEmpleado.Text = "Empleado";
             chkEmpleado.UseVisualStyleBackColor = true;
             chkEmpleado.CheckedChanged += chkEmpleado_CheckedChanged;
@@ -535,7 +535,7 @@
             btnNuevo.Location = new Point(18, 22);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(75, 23);
-            btnNuevo.TabIndex = 21;
+            btnNuevo.TabIndex = 0;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += btnNuevo_Click;
@@ -545,7 +545,7 @@
             btnEditar.Location = new Point(112, 22);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
-            btnEditar.TabIndex = 22;
+            btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
@@ -555,7 +555,7 @@
             btnBorrar.Location = new Point(297, 22);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(75, 23);
-            btnBorrar.TabIndex = 24;
+            btnBorrar.TabIndex = 3;
             btnBorrar.Text = "Borrar";
             btnBorrar.UseVisualStyleBackColor = true;
             btnBorrar.Click += btnBorrar_Click;
@@ -565,7 +565,7 @@
             btnGrabar.Location = new Point(203, 22);
             btnGrabar.Name = "btnGrabar";
             btnGrabar.Size = new Size(75, 23);
-            btnGrabar.TabIndex = 23;
+            btnGrabar.TabIndex = 4;
             btnGrabar.Text = "Grabar";
             btnGrabar.UseVisualStyleBackColor = true;
             btnGrabar.Click += btnGrabar_Click;
@@ -575,7 +575,7 @@
             btnSalir.Location = new Point(387, 22);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(75, 23);
-            btnSalir.TabIndex = 25;
+            btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
@@ -593,7 +593,7 @@
             gbDatos.Location = new Point(6, 112);
             gbDatos.Name = "gbDatos";
             gbDatos.Size = new Size(245, 142);
-            gbDatos.TabIndex = 26;
+            gbDatos.TabIndex = 6;
             gbDatos.TabStop = false;
             gbDatos.Text = "Datos";
             // 
@@ -607,14 +607,14 @@
             gbBotones.Location = new Point(6, 534);
             gbBotones.Name = "gbBotones";
             gbBotones.Size = new Size(477, 59);
-            gbBotones.TabIndex = 27;
+            gbBotones.TabIndex = 4;
             gbBotones.TabStop = false;
             // 
             // FrmContactos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1105, 599);
+            ClientSize = new Size(495, 599);
             Controls.Add(gbBotones);
             Controls.Add(gbDatos);
             Controls.Add(chkEmpleado);
@@ -628,7 +628,10 @@
             Controls.Add(gbMedico);
             Controls.Add(gbEmpleado);
             Controls.Add(gbCliente);
+            MaximumSize = new Size(511, 638);
+            MinimumSize = new Size(511, 638);
             Name = "FrmContactos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ABMC Contactos";
             Load += FrmContactos_Load;
             gbCliente.ResumeLayout(false);

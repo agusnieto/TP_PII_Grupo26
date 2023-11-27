@@ -51,7 +51,7 @@
             dgvProductos.Name = "dgvProductos";
             dgvProductos.RowTemplate.Height = 25;
             dgvProductos.Size = new Size(776, 379);
-            dgvProductos.TabIndex = 0;
+            dgvProductos.TabIndex = 1;
             // 
             // ColID
             // 
@@ -104,7 +104,7 @@
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(240, 32);
-            label1.TabIndex = 1;
+            label1.TabIndex = 3;
             label1.Text = "Control de Productos";
             // 
             // txtNombre
@@ -112,7 +112,7 @@
             txtNombre.Location = new Point(402, 20);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(191, 23);
-            txtNombre.TabIndex = 2;
+            txtNombre.TabIndex = 0;
             txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // label2
@@ -121,7 +121,7 @@
             label2.Location = new Point(288, 23);
             label2.Name = "label2";
             label2.Size = new Size(108, 15);
-            label2.TabIndex = 3;
+            label2.TabIndex = 2;
             label2.Text = "Buscar por nombre";
             // 
             // FrmStock
@@ -133,7 +133,10 @@
             Controls.Add(txtNombre);
             Controls.Add(label1);
             Controls.Add(dgvProductos);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "FrmStock";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Productos";
             Load += FrmStock_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();

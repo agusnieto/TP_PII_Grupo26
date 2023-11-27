@@ -14,16 +14,16 @@ namespace FarmaciaBack.Datos.Implementacion
 {
     public class FacturaDao : IFacturaDao
     {
-        public bool PostFactura(FacturaDTO factura)
+        public bool PostFactura(Factura factura)
         {
             bool resultado = false;
             List<Parametro> parametros = new List<Parametro>()
             {
-                new Parametro("@LEGAJO", factura.Empleado),
-                new Parametro("@CLIENTE", factura.Cliente),
-                new Parametro("@PAGO", factura.FormaPago),
-                new Parametro("@SEDE", factura.Sede),
-                new Parametro("@ENVIO", factura.Envio)
+                new Parametro("@LEGAJO", factura.Empleado.Legajo),
+                new Parametro("@CLIENTE", factura.Cliente.IdCliente),
+                new Parametro("@PAGO", factura.FormaPago.Id),
+                new Parametro("@SEDE", factura.Sede.Id),
+                new Parametro("@ENVIO", factura.Envio.Id)
             };
             int nro_factura = HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_FACTURAS", parametros, "@FACTURA");
 
@@ -36,28 +36,28 @@ namespace FarmaciaBack.Datos.Implementacion
 
                 if (factura.DetalleServicio != null)
                 {
-                    foreach (DetalleServicioDTO ds in factura.DetalleServicio)
+                    foreach (DetalleServicio ds in factura.DetalleServicio)
                     {
                         List<Parametro> detalleS = new List<Parametro>()
                     {
                     new Parametro("@FACTURA", factura.NroFactura),
-                    new Parametro("@MEDICO", ds.Medico),
-                    new Parametro("@SERVICIO", ds.Servicio),
+                    new Parametro("@MEDICO", ds.Medico.Id),
+                    new Parametro("@SERVICIO", ds.Servicio.Id),
                     new Parametro("@PRECIO", ds.Precio),
                     new Parametro("@ATENCION", ds.Atencion),
-                    new Parametro("@DESCUENTO", ds.Descuento)   //REVISAR SI DESCUENTO ESTA BIEN ACA O VA EN FACTURA           
+                    new Parametro("@DESCUENTO", 0)   //REVISAR SI DESCUENTO ESTA BIEN ACA O VA EN FACTURA           
                     };
                         auxser += HelperDB.ObtenerInstancia().InsartarSql("SP_INSERT_DET_SERVICIO", detalleS, "");
                     }
                 }
                 if (factura.DetalleFactura != null)
                 {
-                    foreach (DetalleFacturaDTO df in factura.DetalleFactura)
+                    foreach (DetalleFactura df in factura.DetalleFactura)
                     {
                         List<Parametro> detalleF = new List<Parametro>()
                     {
                     new Parametro("@FACTURA", factura.NroFactura),
-                    new Parametro("@PRODUCTO", df.Producto),
+                    new Parametro("@PRODUCTO", df.Producto.Id),
                     new Parametro("@CANTIDAD", df.Cantidad),
                     new Parametro("@PRECIO", df.Precio)
                     };
@@ -116,16 +116,18 @@ namespace FarmaciaBack.Datos.Implementacion
                 new Parametro("@SEDE", sede)
             });
 
-            EmpleadoDTO empleado;
             List<EmpleadoDTO> lista = new List<EmpleadoDTO>();
+
             if (tabla.Rows.Count > 0)
             {
                 foreach (DataRow row in tabla.Rows)
                 {
-                    empleado = new EmpleadoDTO()
+                    EmpleadoDTO empleado = new EmpleadoDTO()
                     {
-                        Legajo = Convert.ToInt32(row.ItemArray[0]),
-                        NombreCompleto = row.ItemArray[2].ToString() + ", " + row.ItemArray[1].ToString()
+                        Legajo = Convert.ToInt32(row["LEGAJO"]),
+                        Nombre = row["NOMBRE"].ToString(),
+                        Apellido = row["APELLIDO"].ToString(),
+                        NombreCompleto = row["APELLIDO"].ToString() + ", " + row["NOMBRE"].ToString()
                     };
                     lista.Add(empleado);
                 }

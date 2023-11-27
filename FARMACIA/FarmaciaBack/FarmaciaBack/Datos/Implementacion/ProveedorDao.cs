@@ -129,7 +129,7 @@ namespace FarmaciaBack.Datos.Implementacion
                         Razon = new RazonSocial(Convert.ToInt32(row.ItemArray[2]), row.ItemArray[3].ToString()),
                         Barrio = new Barrio(Convert.ToInt32(row.ItemArray[4]), row.ItemArray[5].ToString(), new Provincia()),
                         Calle = row.ItemArray[6].ToString(),
-                        Cuit = Convert.ToInt32(row.ItemArray[7].ToString())
+                        Cuit = Convert.ToInt64(row.ItemArray[7].ToString())
                     };
                     if (row.ItemArray[8].Equals(null))
                     {

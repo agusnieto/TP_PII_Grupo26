@@ -17,7 +17,7 @@ namespace FarmaciaWebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] FacturaDTO factura)
+        public IActionResult Post([FromBody] Factura factura)
         {
             //dentro de un try catch
             try
@@ -64,7 +64,7 @@ namespace FarmaciaWebApi.Controllers
             return NotFound("No hay servicios cargados");
         }
         
-        [HttpGet("{sede}")]
+        [HttpGet("Empleados/{sede}")]
         public IActionResult GetEmpleadosDTO(int sede)
         {
             List<EmpleadoDTO> empleados = ServicioDao.ObtenerServicio().ConsultarEmpleadosXSede(sede);

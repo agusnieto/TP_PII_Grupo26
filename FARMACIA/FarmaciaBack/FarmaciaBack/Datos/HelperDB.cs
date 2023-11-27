@@ -21,21 +21,40 @@ namespace FarmaciaBack.Datos
         }
         public DataTable ConsultaSQL(string spNombre, List<Parametro> values)
         {
+            SqlTransaction t = null;
             DataTable tabla = new DataTable();
-
-            cnn.Open();
-            SqlCommand cmd = new SqlCommand(spNombre, cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            if (values != null)
+            try
             {
-                foreach (Parametro oParametro in values)
+                cnn.Open();
+                t = cnn.BeginTransaction();
+                SqlCommand cmd = new SqlCommand(spNombre, cnn, t);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (values != null)
                 {
-                    cmd.Parameters.AddWithValue(oParametro.Clave, oParametro.Valor);
+                    foreach (Parametro oParametro in values)
+                    {
+                        cmd.Parameters.AddWithValue(oParametro.Clave, oParametro.Valor);
+                    }
+                }
+                tabla.Load(cmd.ExecuteReader());
+                t.Commit();
+            }
+            catch (Exception)
+            {
+                if(tabla != null)
+                {
+                    tabla = null;
+                }
+                t.Rollback();
+            }
+            finally
+            {
+                if(cnn != null && cnn.State == ConnectionState.Open)
+                {
+                    cnn.Close();
                 }
             }
-            tabla.Load(cmd.ExecuteReader());
-            cnn.Close();
-
+            
             return tabla;
         }
 

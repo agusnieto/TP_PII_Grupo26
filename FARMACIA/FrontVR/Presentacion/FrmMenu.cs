@@ -241,7 +241,7 @@ namespace FrontVR
 
         private void btnNuevaFactura_Click_1(object sender, EventArgs e)
         {
-            FrmDatosPersonales datos = new FrmDatosPersonales();
+            FrmContactos datos = new FrmContactos();
             datos.Show();
         }
 
